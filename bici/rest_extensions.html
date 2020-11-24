@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>BICI Operations Management API :: Bonita Documentation</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://bonitasoft.github.io">Bonita Documentation</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link" href="#">Bonita ICI</a>
+              <div class="navbar-dropdown">
+                  <a class="navbar-item" href="./">labs</a>
+              </div>
+            </div>
+      </div>
+    </div>
+
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="bici" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="./">Bonita ICI</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release_notes">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="architecture">Architecture</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="process_mining">Process mining</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="prerequisites">Pre-requisites</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="getting_started">Getting started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="installation_guide">Installation guide</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="configure">Configuration Living Application</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="monitoring">Operations Management Living Application</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="rest_extensions">REST API extensions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="send_data">Send us (anonymous) data!</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Bonita ICI</span>
+    <span class="version">labs</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Bonita ICI</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="./">labs</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="./" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="./">Bonita ICI</a></li>
+    <li><a href="rest_extensions">REST API extensions</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/bonitasoft/bonita-ici-doc/edit/master/modules/ROOT/pages/rest_extensions.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">BICI Operations Management API</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><em>version 2.0</em></p>
+</div>
+<div class="paragraph">
+<p>API used by Operations Management Living Application</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bici_info"><a class="anchor" href="#_bici_info"></a><code>/bici-info</code></h2>
+<div class="sectionbody">
+<h4 id="_http_method" class="discrete">Http method</h4>
+<div class="paragraph">
+<p><code>GET</code></p>
+</div>
+<h4 id="_description" class="discrete">Description</h4>
+<div class="paragraph">
+<p>Experimental: may change or be removed at any time (since BICI 1.3.0)</p>
+</div>
+<h4 id="_query_parameters" class="discrete">Query parameters</h4>
+<div class="paragraph">
+<p>No parameters</p>
+</div>
+<h4 id="_response_examples" class="discrete">Response examples</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://localhost:8080/bonita/apps/bici-operations-management/API/extension/bici-info" class="bare">http://localhost:8080/bonita/apps/bici-operations-management/API/extension/bici-info</a></p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "documentationVersion": "1.3",
+  "version": "1.3.0"
+}</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bici_case_by_id_api"><a class="anchor" href="#_bici_case_by_id_api"></a><code>/bici-case-by-id-api</code></h2>
+<div class="sectionbody">
+<h4 id="_http_method_2" class="discrete">Http method</h4>
+<div class="paragraph">
+<p><code>GET</code></p>
+</div>
+<h4 id="_description_2" class="discrete">Description</h4>
+<div class="paragraph">
+<p>Return the open case related to the provided case id</p>
+</div>
+<h4 id="_query_parameters_2" class="discrete">Query parameters</h4>
+<div class="paragraph">
+<p>|Parameter|Type|Required|Description|
+|------|---|------|--------|
+|caseId|integer|true|id of the case|</p>
+</div>
+<h4 id="_response_examples_2" class="discrete">Response examples</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://localhost:8080/bonita/apps/bici-operations-management/API/extension/bici-case-by-id-api?caseId=101" class="bare">http://localhost:8080/bonita/apps/bici-operations-management/API/extension/bici-case-by-id-api?caseId=101</a></p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "caseId": 101,
+  "startDate": "2019-06-17T15:27:29.044Z",
+  "startedBy": {
+      "id": 4,
+      "username": "walter.bates",
+      "firstName": "Walter",
+      "lastName": "Bates"
+  },
+  "process": {
+      "definitionId": "8662860246251890111",
+      "name": "Vacation",
+      "version": "4.0",
+      "versionSpecified": true
+  },
+  "status": "LATE",
+  "predictedEndDate": "2019-06-17T15:28:10.220Z",
+  "predictedDurationInMillis": 41153,
+  "minInMillis": null,
+  "maxInMillis": null,
+  "withinTargetRatio": 0
+}</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bici_case_api"><a class="anchor" href="#_bici_case_api"></a><code>/bici-case-api</code></h2>
+<div class="sectionbody">
+<h4 id="_http_method_3" class="discrete">Http method</h4>
+<div class="paragraph">
+<p><code>GET</code></p>
+</div>
+<h4 id="_description_3" class="discrete">Description</h4>
+<div class="paragraph">
+<p>This list of cases can be filtered by status (late, predictedLate, predictedOnTime, unknown) or using a search term</p>
+</div>
+<h4 id="_query_parameters_3" class="discrete">Query parameters</h4>
+<div class="paragraph">
+<p>|Parameter|Type|Required|Description|
+|------|---|------|--------|
+|c|integer|false|Number of elements to return|
+|p|integer|false|Page to return, starts at 0|
+|processName|string|true|Name of the process|
+|processVersion|string|false|Version of the process|
+|status|string|false|Status of the cases: late, predictedLate, predictedOnTime, unknown|
+|search|string|false|Search keyword, will search in case id and name of the initiator|</p>
+</div>
+<h4 id="_response_examples_3" class="discrete">Response examples</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://localhost:8080/bonita/apps/bici-operations-management/API/extension/bici-case-api?processName=Vacation" class="bare">http://localhost:8080/bonita/apps/bici-operations-management/API/extension/bici-case-api?processName=Vacation</a></p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "cases": [
+      {
+          "caseId": 101,
+          "startDate": "2019-06-17T15:27:29.044Z",
+          "startedBy": {
+              "id": 4,
+              "username": "walter.bates",
+              "firstName": "Walter",
+              "lastName": "Bates"
+          },
+          "process": {
+              "definitionId": "8662860246251890111",
+              "name": "Vacation",
+              "version": "4.0",
+              "versionSpecified": true
+          },
+          "status": "LATE",
+          "predictedEndDate": "2019-06-17T15:28:10.220Z",
+          "predictedDurationInMillis": 41153,
+          "minInMillis": null,
+          "maxInMillis": null,
+          "withinTargetRatio": 0
+      }
+  ],
+  "counts": {
+      "predictedLate": 0,
+      "late": 1,
+      "predictedOnTime": 0,
+      "unknown": 0
+  },
+  "lastPollingDate": "2019-06-25T15:54:40.298Z"
+}</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bici_process_api"><a class="anchor" href="#_bici_process_api"></a><code>/bici-process-api</code></h2>
+<div class="sectionbody">
+<h4 id="_http_method_4" class="discrete">Http method</h4>
+<div class="paragraph">
+<p><code>GET</code></p>
+</div>
+<h4 id="_description_4" class="discrete">Description</h4>
+<div class="paragraph">
+<p>Get processes that the user is manager of</p>
+</div>
+<h4 id="_query_parameters_4" class="discrete">Query parameters</h4>
+<div class="paragraph">
+<p>No parameters</p>
+</div>
+<h4 id="_response_examples_4" class="discrete">Response examples</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://localhost:8080/bonita/apps/bici-operations-management/API/extension/bici-process-api" class="bare">http://localhost:8080/bonita/apps/bici-operations-management/API/extension/bici-process-api</a></p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">[
+  {
+      "name": "Vacation",
+      "versions": [
+          "4.0"
+      ],
+      "targetDurationInMillis": 259200000,
+      "successRateThreshold": 0.5
+  }
+]</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><a href="http://localhost:8080/bonita/apps/bici-operations-management/API/extension/bici-process-api" class="bare">http://localhost:8080/bonita/apps/bici-operations-management/API/extension/bici-process-api</a></p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "code": 404,
+  "message": "Unexpected error: no_supervised_process"
+}</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bici_query_api"><a class="anchor" href="#_bici_query_api"></a><code>/bici-query-api</code></h2>
+<div class="sectionbody">
+<h4 id="_http_method_5" class="discrete">Http method</h4>
+<div class="paragraph">
+<p><code>GET</code></p>
+</div>
+<h4 id="_description_5" class="discrete">Description</h4>
+<div class="paragraph">
+<p>This allows to execute an analytics query.</p>
+</div>
+<h4 id="_query_parameters_5" class="discrete">Query parameters</h4>
+<div class="paragraph">
+<p>|Parameter|Type|Required|Description|
+|------|---|------|--------|
+|c|integer|false|Number of elements to return|
+|p|integer|false|Page to return, starts at 0|
+|queryName|string|true|Name of the analytics query: case-time-distribution, case-statistics, case-late-per-month, task-statistics|
+|processName|string|true|Name of the process|
+|processVersion|string|false|Version of the process. If empty, use all allowed versions|
+|parameters|object|false|Parameters required by the query: durationOfAnalysis, for case-time-distribution, case-statistics, case-late-per-month, task-statistics; durationInMillis, for case-late-per-month|</p>
+</div>
+<h4 id="_response_examples_5" class="discrete">Response examples</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://localhost:8080/bonita/apps/bici-operations-management/API/extension/bici-query-api?queryName=case-time-distribution&amp;processName=Vacation&amp;durationOfAnalysis=2m" class="bare">http://localhost:8080/bonita/apps/bici-operations-management/API/extension/bici-query-api?queryName=case-time-distribution&amp;processName=Vacation&amp;durationOfAnalysis=2m</a></p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "percentiles": [
+      "10",
+      "20",
+      "30",
+      "40",
+      "50",
+      "60",
+      "70",
+      "80",
+      "90",
+      "100"
+  ],
+  "durationMillis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+  ]
+}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><a href="http://localhost:8080/bonita/apps/bici-operations-management/API/extension/bici-query-api?queryName=case-statistics&amp;processName=Vacation&amp;durationOfAnalysis=2y" class="bare">http://localhost:8080/bonita/apps/bici-operations-management/API/extension/bici-query-api?queryName=case-statistics&amp;processName=Vacation&amp;durationOfAnalysis=2y</a></p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "median": 38345,
+  "count": 100,
+  "min": 34520,
+  "max": 50736,
+  "avg": 41545,
+  "std_deviation": 5584
+}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><a href="http://localhost:8080/bonita/apps/bici-operations-management/API/extension/bici-query-api?queryName=case-late-per-month&amp;processName=Vacation&amp;durationOfAnalysis=2m&amp;durationInMillis=300" class="bare">http://localhost:8080/bonita/apps/bici-operations-management/API/extension/bici-query-api?queryName=case-late-per-month&amp;processName=Vacation&amp;durationOfAnalysis=2m&amp;durationInMillis=300</a></p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "month": [
+      6
+  ],
+  "year": [
+      2019
+  ],
+  "predictedOnTime": [
+      0
+  ],
+  "late": [
+      0
+  ]
+}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><a href="http://localhost:8080/bonita/apps/bici-operations-management/API/extension/bici-query-api?queryName=task-statistics&amp;processName=Vacation&amp;durationOfAnalysis=2y" class="bare">http://localhost:8080/bonita/apps/bici-operations-management/API/extension/bici-query-api?queryName=task-statistics&amp;processName=Vacation&amp;durationOfAnalysis=2y</a></p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">[
+  {
+      "taskName": "Merge",
+      "type": "gate",
+      "averageDuration": 0,
+      "averageDurationFromStartToClaimDates": 0,
+      "averageDurationFromClaimToEndDates": 0,
+      "count": 100,
+      "numberOfCases": 100,
+      "loopRatio": 1,
+      "percentOccurrences": 100
+  },
+  {
+      "taskName": "Notify employee request approved",
+      "type": "auto",
+      "averageDuration": 879,
+      "averageDurationFromStartToClaimDates": 50,
+      "averageDurationFromClaimToEndDates": 0,
+      "count": 100,
+      "numberOfCases": 100,
+      "loopRatio": 1,
+      "percentOccurrences": 100
+  },
+  {
+      "taskName": "Request approved ?",
+      "type": "gate",
+      "averageDuration": 0,
+      "averageDurationFromStartToClaimDates": 50,
+      "averageDurationFromClaimToEndDates": 0,
+      "count": 100,
+      "numberOfCases": 100,
+      "loopRatio": 1,
+      "percentOccurrences": 100
+  },
+  {
+      "taskName": "Review request",
+      "type": "user",
+      "averageDuration": 27682,
+      "averageDurationFromStartToClaimDates": 50,
+      "averageDurationFromClaimToEndDates": 0,
+      "count": 100,
+      "numberOfCases": 100,
+      "loopRatio": 1,
+      "percentOccurrences": 100
+  }
+]</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../_/js/site.js"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

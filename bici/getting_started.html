@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Getting started :: Bonita Documentation</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://bonitasoft.github.io">Bonita Documentation</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link" href="#">Bonita ICI</a>
+              <div class="navbar-dropdown">
+                  <a class="navbar-item" href="./">labs</a>
+              </div>
+            </div>
+      </div>
+    </div>
+
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="bici" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="./">Bonita ICI</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release_notes">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="architecture">Architecture</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="process_mining">Process mining</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="prerequisites">Pre-requisites</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="getting_started">Getting started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="installation_guide">Installation guide</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="configure">Configuration Living Application</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="monitoring">Operations Management Living Application</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="rest_extensions">REST API extensions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="send_data">Send us (anonymous) data!</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Bonita ICI</span>
+    <span class="version">labs</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Bonita ICI</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="./">labs</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="./" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="./">Bonita ICI</a></li>
+    <li><a href="getting_started">Getting started</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/bonitasoft/bonita-ici-doc/edit/master/modules/ROOT/pages/getting_started.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Getting started</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Bonita Intelligent Continuous Improvement (BICI) installation and configuration instructions.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_download"><a class="anchor" href="#_download"></a>Download</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Download BICI from the <a href="https://customer.bonitasoft.com/">Bonitasoft Customer Portal</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_install"><a class="anchor" href="#_install"></a>Install</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Follow the instructions described in the <a href="installation_guide" class="page">installation guide</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configure"><a class="anchor" href="#_configure"></a>Configure</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_configure_profiles"><a class="anchor" href="#_configure_profiles"></a>Configure Profiles</h3>
+<div class="paragraph">
+<p>Once installed, you need to setup the Bonita Portal profile mapping for the profile <code>Configuration</code> and make sure Operations Managers are mapped to the provided profile <code>Process Manager</code>.
+Moreover, for each process supervised by Operation Managers, the <code>Process Manager mapping</code> must also include the Operations Managers in order to display data of the processes in the <code>Operations Management</code> Living Application.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_synchronize_data"><a class="anchor" href="#_synchronize_data"></a>Synchronize data</h3>
+<div class="paragraph">
+<p>In the <a href="configure" class="page">Configure Living application</a>'s <code>Polling Status</code> tab, activate the synchronization to push your data into the BICI storage.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_configure_processes"><a class="anchor" href="#_configure_processes"></a>Configure processes</h3>
+<div class="paragraph">
+<p>In the <a href="configure" class="page">Configure Living application</a>'s <code>Configuration</code> tab, set target durations and create models for your processes.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_explore"><a class="anchor" href="#_explore"></a>Explore</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_monitor_executing_cases"><a class="anchor" href="#_monitor_executing_cases"></a>Monitor executing cases</h3>
+<div class="paragraph">
+<p>Check out the <a href="monitoring" class="page">Operation manager Living application</a>'s <code>Monitoring</code> tab, it contains live monitoring of executing cases.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_analyse_performance_of_completed_cases"><a class="anchor" href="#_analyse_performance_of_completed_cases"></a>Analyse performance of completed cases</h3>
+<div class="paragraph">
+<p>Check out the <a href="monitoring" class="page">Operation manager Living application</a>'s <code>Analytics</code> tab, it contains analytics of completed cases.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../_/js/site.js"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

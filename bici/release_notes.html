@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Release notes :: Bonita Documentation</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://bonitasoft.github.io">Bonita Documentation</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link" href="#">Bonita ICI</a>
+              <div class="navbar-dropdown">
+                  <a class="navbar-item" href="./">labs</a>
+              </div>
+            </div>
+      </div>
+    </div>
+
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="bici" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="./">Bonita ICI</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="release_notes">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="architecture">Architecture</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="process_mining">Process mining</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="prerequisites">Pre-requisites</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="getting_started">Getting started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="installation_guide">Installation guide</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="configure">Configuration Living Application</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="monitoring">Operations Management Living Application</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="rest_extensions">REST API extensions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="send_data">Send us (anonymous) data!</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Bonita ICI</span>
+    <span class="version">labs</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Bonita ICI</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="./">labs</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="./" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="./">Bonita ICI</a></li>
+    <li><a href="release_notes">Release Notes</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/bonitasoft/bonita-ici-doc/edit/master/modules/ROOT/pages/release_notes.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Release notes</h1>
+<div class="sect1">
+<h2 id="_new_values"><a class="anchor" href="#_new_values"></a>New values</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_task_assignment_decision_support"><a class="anchor" href="#_task_assignment_decision_support"></a>Task assignment decision support</h3>
+<div class="paragraph">
+<p>When a case seems stuck or gets pretty late, view all candidates for the pending task and maybe reassign the task to someone else: choose the candidate with the smallest workload or someone you expect to be able to get the case back on track.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_rich_case_execution_timeline"><a class="anchor" href="#_rich_case_execution_timeline"></a>Rich case execution timeline</h3>
+<div class="paragraph">
+<p>For every case, learn about durations of all task execution: pending, last assignment, and execution date and time, durations between the states, and average durations for these durations. All such data help understanding the detailed history of tasks execution along the case lifecycle.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_monitoring_unknown_status"><a class="anchor" href="#_monitoring_unknown_status"></a>Monitoring 'Unknown' status</h3>
+<div class="paragraph">
+<p>In BICI Monitoring page, when a case&#8217;s prefix has been encountered by less than 100 archived cases, it is not displayed with the 'On time' status anymore, but with the new 'Unknown' status, because the predicted ratio is not robust enough under 100 cases.
+For those cases, we cannot predict whether they will finish on time or be late.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_status_bar_on_case_execution_details"><a class="anchor" href="#_status_bar_on_case_execution_details"></a>Status bar on case execution details</h3>
+<div class="paragraph">
+<p>For each case, the case execution details page gives a full status bar that recalls case start time, deadline, elapsed time and remaining time to deadline, so you get all you need to anticipate and react along the case lifecycle.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_rest_api_version_changes"><a class="anchor" href="#_rest_api_version_changes"></a>Rest API version changes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The version of the Rest API has been updated from 1.0 to 2.0.
+The Rest API '/bici-case-api' does not return the same result for the cases with the status 'onTime'. And in order to keep consistency, the status 'onTime' has been renamed in 'predictedOnTime'.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bug_fixes"><a class="anchor" href="#_bug_fixes"></a>Bug fixes</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_fixes_in_bici_1_3_1_2020_02_06"><a class="anchor" href="#_fixes_in_bici_1_3_1_2020_02_06"></a>Fixes in BICI 1.3.1 (2020-02-06)</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>[ICI-851] - Nothing explains that the BICI application is not reachable by BICI LA</p>
+</li>
+<li>
+<p>[ICI-996] - Sum of cases in the Case late by month graph is not equal to the total number of cases ( 1 case missing?)</p>
+</li>
+<li>
+<p>[ICI-1380] - Task analytics table headers not aligned on some screen sizes</p>
+</li>
+<li>
+<p>[ICI-1381] - Architecture picture in the doc: API to REST API ext. arrow should only be one way</p>
+</li>
+<li>
+<p>[ICI-1399] - The period over which the average duration of tasks has been computed is missing</p>
+</li>
+<li>
+<p>[ICI-1403] - Display name for page 'case details' is wrong. It should be "BICI Case Details page"</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_fixes_in_bici_1_3_0_2019_12_05"><a class="anchor" href="#_fixes_in_bici_1_3_0_2019_12_05"></a>Fixes in BICI 1.3.0 (2019-12-05)</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>[ICI-1268] - As Omar when I come back to the monitoring page, I need the same loader than at first display</p>
+</li>
+<li>
+<p>[ICI-1386] - [LA Configuration] Not possible to configure and create prediction model for more than 10 process</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../_/js/site.js"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
