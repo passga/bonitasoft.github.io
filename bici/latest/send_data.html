@@ -3,15 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Page Not Found :: Bonita Documentation</title>
+    <title>Send us (anonymous) data ! :: Bonita Documentation</title>
+    <link rel="canonical" href="https://bonitasoft.github.io/bici/latest/send_data">
     <meta name="generator" content="Antora 2.3.4">
-    <link rel="stylesheet" href="/_/stylesheets/site.css">
+    <link rel="stylesheet" href="../../_/stylesheets/site.css">
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.3/dist/cdn/docsearch.min.css"
     />
   </head>
-  <body class="status-404">
+  <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
@@ -51,16 +52,52 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container">
+<div class="nav-container" data-component="bici" data-version="latest">
   <aside class="nav">
     <div class="panels">
-<div class="nav-panel-explore is-active" data-panel="explore">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="./">Bonita ICI</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="architecture">Architecture</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="process_mining">Process mining</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="getting_started">Getting started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="configure">Configuration Living Application</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="monitoring">Operations Management Living Application</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="rest_extensions">REST API extensions</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="send_data">Send us (anonymous) data!</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Bonita ICI</span>
+    <span class="version">labs</span>
+  </div>
   <ul class="components">
-    <li class="component">
+    <li class="component is-current">
       <span class="title">Bonita ICI</span>
       <ul class="versions">
-        <li class="version is-latest">
-          <a href="/bici/latest/">labs</a>
+        <li class="version is-current is-latest">
+          <a href="./">labs</a>
         </li>
       </ul>
     </li>
@@ -72,19 +109,29 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="/bici/latest/" class="home-link"></a>
+  <a href="./" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="./">Bonita ICI</a></li>
+    <li><a href="send_data">Send us (anonymous) data!</a></li>
+  </ul>
 </nav>
-</div>
+  <div class="edit-this-page"><a href="https://github.com/bonitasoft/bonita-ici-doc/edit/master/modules/ROOT/pages/send_data.adoc">Edit this Page</a></div>
+  </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Page Not Found</h1>
+<h1 class="page">Send us (anonymous) data !</h1>
 <div class="paragraph">
-<p>The page you&#8217;re looking for does not exist. It may have been moved.</p>
+<p>To be able to have better predictions we need to have real world data.</p>
 </div>
 <div class="paragraph">
-<p>If you arrived on this page by clicking on a link, please notify the owner of the site that the link is broken.
-If you typed the URL of this page manually, please double check that you entered the address correctly.</p>
+<p>These data can help us try out and test new version of our algorithm. It means also that in later version of the modules there is higher chances that the prediction made but the module fit your own processes.</p>
+</div>
+<div class="paragraph">
+<p>If you are willing to help us in that way follow that procedure given in <a href="https://community.bonitasoft.com/blog/data-science-applied-bpm">this blog post</a>.</p>
+</div>
+<div class="paragraph">
+<p>and sent it to use at <a href="mailto:rd.user@bonitasoft.com">rd.user@bonitasoft.com</a></p>
 </div>
 </article>
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -97,8 +144,8 @@ If you typed the URL of this page manually, please double check that you entered
   <p>This page was built using the Antora default UI.</p>
   <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
-<script src="/_/js/site.js"></script>
-<script async src="/_/js/vendor/highlight.js"></script>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.3/dist/cdn/docsearch.min.js"></script>
 <script>
@@ -114,7 +161,7 @@ If you typed the URL of this page manually, please double check that you entered
     // Set debug to true to inspect the dropdown
     debug: false,
     algoliaOptions: {
-      'facetFilters': ["tags:", "tags:"]
+      'facetFilters': ["tags:latest", "tags:bici"]
     },
   });
 </script>
