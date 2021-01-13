@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>WildFly bundle :: Bonita Documentation</title>
+    <link rel="canonical" href="https://bonitasoft.github.io/bonita/7.5/wildfly-bundle">
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../_/stylesheets/site.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.3/dist/cdn/docsearch.min.css"
+    />
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="navbar-item">
+        <a class="bonita-logo" href="https://bonitasoft.github.io"></a>
+      </div>
+
+    </div>
+
+    <div class="search-content">
+      <fieldset>
+        <input type="text" id="search-bar" placeholder="Search..." />
+        <div class="icons-container">
+          <div id="search-icon"></div>
+        </div>
+      </fieldset>
+    </div>
+
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-item is-hoverable">
+        <a href="https://community.bonitasoft.com/" class="navbar-link">Community</a>
+      </div>
+      <div class="navbar-item is-hoverable">
+        <a class="navbar-link" href="/bonita/7.5/">Bonita</a>
+      </div>
+      <div class="navbar-item is-hoverable">
+        <a class="navbar-link" href="/bici/latest/">Bonita ICI</a>
+      </div>
+    </div>
+
+    <div class="navbar-item search-item hide-for-print">
+      <input type="text" placeholder="Search Docs" class="search-bar query ds-input" id="search-query">
+      <i class="search-icon" aria-hidden="true"></i>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="bonita" data-version="7.5">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="./">Bonita</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="migration-tool">Migration tool change log</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Application and Process Design</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bonita-bpm-overview">Bonita BPM overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Application and process design overview</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="getting-started-tutorial">Getting started tutorial</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="key-concepts">Key concepts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="comparison-of-7-x-and-6-x">Comparison of 7.x and 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lifecycle-and-profiles">Lifecycle and profiles</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="design-methodology">Design methodology</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bonita-bpm-studio-preferences">Bonita BPM Studio preferences</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bonita-bpm-studio-hints-and-tips">Bonita BPM Studio hints and tips</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Process modeling</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Diagrams</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="diagram-overview">Diagram overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="pools-and-lanes">Pools and lanes</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="diagram-tasks">Tasks</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="gateways">Gateways</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="transitions">Transitions</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="events">Events</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="called-processes">Called processes</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="event-subprocesses">Event subprocesses</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="text-annotations">Text annotations</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="migrate-a-process-from-bonita-open-solution-5-x">Migrate a process from Bonita Open Solution 5.x</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="naming-conventions">Naming conventions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="generate-process-documentation">Generate process documentation</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="refactoring">Refactoring</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="actors">Actors</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="actor-filtering">Actor filters</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="iteration">Iteration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Data</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="data-handling-overview">Data handling overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="define-and-deploy-the-bdm">Define and deploy the BDM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="specify-data-in-a-process-definition">Specify data in a process definition</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="parameters">Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="contracts-and-contexts">Contracts and contexts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="documents">Documents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="create-a-complex-data-type">Complex data types</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="define-a-search-index">Define a search key</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="expressions-and-scripts">Expressions and scripts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="operations">Operations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Page and form development</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="page-and-form-development-overview">Page and form development overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">UI Designer</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="ui-designer-overview">UI Designer overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="create-or-modify-a-page">Create or modify UI artifacts</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="widgets">Widgets</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="widget-properties">Widget properties</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Widget use examples</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="repeat-a-container-for-a-collection-of-data">Repeat a container for a collection of data</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="fragments">Fragments</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="custom-widgets">Custom widgets</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="variables">Variables</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="appearance">Appearance</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="assets">Assets</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="multi-language-pages">Multi-language pages</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="migrate-a-form-from-6-x">Migrate a form from 6.x</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="6-x-legacy-forms">6.x legacy forms</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="applicationCreation">Application descriptor</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Connectivity</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="connectivity-overview">Connectivity overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="alfresco">Alfresco</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="cmis">CMIS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Database</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="list-of-database-connectors">List of database connectors</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="database-connector-configuration">Database connector configuration</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="graphical-query-builder">Graphical query builder</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="initialize-a-variable-from-a-database-without-scripting-or-java-code">Initialize a variable from a database without scripting or Java code</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="insert-data-in-a-docx-odt-template">Insert data in a .docx/.odt template</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="google-calendar">Google Calendar</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="jasper-5">Jasper</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="ldap">LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="messaging">Messaging</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="generate-pdf-from-an-office-document">Generate PDF from an Office document</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="salesforce">Salesforce</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="sap-jco-2">SAP JCo 2</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="sap-jco-3">SAP JCo 3</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="script">Script</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="sugar-crm">SugarCRM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="talend-job-launcher">Talend Job launcher</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="talend-tis-job-launcher">Talend TIS Job launcher</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="twitter">Twitter</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Web service</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="web-service-connector-overview">Web service connector overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="web-service-tutorial">Web service connector tutorial</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Organization</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="organization-overview">Organization overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="approaches-to-managing-organizations-and-actor-mapping">Approaches to managing organizations and actor mapping</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="organization-management-in-bonita-bpm-studio">Organization management in Bonita BPM Studio</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="custom-user-information-in-bonita-bpm-studio">Custom User Information in Bonita BPM Studio</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="ldap-synchronizer">LDAP synchronizer</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Reporting</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="reporting-overview">Reporting overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set-up-a-reporting-database">Set up a reporting database</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set-up-kpis">Set up KPIs</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="create-a-report">Create a report</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="import-and-export-a-process">Import and export a process</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Process configuration</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="process-configuration-overview">Process configuration overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="environments">Environments</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="configuring-a-process">Configure a process</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="manage-jar-files">Manage JAR files</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="managing-dependencies">Manage dependencies</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Process testing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="process-testing-overview">Process testing overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="configure-a-test-organization">Configure a test organization</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="run-a-process-from-bonita-bpm-studio-for-testing">Run a process from Bonita BPM Studio for testing</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="log-files">Log files</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="build-a-process-for-deployment">Build a process for deployment</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="workspaces-and-repositories">Workspaces and repositories</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Installation</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bonita-bpm-installation-overview">Bonita BPM installation overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bonita-bpm-studio-installation">Bonita BPM Studio installation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basic Bonita BPM Platform installation</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="hardware-and-software-requirements">Hardware and software requirements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tomcat-bundle">Tomcat bundle</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="wildfly-bundle">WildFly bundle</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="deploy-bundle">Deploy bundle</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="BonitaBPM_platform_setup">Platform configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="database-configuration">Database creation and customization to work with Bonita BPM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="first-steps-after-setup">First steps after setup</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="licenses">Licenses</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Advanced Bonita BPM Platform installation</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Security and authentication</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="user-authentication-overview">User authentication overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="active-directory-or-ldap-authentication">Active Directory or LDAP authentication</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="single-sign-on-with-cas">Single sign-on with CAS</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="single-sign-on-with-saml">Single sign-on with SAML</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="enforce-password-policy">Enforce password policy</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="rest-api-authorization">REST API authorization</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="csrf-security">CSRF security</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="enable-cors-in-tomcat-bundle">Enable CORS in Tomcat bundle</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="ssl">SSL</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tenant_admin_credentials">Tenant administrator credentials</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set-log-and-archive-levels">Set log and archive levels</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="configurable-archive">Configurable Archive</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="performance-tuning">Performance tuning</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="performance-troubleshooting">Performance troubleshooting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="use-gzip-compression">Use gzip compression</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="two-main-types-of-deployment">Two main types of deployment</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Bonita BPM in a cluster</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="overview-of-bonita-bpm-in-a-cluster">Overview of Bonita BPM in a cluster</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="install-a-bonita-bpm-cluster">Install a Bonita BPM cluster</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cluster-administration">Cluster administration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="multi-tenancy-and-tenant-configuration">Multi-tenancy and tenant configuration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Platform installation examples</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="ubuntu-openjdk-tomcat-postgresql">Ubuntu + OpenJDK + Tomcat + PostgreSQL</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bonita-as-windows-service">Install Tomcat with Bonita as a service in Windows</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="back-up-bonita-bpm-platform">Back up Bonita BPM Platform</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Migration</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="migration-overview">Migration overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="migrate-from-an-earlier-version-of-bonita-bpm">Migrate from an earlier version of Bonita BPM</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="upgrade-from-community-to-a-subscription-edition">Community to Subscription upgrade</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Bonita BPM Portal Administration</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Bonita BPM Portal interface</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bonita-bpm-portal-interface-overview">Bonita BPM Portal overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="user-task-list">User task list</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="languages">Languages</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="log-in-and-log-out">Log in and log out</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="about">About Bonita BPM Portal</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="mobile-portal">Mobile Portal</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Process maintenance</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="processes">Processes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="cases">Cases</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tasks">Tasks</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="subtasks">Subtasks</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="monitoring">Monitoring</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="pause-and-resume-bpm-services">Pause and resume BPM services</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bdm-management-in-bonita-bpm-portal">BDM Management in Bonita BPM Portal</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="applications">Applications</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Resources</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="resource-management">Resource management</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="pages">Pages</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="forms">Forms</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="layouts">Layouts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="themes">Themes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="api-extensions">REST API extensions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="live-update">Live update</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Organization in Bonita BPM Portal</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="organization-in-bonita-bpm-portal-overview">Organization in Bonita BPM Portal overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Organization maintenance</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="import-export-an-organization">Import/export an organization</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="group">Manage groups</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="role">Manage roles</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Manage users</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="manage-a-user">Manage a user</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="deactivate-a-user">Deactivate a user</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="custom-user-information-in-bonita-bpm-portal">Custom User Information in Bonita BPM Portal</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="analytics">Analytics</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">User profiles</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="profiles-overview">Profiles overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="administrator-rights">Administrator rights</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="process-manager">Process manager</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="custom-profiles">Custom profiles</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="deploying-profiles-with-export-and-import">Deploy profiles with export and import</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Look &amp; Feel</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="managing-look-feel">Manage Look &amp; Feel</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="creating-a-new-look-feel">Create a new Look &amp; Feel</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="search-index">Search keys</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Development</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="software-extensibility">Software extensibility</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Bonita BPM artifacts</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Connectors</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="connectors-overview">Connectors overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="connector-development-toolkit">Connector development toolkit</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="creating-an-actor-filter">Create an actor filter</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="api-glossary">API glossary</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">REST API</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-api-overview">REST API overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="application-api">application API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bdm-api">bdm API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bpm-api">bpm API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="customuserinfo-api">customuserinfo API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="form-api">form API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="identity-api">identity API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="platform-api">platform API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="portal-api">portal API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="system-api">system API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-api-extensions">REST API extensions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="manage-files-using-upload-servlet-and-rest-api">Manage files using upload servlet and REST API</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Engine API</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="engine-api-overview">Engine API overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="create-your-first-project-with-the-engine-apis-and-maven">Create your first project with the Engine APIs and Maven</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="configure-client-of-bonita-bpm-engine">Configure connection to Bonita BPM Engine</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="http://documentation.bonitasoft.com/javadoc/api/$7.5/index.html">Javadoc</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Examples</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manage-a-process">Manage a process</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="handle-a-failed-activity">Handle a failed activity</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manage-an-organization">Manage an organization</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manage-users">Manage users</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="handling-documents">Handle documents</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="create-administration-tools">Create administration tools</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="restore-default-look-feel">Restore the default Look &amp; Feel</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manage-the-platform">Manage the platform</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="using-list-and-search-methods">List and search methods</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="log-in-with-cas">Log in with CAS</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bonita-bpm-portal-urls">Bonita BPM Portal URLs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Bonita BPM Engine architecture</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="engine-architecture-overview">Bonita BPM Engine architecture overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Services</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="event-handlers">Event handlers</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="queriable-logging">Queriable logger</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="technical-logging">Technical logger</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="execution-sequence-states-and-transactions">Execution sequence, states, and transactions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="shared-transactions">Shared transactions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Living application</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="customize-living-application-layout">Customize living application layout</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="logging">Logs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="preloading-the-forms-cache">Preload the forms cache</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="building-community-edition-from-source">Build Bonita BPM Community edition from source files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Continuous integration</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="automating-builds">Automate builds</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set-up-continuous-integration">Set up continuous integration</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Howtos</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uid-modal-tutorial">Create a modal window using CSS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uid-case-overview-tutorial">Create a case overview page using the UI Designer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="optimize-user-tasklist">Create unique task names for the user task list</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="manage-control-in-forms">Control and validate forms in the UI Designer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="list-of-documents">Manage a list of documents</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bo-multiple-refs-tutorial">Manage multiple references in Business Objects</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="custom-authorization-rule-mapping">Map authorization rules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="rta-mail-template">Use the rich textarea widget in a mail template</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="datetimes-management-tutorial">Manage dates and times in BDM and User Interfaces</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Bonita</span>
+    <span class="version">7.5</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Bonita</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="./">7.5</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Bonita ICI</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../bici/latest/">labs</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="./" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="./">Bonita</a></li>
+    <li>Installation</li>
+    <li>Basic Bonita BPM Platform installation</li>
+    <li><a href="wildfly-bundle">WildFly bundle</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/bonitasoft/bonita-doc/edit/7.5_new/modules/ROOT/pages/wildfly-bundle.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">WildFly bundle</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>You will find here steps needed to install and configure a WildFly bundle.</p>
+</div>
+<div class="paragraph">
+<p>The WildFly bundle is a zip archive that contains the Red Hat WildFly Java EE application server packaged with Bonita BPM and <a href="BonitaBPM_platform_setup.md#platform_setup_tool">Bonita platform setup tool</a>.
+The WildFly bundle is a regular zip archive based on the WildFly zip distribution.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_installation_of_the_wildfly_bundle"><a class="anchor" href="#_installation_of_the_wildfly_bundle"></a>Installation of the WildFly bundle</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_download_and_unzip_the_wildfly_bundle"><a class="anchor" href="#_download_and_unzip_the_wildfly_bundle"></a>Download and unzip the WildFly bundle</h3>
+<div class="paragraph">
+<p><a id="download"></a></p>
+</div>
+<div class="sect3">
+<h4 id="_download"><a class="anchor" href="#_download"></a>Download</h4>
+<div class="paragraph">
+<p>For the Community edition:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Go to the <a href="http://www.bonitasoft.com/downloads-v2">Bonitasoft website</a> and get the Bonita BPM Community edition WildFly bundle.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For a Subscription edition:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Go to the <a href="https://customer.bonitasoft.com/download/request">Customer Portal</a> and download the Bonita BPM Subscription edition WildFly bundle.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_unzip"><a class="anchor" href="#_unzip"></a>Unzip</h4>
+<div class="paragraph">
+<p>The folder where you unzip the WildFly bundle is known as <em>`&lt;WILDFLY_HOME&gt;`</em>. We recommend the following locations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Windows: <code>C:\BonitaBPM</code>.</p>
+</li>
+<li>
+<p>Linux: in <code>/opt/BonitaBPM</code>. Make sure that Linux user account used to execute WildFly is the owner of the folders and files.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>WARNING:
+Whatever location you choose, <strong>do not</strong> leave blank spaces in the path to the directory, nor in the folder name.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_content_of_the_wildfly_bundle"><a class="anchor" href="#_content_of_the_wildfly_bundle"></a>Content of the WildFly bundle</h4>
+<div class="paragraph">
+<p>The WildFly bundle is based on a standard WildFly installation with the following additions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>server/bin/standalone.conf</code>: script to configure JVM system properties on Linux systems.</p>
+</li>
+<li>
+<p><code>server/bin/standalone.conf.bat</code>: script to configure JVM system properties on Windows systems.</p>
+</li>
+<li>
+<p><code>server/modules/system/layers/base/sun/jdk/main/module.xml</code>: list of base jdk module necessary for WildFly and Bonita to execute.</p>
+</li>
+<li>
+<p><code>server/request_key_utils</code>: script to generate license request keys (Subscription editions only).</p>
+</li>
+<li>
+<p><code>server/standalone/deployments/bonita-all-in-one-[version].ear</code>: Bonita BPM Portal (web application) and EJB3 API.</p>
+</li>
+<li>
+<p><code>setup/</code>: a tool to manage Bonita BPM Platform configuration, stored in database instead of filesystem. Also ships a tool to centralize all the required WildFly bundle configuration.</p>
+</li>
+<li>
+<p><code>setup/wildfly-templates/standalone.xml</code>: WildFly context configuration for Bonita BPM Portal. It defines data sources used by Bonita BPM Engine.</p>
+</li>
+<li>
+<p><code>start-bonita.bat</code>: script to start the bundle on Windows.</p>
+</li>
+<li>
+<p><code>start-bonita.sh</code>: script to start the bundle on Linux.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>NOTE:
+<strong>Note:</strong> Beginning with version 7.3.0, Bonita BPM Platform configuration, including the license file, is stored in the same database as the Bonita BPM Engine data, namely in the <code>CONFIGURATION</code> table.<br>
+The initialization of this configuration happens during start-bonita.bat (for Windows) or start.bonita.sh (for Linux) execution.<br>
+Once initialized, to update this configuration, use the <a href="BonitaBPM_platform_setup" class="page"><em>Platform setup tool</em></a> embedded in Bonita BPM bundles.<br></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_get_and_install_a_license_subscription_editions_only"><a class="anchor" href="#_get_and_install_a_license_subscription_editions_only"></a>Get and install a license (Subscription editions only)</h3>
+<div class="paragraph">
+<p>First, request a license.
+If this is the first time you generate a license, you need to generate a request key.</p>
+</div>
+<div class="sect3">
+<h4 id="_generate_the_request_key"><a class="anchor" href="#_generate_the_request_key"></a>Generate the request key</h4>
+<div class="paragraph">
+<p>On the server where you installed Bonita BPM Platform:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Go to the request_key_utils folder</p>
+</li>
+<li>
+<p>Run the <code>generateRequestKey.bat</code> script (for Windows) or the <code>generateRequestKey.sh</code> script (for Linux)</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_request_the_new_license"><a class="anchor" href="#_request_the_new_license"></a>Request the new license</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Copy your request key and go to the Customer Portal license request page.</p>
+</li>
+<li>
+<p>Fill in the details in the form, copy the request key in the <em>Request Key</em> field, and submit.<br>
+Note: keep the brackets () in the key; if the key is separated by a line break, remove it and put the key on a single line.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The license file will be sent to you by email.</p>
+</div>
+<div class="paragraph">
+<p><a id="license"></a></p>
+</div>
+<div class="paragraph">
+<p>When you receive your license:
+If this is your first installation, copy the file to the <code>&lt;WILDFLY_HOME&gt;/setup/platform_conf/licenses</code> folder before starting the bundle.
+If this is a license update, use <a href="BonitaBPM_platform_setup.md#update_platform_conf">the <em>Platform setup tool</em></a>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_change_the_default_credentials_optional_recommended_for_production"><a class="anchor" href="#_change_the_default_credentials_optional_recommended_for_production"></a>Change the default credentials (optional, recommended for production)</h3>
+<div class="paragraph">
+<p>As a security precaution, we <strong>strongly recommend</strong> that before you start your application server, you change the default username and password used for the platform administrator and for the default tenant administrator.</p>
+</div>
+<div class="sect3">
+<h4 id="_platform_administrator"><a class="anchor" href="#_platform_administrator"></a>Platform administrator</h4>
+<div class="paragraph">
+<p>The username and password for the platform administrator are defined in the file <a href="BonitaBPM_platform_setup" class="page"><code>&lt;WILDFLY_HOME&gt;/setup/platform_conf/initial/platform_engine/bonita-platform-community-custom.properties</code></a>, by the following properties:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>platformAdminUsername</code> defines the username (default <code>platformAdmin</code>)</p>
+</li>
+<li>
+<p><code>platformAdminPassword</code> defines the password (default <code>platform</code>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This password is used for platform-level administration tasks, such as creating a tenant.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_tenant_administrator"><a class="anchor" href="#_tenant_administrator"></a>Tenant administrator</h4>
+<div class="paragraph">
+<p>Each tenant has an administrator, with a tenant-specific username and password. The tenant administrator is also known as the tenant technical user.</p>
+</div>
+<div class="paragraph">
+<p>When the platform is created, default values for the tenant administrator username and password are defined in the file <a href="BonitaBPM_platform_setup" class="page"><code>&lt;WILDFLY_HOME&gt;/setup/platform_conf/initial/tenant_template_engine/bonita-tenant-community-custom.properties</code></a>, by the following properties:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>userName</code> defines the username (default <code>install</code>)</p>
+</li>
+<li>
+<p><code>userPassword</code> defines the password (default <code>install</code>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When you create a tenant, the tenant administrator is created with the default username and password, unless you specify new values.
+Change these tenant-specific credentials for an existing tenant by updating the <code>userName</code> and <code>userPassword</code> properties in <code>&lt;WILDFLY_HOME&gt;/setup/platform_conf/current/tenants/&lt;TENANT_ID&gt;/tenant_engine/bonita-tenant-community-custom.properties</code>.</p>
+</div>
+<div class="paragraph">
+<p>WARNING:
+For the <strong>default tenant</strong>, the tenant administrator username and password must also be changed in file <a href="BonitaBPM_platform_setup" class="page"><code>&lt;WILDFLY_HOME&gt;/setup/platform_conf/initial/platform_portal/platform-tenant-config.properties</code></a>,
+with exactly the same values that you set in <code>bonita-tenant-community-custom.properties</code> (see above). At platform creation, this file contains the default username and password for the default tenant.<br>
+For further details and a better understanding, please read the section <a href="tenant_admin_credentials" class="page">Tenant administrator credentials</a>.</p>
+</div>
+<div class="paragraph">
+<p><a id="edition_specification"></a></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_specify_the_subscription_edition"><a class="anchor" href="#_specify_the_subscription_edition"></a>Specify the Subscription edition</h3>
+<div class="paragraph">
+<p>For <strong>Performance</strong> Subscription edition, edit <a href="BonitaBPM_platform_setup" class="page"><code>&lt;WILDFLY_HOME&gt;/setup/platform_conf/initial/platform_init_engine/bonita-platform-init-community-custom.properties</code></a> by uncommenting the line and change the value of the <code>activeProfiles</code> key to <code>'community,performance'</code>.</p>
+</div>
+<div class="paragraph">
+<p><a id="configuration"></a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_configure_the_wildfly_bundle"><a class="anchor" href="#_configure_the_wildfly_bundle"></a>Configure the WildFly bundle</h3>
+<div class="paragraph">
+<p>NOTE:
+If you just want to try Bonita BPM Platform with the embedded H2 database (only for development and testing phases of your project), you can skip this paragraph.
+For production, you are recommended to use one of the supported databases, with the following steps.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Make sure <a href="database-configuration.md#database_creation">your databases are created</a> and <a href="database-configuration.md#specific_database_configuration">customized to work with Bonita BPM</a>.</p>
+</li>
+<li>
+<p>Edit file <code>&lt;WILDFLY_HOME&gt;/setup/database.properties</code> and modify the properties to suit your databases (Bonita BPM internal database &amp; Business Data database)</p>
+</li>
+<li>
+<p>If you use <strong>Microsoft SQL Server</strong> or <strong>Oracle</strong> database, copy your <a href="database-configuration.md#proprietary_jdbc_drivers">jdbc driver</a> in <code>&lt;WILDFLY_HOME&gt;/setup/lib</code> folder.</p>
+</li>
+<li>
+<p>Run <code>&lt;WILDFLY_HOME&gt;\start-bonita.bat</code> (Windows system) or <code>&lt;WILDFLY_HOME&gt;/start-bonita.sh (Unix system)</code> to run Bonita BPM WildFly bundle (see <a href="#wildfly_start">WildFly start script</a>)</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>NOTE:
+The <strong>start-bonita</strong> script does the following:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Runs the <strong><code>setup init</code></strong> command:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>initializes the Bonita BPM internal database (the one you have defined in file <code>&lt;WILDFLY_HOME&gt;/setup/database.properties</code>): creates the tables that Bonita BPM uses internally + stores the configuration in database.</p>
+</li>
+<li>
+<p>install the license files (Subscription editions only) in the database.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Runs the <strong><code>setup configure</code></strong> command:
+The Setup Configure command configures the WildFly environment to access the right databases:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>updates the file <code>&lt;WILDFLY_HOME&gt;/setup/wildfly-templates/standalone.xml</code> with the values you set in file <code>database.properties</code> for <strong>Bonita BPM internal database</strong> &amp; <strong>Business Data database</strong></p>
+</li>
+<li>
+<p>creates the file(s) <code>&lt;WILDFLY_HOME&gt;/server/modules/**/main/modules.xml</code> that WildFly needs, according to your database settings</p>
+</li>
+<li>
+<p>copies your database vendor-specific drivers into <code>&lt;WILDFLY_HOME&gt;/server/modules/**/main/</code> folders</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Starts the WildFly bundle</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>For advanced server configuration needs: check out <a href="BonitaBPM_platform_setup.md#run_bundle_configure">Bundle configuration</a> to finely tune your WildFly bundle, using templates used by Bonita BPM.</p>
+</div>
+<div class="paragraph">
+<p><a id="start"></a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_starting_and_shutting_down_wildfly"><a class="anchor" href="#_starting_and_shutting_down_wildfly"></a>Starting and shutting down WildFly</h3>
+<div class="paragraph">
+<p><a id="wildfly_start"></a></p>
+</div>
+<div class="sect3">
+<h4 id="_wildfly_start_script"><a class="anchor" href="#_wildfly_start_script"></a>WildFly start script</h4>
+<div class="paragraph">
+<p>WildFly can be started by executing the following script:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Windows <code>&lt;WILDFLY_HOME&gt;\start-bonita.bat</code></p>
+</li>
+<li>
+<p>Linux <code>&lt;WILDFLY_HOME&gt;/start-bonita.sh</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_wildfly_stop_script"><a class="anchor" href="#_wildfly_stop_script"></a>WildFly stop script</h4>
+<div class="paragraph">
+<p>WildFly can be shut down by executing the following script:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Windows <code>&lt;WILDFLY_HOME&gt;\server\bin\jboss-cli.bat --connect --command=:shutdown</code></p>
+</li>
+<li>
+<p>Linux <code>&lt;WILDFLY_HOME&gt;/server/bin/jboss-cli.sh --connect --command=:shutdown</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can also press Ctrl + C.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_after_installation"><a class="anchor" href="#_after_installation"></a>After installation</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_first_steps_after_installation"><a class="anchor" href="#_first_steps_after_installation"></a>First steps after installation</h3>
+<div class="paragraph">
+<p>Once you have your WildFly bundle up and running, complete these <a href="first-steps-after-setup" class="page">first steps</a> to get Bonita BPM Platform fully operational.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_configuration_update"><a class="anchor" href="#_configuration_update"></a>Configuration update</h3>
+<div class="paragraph">
+<p>To update the configuration after the first run please take a look at the <a href="BonitaBPM_platform_setup.md#update_platform_conf"><em>Platform setup tool</em></a></p>
+</div>
+<div class="paragraph">
+<p>NOTE:
+File <code>database.properties</code> is the only entry point to configure the WildFly environment and the
+<a href="BonitaBPM_platform_setup.md#configure_tool">Bonita BPM Platform configuration</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_license_update"><a class="anchor" href="#_license_update"></a>License update</h3>
+<div class="paragraph">
+<p>To update the licenses after the first run, take a look at the <a href="BonitaBPM_platform_setup.md#update_platform_conf">platform setup tool</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_troubleshooting"><a class="anchor" href="#_troubleshooting"></a>Troubleshooting</h2>
+<div class="sectionbody">
+<hr>
+<div class="paragraph">
+<p><strong>Issue</strong>: When I restart the WildFly bundle, the Bonita BPM application starts and then stops with message <code>WFLYSRV0009: Undeployed "bonita-all-in-one-...</code></p>
+</div>
+<div class="paragraph">
+<p><strong>Potential cause</strong>: There are too many BPM elements to restart.</p>
+</div>
+<div class="paragraph">
+<p><strong>Solution</strong>: Increase the WildFly application deployment timeout in file <code>standalone.xml</code> in folder <code>setup/wildlfy-templates</code>. Look for <code>'&lt;deployment-scanner ... deployment-timeout="600" ...'</code>
+and change it to a higher value (in seconds).</p>
+</div>
+<hr>
+<div class="paragraph">
+<p><strong>Issue</strong>:<br>
+My <strong>Microsoft SQL Server</strong> or <strong>Oracle</strong> database drivers do not seem to be taken into account when I put them in <code>&lt;WILDFLY_HOME&gt;/setup/lib</code> folder.</p>
+</div>
+<div class="paragraph">
+<p><strong>Potential cause</strong>:<br>
+Driver file must respect some naming convention.</p>
+</div>
+<div class="paragraph">
+<p><strong>Solution</strong>:<br>
+For Microsoft SQL Server, rename it so that the name contains at least the word <code>sqlserver</code> or <code>sqljdbc</code> (case insensitive)<br>
+For Oracle, rename it so that the name contains at least the word <code>oracle</code> or <code>ojdbc</code> (case insensitive)</p>
+</div>
+<hr>
+<div class="paragraph">
+<p><strong>Issue</strong>: When I run <code>start-bonita.sh</code> or <code>start-bonita.bat</code>, I get the error message <code>Invalid Java version (1.7) &lt; 1.8. Please set JAVA or JAVA_HOME variable to a JDK / JRE 1.8+</code></p>
+</div>
+<div class="paragraph">
+<p><strong>Cause</strong>: Bonita BPM 7.4+ WildFly bundle requires Java 1.8 to run</p>
+</div>
+<div class="paragraph">
+<p><strong>Solution</strong>: Ensure your running environment has a JDK or JRE 1.8 installed and set either JAVA or JAVA_HOME environment variable to point to it.</p>
+</div>
+<hr>
+<div class="paragraph">
+<p><strong>Issue</strong>: When I start the Wildfly bundle configured to use a <strong>Microsoft SQL Server</strong> database, I get the error message <code>java.lang.NoClassDefFoundError: javax/xml/bind/DatatypeConverter</code></p>
+</div>
+<div class="paragraph">
+<p><strong>Cause</strong>: The WildFly configuration has not been properly updated</p>
+</div>
+<div class="paragraph">
+<p><strong>Solution</strong>: In the <em><WILDFLY_HOME>/server/modules/com/sqlserver/main/module.xml</em> file, add <code><module name="javax.xml.bind.api"></module></code> in the list of dependencies</WILDFLY_HOME></p>
+</div>
+<hr>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.3/dist/cdn/docsearch.min.js"></script>
+<script>
+  docsearch({
+    // Your apiKey and indexName will be given to you once
+    // we create your config
+    apiKey: '8b16fe941025bb59db192dce337bc486',
+    indexName: 'test_BONITA',
+    appId: 'LMVLEZKT54', // Should be only included if you are running DocSearch on your own.
+    // Replace inputSelector with a CSS selector
+    // matching your search input
+    inputSelector: '#search-query',
+    // Set debug to true to inspect the dropdown
+    debug: false,
+    algoliaOptions: {
+      'facetFilters': ["tags:7.5", "tags:bonita"]
+    },
+  });
+</script>
+  </body>
+</html>
