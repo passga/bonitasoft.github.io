@@ -70,8 +70,8 @@
   --color-gray-30-dark: #808080;
   --color-gray-50-dark: #8e8e8e;
   --color-gray-70-dark: #c1c1c1;
-  --color-jet-20-dark: #4a4a4a;
-  --color-jet-30-dark: #424242;
+  --color-jet-20-dark: #d4d4d4;
+  --color-jet-30-dark: #d6d6d6;
   --color-jet-50-dark: #d8d8d8;
   --color-jet-70-dark: #dadada;
   --color-jet-80-dark: #dcdcdc;
@@ -205,7 +205,9 @@
   --nav-height: calc(var(--body-min-height) - var(--toolbar-height));
   --nav-height--desktop: var(--body-min-height);
   --nav-panel-height: calc(var(--nav-height) - var(--drawer-height));
-  --nav-panel-height--desktop: calc(var(--nav-height--desktop) - var(--drawer-height));
+  --nav-panel-height--desktop: calc(
+    var(--nav-height--desktop) - var(--drawer-height)
+  );
   --nav-width: calc(270 / var(--rem-base) * 1rem);
   --toc-top: calc(var(--body-top) + var(--toolbar-height));
   --toc-height: calc(100vh - var(--toc-top) - 2.5rem);
@@ -2229,7 +2231,7 @@ body {
 footer {
   display: block;
   background-color: var(--color-blue-bonita);
-  color: var(--color-white);
+  color: var(--color-focused);
   padding: 5rem;
   padding-bottom: 2rem; }
 
@@ -2278,7 +2280,7 @@ footer .footer-header button {
   margin: 0;
   font-size: 0.7rem;
   background-color: var(--color-red-bonita);
-  color: var(--color-white);
+  color: var(--color-focused);
   font-weight: bold; }
 
 footer .footer-body {
@@ -2326,18 +2328,18 @@ footer .footer-body .footer-footer ul li {
 
 footer .footer-body .social-links ul li a,
 footer .footer-body .footer-footer ul li a {
-  color: var(--color-white);
+  color: var(--color-focused);
   text-decoration: none; }
 
 footer .footer-body .social-links ul li a svg,
 footer .footer-body .footer-footer ul li a svg {
   height: 1.2rem;
   width: 1.2rem;
-  fill: var(--color-white); }
+  fill: var(--color-focused); }
 
 footer .footer-body .social-links .border-right li,
 footer .footer-body .footer-footer .border-right li {
-  border-right: 0.1rem solid var(--color-white);
+  border-right: 0.1rem solid var(--color-focused);
   line-height: 0.2rem; }
 
 footer .footer-body .social-links .border-right li:last-child,
@@ -2350,7 +2352,7 @@ footer .footer-body .footer-footer {
 
 footer .footer-body .footer-footer a {
   text-decoration: none;
-  color: var(--color-white); }
+  color: var(--color-focused); }
 
 footer .footer-body .footer-footer .footer-bonita-logo {
   background: url(../img/bonitasoft-logo.svg) no-repeat;
