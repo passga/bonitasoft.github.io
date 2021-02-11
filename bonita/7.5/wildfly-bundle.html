@@ -48,13 +48,16 @@
       </div>
     </div>
 
+    <div class="theme-switch-wrapper">
+      <input type="checkbox" name="" onclick="toggleDarkThemeMode(this)">
+    </div>
+
     <div class="navbar-item search-item hide-for-print">
       <input type="text" placeholder="Search Docs" class="search-bar query ds-input" id="search-query">
       <i class="search-icon" aria-hidden="true"></i>
     </div>
   </nav>
-</header>
-<div class="body">
+</header><div class="body">
 <div class="nav-container" data-component="bonita" data-version="7.5">
   <aside class="nav">
     <div class="panels">
@@ -1013,9 +1016,14 @@
 </div>
 <main class="article">
 <div class="toolbar" role="navigation">
-<button class="nav-toggle"></button>
-  <a href="./" class="home-link"></a>
-<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <button class="nav-toggle"></button>
+  <a href="./" class="home-link">
+    <svg height="30" viewBox="0 0 48 48" width="30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 40V28h8v12h10V24h6L24 6 4 24h6v16z" />
+      <path d="M0 0h48v48H0z" fill="none" />
+    </svg>
+  </a>
+  <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="./">Bonita</a></li>
     <li>Installation</li>
@@ -1023,7 +1031,7 @@
     <li><a href="wildfly-bundle">WildFly bundle</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/bonitasoft/bonita-doc/edit/7.5_new/modules/ROOT/pages/wildfly-bundle.adoc">Edit this Page</a></div>
+    <div class="edit-this-page"><a href="https://github.com/bonitasoft/bonita-doc/edit/7.5_new/modules/ROOT/pages/wildfly-bundle.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <article class="doc">
@@ -1520,19 +1528,19 @@ For Oracle, rename it so that the name contains at least the word <code>oracle</
     </div>
     <div class="social-links">
       <ul class="border-right">
-        <li><a href="#">Download</a></li>
-        <li><a href="#">Events</a></li>
-        <li><a href="#">Community</a></li>
-        <li><a href="#">Site map</a></li>
-        <li><a href="#">Terms of use</a></li>
+        <li><a href="https://www.bonitasoft.com/downloads">Download</a></li>
+        <li><a href="https://www.bonitasoft.com/events">Events</a></li>
+        <li><a href="https://community.bonitasoft.com/">Community</a></li>
+        <li><a href="https://www.bonitasoft.com/sitemap">Site map</a></li>
+        <li><a href="https://www.bonitasoft.com/bonitasoft-website-legal-terms-use">Terms of use</a></li>
       </ul>
     </div>
     <div class="footer-footer">
       <p>
         &copy; Bonitasoft, S.A. All rights reserved.
         <span>
-          <a href="#">Privacy,</a>
-          <a href="#">Legal notices</a>
+          <a href="https://www.bonitasoft.com/privacy">Privacy,</a>
+          <a href="https://www.bonitasoft.com/legal-notices">Legal notices</a>
         </span>
       </p>
       <a class="footer-bonita-logo" href="https://bonitasoft.github.io"></a>

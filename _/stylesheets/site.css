@@ -3,59 +3,108 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  src: local("Roboto Regular"), local("Roboto-Regular"), url(~typeface-roboto/files/roboto-latin-400.woff2) format("woff2"), url(~typeface-roboto/files/roboto-latin-400.woff) format("woff"); }
+  src: local("Roboto Regular"), local("Roboto-Regular"), url(../font/roboto-latin-400.woff2) format("woff2"), url(../font/roboto-latin-400.woff) format("woff"); }
 
 @font-face {
   font-family: "Roboto";
   font-style: italic;
   font-weight: 400;
-  src: local("Roboto Italic"), local("Roboto-Italic"), url(~typeface-roboto/files/roboto-latin-400italic.woff2) format("woff2"), url(~typeface-roboto/files/roboto-latin-400italic.woff) format("woff"); }
+  src: local("Roboto Italic"), local("Roboto-Italic"), url(../font/roboto-latin-400italic.woff2) format("woff2"), url(../font/roboto-latin-400italic.woff) format("woff"); }
 
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
-  src: local("Roboto Medium"), local("Roboto-Medium"), url(~typeface-roboto/files/roboto-latin-500.woff2) format("woff2"), url(~typeface-roboto/files/roboto-latin-500.woff) format("woff"); }
+  src: local("Roboto Medium"), local("Roboto-Medium"), url(../font/roboto-latin-500.woff2) format("woff2"), url(../font/roboto-latin-500.woff) format("woff"); }
 
 @font-face {
   font-family: "Roboto";
   font-style: italic;
   font-weight: 500;
-  src: local("Roboto Medium Italic"), local("Roboto-MediumItalic"), url(~typeface-roboto/files/roboto-latin-500italic.woff2) format("woff2"), url(~typeface-roboto/files/roboto-latin-500italic.woff) format("woff"); }
+  src: local("Roboto Medium Italic"), local("Roboto-MediumItalic"), url(../font/roboto-latin-500italic.woff2) format("woff2"), url(../font/roboto-latin-500italic.woff) format("woff"); }
 
 @font-face {
   font-family: "Roboto Mono";
   font-style: normal;
   font-weight: 400;
-  src: local("Roboto Mono"), local("RobotoMono-Regular"), url(~typeface-roboto-mono/files/roboto-mono-latin-400.woff2) format("woff2"), url(~typeface-roboto-mono/files/roboto-mono-latin-400.woff) format("woff"); }
+  src: local("Roboto Mono"), local("RobotoMono-Regular"), url(../font/roboto-mono-latin-400.woff2) format("woff2"), url(../font/roboto-mono-latin-400.woff) format("woff"); }
 
 @font-face {
   font-family: "Roboto Mono";
   font-style: normal;
   font-weight: 500;
-  src: local("Roboto Mono Medium"), local("RobotoMono-Medium"), url(~typeface-roboto-mono/files/roboto-mono-latin-500.woff2) format("woff2"), url(~typeface-roboto-mono/files/roboto-mono-latin-500.woff) format("woff"); }
+  src: local("Roboto Mono Medium"), local("RobotoMono-Medium"), url(../font/roboto-mono-latin-500.woff2) format("woff2"), url(../font/roboto-mono-latin-500.woff) format("woff"); }
 
 :root {
-  --color-white: #fff;
-  --color-text-light: #556;
-  --color-smoke-10: #fefefe;
-  --color-smoke-30: #fafafa;
-  --color-smoke-50: #f5f5f5;
-  --color-smoke-70: #f0f0f0;
-  --color-smoke-90: #e1e1e1;
-  --color-gray-10: #c1c1c1;
-  --color-gray-30: #8e8e8e;
-  --color-gray-50: #808080;
-  --color-gray-70: #5d5d5d;
-  --color-jet-20: #4a4a4a;
-  --color-jet-30: #424242;
-  --color-jet-50: #333;
-  --color-jet-70: #222;
-  --color-jet-80: #191919;
-  --color-black: #000;
-  --color-blue-bonita: #083355;
-  --color-red-bonita: #e22936;
-  --color-unfocused: #ffffff85;
+  --color-white-light: #fff;
+  --color-text-light-light: #556;
+  --color-smoke-10-light: #fefefe;
+  --color-smoke-30-light: #fafafa;
+  --color-smoke-50-light: #f5f5f5;
+  --color-smoke-70-light: #f0f0f0;
+  --color-smoke-90-light: #e1e1e1;
+  --color-gray-10-light: #c1c1c1;
+  --color-gray-30-light: #8e8e8e;
+  --color-gray-50-light: #808080;
+  --color-gray-70-light: #5d5d5d;
+  --color-jet-20-light: #4a4a4a;
+  --color-jet-30-light: #424242;
+  --color-jet-50-light: #333;
+  --color-jet-70-light: #222;
+  --color-jet-80-light: #191919;
+  --color-black-light: #000;
+  --color-blue-bonita-light: #083355;
+  --color-red-bonita-light: #e22936;
+  --color-unfocused-light: #ffffff85;
+  --color-focused-light: #fff;
+  --color-link-light: #1565c0;
+  --color-link-hover-light: #104d92;
+  --color-white-dark: #1a202d;
+  --color-text-light-dark: #556;
+  --color-smoke-10-dark: #141a28;
+  --color-smoke-30-dark: #192030;
+  --color-smoke-50-dark: #212a3f;
+  --color-smoke-70-dark: #27314a;
+  --color-smoke-90-dark: #2b3652;
+  --color-gray-10-dark: #5d5d5d;
+  --color-gray-30-dark: #808080;
+  --color-gray-50-dark: #8e8e8e;
+  --color-gray-70-dark: #c1c1c1;
+  --color-jet-20-dark: #4a4a4a;
+  --color-jet-30-dark: #424242;
+  --color-jet-50-dark: #d8d8d8;
+  --color-jet-70-dark: #dadada;
+  --color-jet-80-dark: #dcdcdc;
+  --color-black-dark: #fff;
+  --color-blue-bonita-dark: #202635;
+  --color-red-bonita-dark: #e22936;
+  --color-unfocused-dark: #ffffff85;
+  --color-focused-dark: #fff;
+  --color-link-dark: #e0cb2e;
+  --color-link-hover-dark: #f9e236;
+  --color-white: var(--color-white-light);
+  --color-text-light: var(--color-text-light-light);
+  --color-smoke-10: var(--color-smoke-10-light);
+  --color-smoke-30: var(--color-smoke-30-light);
+  --color-smoke-50: var(--color-smoke-50-light);
+  --color-smoke-70: var(--color-smoke-70-light);
+  --color-smoke-90: var(--color-smoke-90-light);
+  --color-gray-10: var(--color-gray-10-light);
+  --color-gray-30: var(--color-gray-30-light);
+  --color-gray-50: var(--color-gray-50-light);
+  --color-gray-70: var(--color-gray-70-light);
+  --color-jet-20: var(--color-jet-20-light);
+  --color-jet-30: var(--color-jet-30-light);
+  --color-jet-50: var(--color-jet-50-light);
+  --color-jet-70: var(--color-jet-70-light);
+  --color-jet-80: var(--color-jet-80-light);
+  --color-black: var(--color-black-light);
+  --color-blue-bonita: var(--color-blue-bonita-light);
+  --color-red-bonita: var(--color-red-bonita-light);
+  --color-unfocused: var(--color-unfocused-light);
+  --color-focused: var(--color-focused-light);
+  --color-link: var(--link-color-light);
+  --color-link-hover: var(--link-color-hover-light);
   --rem-base: 18;
   --body-font-size: 1.0625em;
   --body-font-size--desktop: 1.125em;
@@ -73,6 +122,7 @@
   --navbar-background: var(--color-blue-bonita);
   --navbar-font-color: var(--color-white);
   --navbar-unfocused-font-color: var(--color-unfocused);
+  --navbar-focused-font-color: var(--color-focused);
   --navbar_hover-background: var(--color-black);
   --navbar-button-background: var(--color-white);
   --navbar-button-border-color: var(--panel-border-color);
@@ -118,13 +168,13 @@
   --heading-font-weight: normal;
   --alt-heading-font-weight: var(--body-font-weight-bold);
   --section-divider-color: var(--panel-border-color);
-  --link-font-color: #1565c0;
-  --link_hover-font-color: #104d92;
+  --link-font-color: var(--color-link);
+  --link_hover-font-color: var(--color-link-hover);
   --link_unresolved-font-color: var(--important-color);
   --abstract-background: var(--color-smoke-70);
   --abstract-font-color: var(--color-jet-20);
   --abstract-border-color: var(--panel-border-color);
-  --admonition-background: var(--panel-background);
+  --admonition-background: var(--color-smoke-70);
   --admonition-label-font-weight: var(--body-font-weight-bold);
   --caption-font-color: var(--color-gray-70);
   --caption-font-weight: var(--body-font-weight-bold);
@@ -155,9 +205,7 @@
   --nav-height: calc(var(--body-min-height) - var(--toolbar-height));
   --nav-height--desktop: var(--body-min-height);
   --nav-panel-height: calc(var(--nav-height) - var(--drawer-height));
-  --nav-panel-height--desktop: calc(
-    var(--nav-height--desktop) - var(--drawer-height)
-  );
+  --nav-panel-height--desktop: calc(var(--nav-height--desktop) - var(--drawer-height));
   --nav-width: calc(270 / var(--rem-base) * 1rem);
   --toc-top: calc(var(--body-top) + var(--toolbar-height));
   --toc-height: calc(100vh - var(--toc-top) - 2.5rem);
@@ -526,6 +574,56 @@ html.is-clipped--nav {
   .nav-panel-menu {
     height: var(--nav-panel-height--desktop); } }
 
+/* Dark theme */
+.theme-switch-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding: 0.5rem; }
+
+input[type=checkbox] {
+  position: relative;
+  width: 2.5rem;
+  height: 1rem;
+  -webkit-appearance: none;
+  background: var(--color-white);
+  outline: none;
+  border-radius: 2rem; }
+
+input:checked[type=checkbox] {
+  background: var(--navbar-unfocused-font-color); }
+
+input[type=checkbox]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1rem;
+  height: 1rem;
+  background: var(--navbar-unfocused-font-color);
+  border-radius: 50%;
+  -webkit-transform: scale(0.98, 0.96);
+  transform: scale(0.98, 0.96);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border: 0.15rem solid var(--color-blue-bonita); }
+
+input:checked[type=checkbox]::before {
+  left: 1.5rem; }
+
+@media screen and (max-width: 767px) {
+  input[type=checkbox] {
+    border: 0.1rem solid var(--color-blue-bonita); }
+  input[type=checkbox]::before {
+    top: -0.1rem;
+    left: -0.1rem; } }
+
 @media screen and (max-width: 1023px) {
   aside.toc.sidebar {
     display: none; } }
@@ -594,18 +692,12 @@ html.is-clipped--nav {
   background-size: 41.5%; }
 
 .home-link {
-  background: url(../img/home-o.svg) no-repeat 50% 45%;
-  background-size: 50%;
   display: block;
-  height: 2.5rem;
   padding: 0;
-  width: 2.5rem; }
+  fill: var(--color-jet-50); }
 
 .home-link:hover {
-  background-image: url(../img/home.svg); }
-
-.home-link.is-current {
-  background-image: url(../img/home.svg); }
+  fill: var(--color-black); }
 
 .edit-this-page {
   display: none;
@@ -1718,7 +1810,7 @@ body {
   opacity: 1; }
 
 /*******************
-****** Mavbar ******
+****** Navbar ******
 ********************/
 .navbar {
   background: var(--navbar-background);
@@ -1838,9 +1930,9 @@ body {
   font-family: inherit;
   font-size: 0.85rem;
   background-color: transparent;
-  color: var(--navbar-font-color);
+  color: var(--color-focused);
   border: none;
-  border-bottom: 1px solid var(--navbar-font-color);
+  border-bottom: 1px solid var(--color-focused);
   border-radius: 0;
   outline: none;
   -webkit-box-shadow: none;
@@ -1897,7 +1989,7 @@ body {
   .navbar-menu > .navbar-item:hover {
     border-top: 4px solid var(--navbar-unfocused-font-color); }
   .navbar-menu > .navbar-item a:hover {
-    color: var(--color-white); }
+    color: var(--navbar-focused-font-color); }
   .navbar-menu .navbar-link {
     color: var(--navbar-unfocused-font-color); }
   .navbar-menu .navbar-link::after {
