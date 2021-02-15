@@ -6,11 +6,8 @@
     <title>Messaging :: Bonita Documentation</title>
     <link rel="canonical" href="https://bonitasoft.github.io/bonita/7.5/messaging">
     <meta name="generator" content="Antora 2.3.4">
-    <link rel="stylesheet" href="../../_/stylesheets/site.css">
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.3/dist/cdn/docsearch.min.css"
-    />
+<link rel="stylesheet" href="../../_/stylesheets/site.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
   </head>
   <body class="article">
 <header class="header">
@@ -29,7 +26,7 @@
 
     <div class="search-content">
       <fieldset>
-        <input type="text" id="search-bar" placeholder="Search..." />
+        <input type="text" id="search-query-mobile" placeholder="Search..." />
         <div class="icons-container">
           <div id="search-icon"></div>
         </div>
@@ -57,7 +54,8 @@
       <i class="search-icon" aria-hidden="true"></i>
     </div>
   </nav>
-</header><div class="body">
+</header>
+<div class="body">
 <div class="nav-container" data-component="bonita" data-version="7.5">
   <aside class="nav">
     <div class="panels">
@@ -1313,22 +1311,22 @@ The expression must return a value of the required type. To specify the message 
 </footer><script src="../../_/js/site.js"></script>
 <script async src="../../_/js/vendor/highlight.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.3/dist/cdn/docsearch.min.js"></script>
-<script>
-  docsearch({
-    // Your apiKey and indexName will be given to you once
-    // we create your config
-    apiKey: '8b16fe941025bb59db192dce337bc486',
-    indexName: 'test_BONITA',
-    appId: 'LMVLEZKT54', // Should be only included if you are running DocSearch on your own.
-    // Replace inputSelector with a CSS selector
-    // matching your search input
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script type="text/javascript"> docsearch({
+    apiKey: '16267f96d135c47df8454efd5b448c9a',
+    indexName: 'bonitasoft',
     inputSelector: '#search-query',
-    // Set debug to true to inspect the dropdown
-    debug: false,
-    algoliaOptions: {
+    debug: false // Set debug to true if you want to inspect the dropdown
+  });
+</script>
+<script type="text/javascript"> docsearch({
+    apiKey: '16267f96d135c47df8454efd5b448c9a',
+    indexName: 'bonitasoft',
+    inputSelector: '#search-query-mobile',
+    debug: false // Set debug to true if you want to inspect the dropdown
+    /*algoliaOptions: {
       'facetFilters': ["tags:7.5", "tags:bonita"]
-    },
+    },*/
   });
 </script>
   </body>
