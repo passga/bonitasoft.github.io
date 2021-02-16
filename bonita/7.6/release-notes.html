@@ -1,0 +1,2060 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Release notes :: Bonita Documentation</title>
+    <link rel="canonical" href="https://bonitasoft.github.io/bonita/7.6/release-notes">
+    <meta name="generator" content="Antora 2.3.4">
+<link rel="stylesheet" href="../../_/stylesheets/site.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="navbar-item">
+        <a class="bonita-logo" href="https://bonitasoft.github.io"></a>
+      </div>
+
+    </div>
+
+    <div class="search-content">
+      <fieldset>
+        <input type="text" id="search-query-mobile" placeholder="Search..." />
+        <div class="icons-container">
+          <div id="search-icon"></div>
+        </div>
+      </fieldset>
+    </div>
+
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-item is-hoverable">
+        <a href="https://community.bonitasoft.com/" class="navbar-link">Community</a>
+      </div>
+      <div class="navbar-item is-hoverable">
+        <a class="navbar-link" href="/bonita/7.6/">Bonita</a>
+      </div>
+      <div class="navbar-item is-hoverable">
+        <a class="navbar-link" href="/bici/latest/">Bonita ICI</a>
+      </div>
+    </div>
+
+    <div class="theme-switch-wrapper">
+      <input type="checkbox" name="" onclick="toggleDarkThemeMode(this)">
+    </div>
+
+    <div class="navbar-item search-item hide-for-print">
+      <input type="text" placeholder="Search Docs" class="search-bar query ds-input" id="search-query">
+      <i class="search-icon" aria-hidden="true"></i>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="bonita" data-version="7.6">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="./">Bonita</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="release-notes">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="migration-tool">Migration tool change log</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_application-and-process-design.adoc">Application and Process Design</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bonita-bpm-overview">Bonita overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_application-and-process-design-overview.adoc">Application and process design overview</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="getting-started-tutorial">Getting started tutorial</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="key-concepts">Key concepts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="comparison-of-7-x-and-6-x">Comparison of 7.x and 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lifecycle-and-profiles">Lifecycle and profiles</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="design-methodology">Design methodology</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bonita-bpm-studio-preferences">Bonita Studio preferences</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bonita-bpm-studio-hints-and-tips">Bonita Studio hints and tips</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_organization.adoc">Organization</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="organization-overview">Organization overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="approaches-to-managing-organizations-and-actor-mapping">Approaches to managing organizations and actor mapping</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="organization-management-in-bonita-bpm-studio">Organization management in Bonita Studio</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="custom-user-information-in-bonita-bpm-studio">Custom User Information in Bonita Studio</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="ldap-synchronizer">LDAP synchronizer</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_profiles.adoc">Profiles</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="profiles-overview">Profiles overview</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="profileCreation">Profiles editor</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_process-modeling.adoc">Process modeling</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_diagrams.adoc">Diagrams</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="diagram-overview">Diagram overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="pools-and-lanes">Pools and lanes</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="diagram-tasks">Tasks</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="gateways">Gateways</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="transitions">Transitions</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="events">Events</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="called-processes">Called processes</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="event-subprocesses">Event subprocesses</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="text-annotations">Text annotations</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="migrate-a-process-from-bonita-open-solution-5-x">Migrate a process from Bonita Open Solution 5.x</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="naming-conventions">Naming conventions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="generate-process-documentation">Generate process documentation</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="refactoring">Refactoring</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="actors">Actors</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="actor-filtering">Actor filters</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="iteration">Iteration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_data.adoc">Data</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="data-handling-overview">Data handling overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="define-and-deploy-the-bdm">Define and deploy the BDM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="specify-data-in-a-process-definition">Specify data in a process definition</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="parameters">Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="contracts-and-contexts">Contracts and contexts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="documents">Documents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="create-a-complex-data-type">Complex data types</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="define-a-search-index">Search keys</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="expressions-and-scripts">Expressions and scripts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="operations">Operations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_page-and-form-development.adoc">Page and form development</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="page-and-form-development-overview">Page and form development overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_using-the-ui-designer.adoc">UI Designer</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="ui-designer-overview">UI Designer overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="create-or-modify-a-page">Create or modify UI artifacts</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="widgets">Widgets</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="widget-properties">Widget properties</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_widget-use-examples.adoc">Widget use examples</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="repeat-a-container-for-a-collection-of-data">Repeat a container for a collection of data</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="fragments">Fragments</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="custom-widgets">Custom widgets</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="variables">Variables</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="appearance">Appearance</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="assets">Assets</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="multi-language-pages">Multi-language pages</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="migrate-a-form-from-6-x">Migrate a form from 6.x</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="6-x-legacy-forms">6.x legacy forms</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="cache-configuration-and-policy">Cache configuration and policy</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="applicationCreation">Application descriptor</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_connectivity.adoc">Connectivity</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="connectivity-overview">Connectivity overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="alfresco">Alfresco</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="cmis">CMIS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_database.adoc">Database</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="list-of-database-connectors">List of database connectors</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="database-connector-configuration">Database connector configuration</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="graphical-query-builder">Graphical query builder</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="initialize-a-variable-from-a-database-without-scripting-or-java-code">Initialize a variable from a database without scripting or Java code</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="insert-data-in-a-docx-odt-template">Insert data in a .docx/.odt template</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="google-calendar">Google Calendar</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="jasper-5">Jasper</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="ldap">LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="messaging">Messaging</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="generate-pdf-from-an-office-document">Generate PDF from an Office document</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="salesforce">Salesforce</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="sap-jco-2">SAP JCo 2</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="sap-jco-3">SAP JCo 3</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="script">Script</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="twitter">Twitter</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_web-service.adoc">Web service</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="web-service-connector-overview">Web service connector overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="#web-service-tutorial.adoc">Web service connector tutorial</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_reporting.adoc">Reporting</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="reporting-overview">Reporting overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set-up-a-reporting-database">Set up a reporting database</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set-up-kpis">Set up KPIs</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="create-a-report">Create a report</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="import-and-export-a-process">Import and export a process</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_process-configuration.adoc">Process configuration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="process-configuration-overview">Process configuration overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="environments">Environments</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="configuring-a-process">Configure a process</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="manage-jar-files">Manage JAR files</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="managing-dependencies">Manage dependencies</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_process-testing.adoc">Process testing</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="process-testing-overview">Process testing overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="configure-a-test-organization">Configure a test organization</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="run-a-process-from-bonita-bpm-studio-for-testing">Run a process from Bonita Studio for testing</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="log-files">Log files</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="build-a-process-for-deployment">Build a process for deployment</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="workspaces-and-repositories">Workspaces and repositories</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_installation.adoc">Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bonita-bpm-installation-overview">Bonita installation overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bonita-bpm-studio-installation">Bonita Studio installation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_basic-bonita-platform-installation.adoc">Basic Bonita Platform installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="hardware-and-software-requirements">Hardware and software requirements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tomcat-bundle">Tomcat bundle</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="wildfly-bundle">WildFly bundle</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="deploy-bundle">Deploy bundle</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="BonitaBPM_platform_setup">Platform configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="database-configuration">Database creation and customization to work with Bonita</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="first-steps-after-setup">First steps after setup</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="licenses">Licenses</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_advanced-bonita-platform-installation.adoc">Advanced Bonita Platform installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_security-and-authentication.adoc">Security and authentication</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="user-authentication-overview">User authentication overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="active-directory-or-ldap-authentication">Active Directory or LDAP authentication</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="single-sign-on-with-cas">Single sign-on with CAS</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="single-sign-on-with-saml">Single sign-on with SAML</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="enforce-password-policy">Enforce password policy</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="rest-api-authorization">REST API authorization</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="csrf-security">CSRF security</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="enable-cors-in-tomcat-bundle">Enable CORS in Tomcat bundle</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="ssl">SSL</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tenant_admin_credentials">Tenant administrator credentials</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set-log-and-archive-levels">Set log and archive levels</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="configurable-archive">Configurable Archive</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="performance-tuning">Performance tuning</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="performance-troubleshooting">Performance troubleshooting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="use-gzip-compression">Use gzip compression</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="two-main-types-of-deployment">Two main types of deployment</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_bonita-in-a-cluster.adoc">Bonita in a cluster</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="overview-of-bonita-bpm-in-a-cluster">Overview of Bonita in a cluster</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="install-a-bonita-bpm-cluster">Install a Bonita cluster</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cluster-administration">Cluster administration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="multi-tenancy-and-tenant-configuration">Multi-tenancy and tenant configuration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_platform-installation-examples.adoc">Platform installation examples</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="ubuntu-openjdk-tomcat-postgresql">Ubuntu + OpenJDK + Tomcat + PostgreSQL</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bonita-as-windows-service">Install Tomcat with Bonita as a service in Windows</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="back-up-bonita-bpm-platform">Back up Bonita Platform</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_migration.adoc">Migration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="migration-overview">Migration overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="migrate-from-an-earlier-version-of-bonita-bpm">Migrate from an earlier version of Bonita</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="upgrade-from-community-to-a-subscription-edition">Community to Subscription upgrade</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_bonita-portal-administration.adoc">Bonita Portal Administration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_bonita-portal-interface.adoc">Bonita Portal interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bonita-bpm-portal-interface-overview">Bonita Portal overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="user-task-list">User task list</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="languages">Languages</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="log-in-and-log-out">Log in and log out</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="about">About Bonita Portal</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="mobile-portal">Mobile Portal</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_process-maintenance.adoc">Process maintenance</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="processes">Processes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="cases">Cases</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tasks">Tasks</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="subtasks">Subtasks</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="monitoring">Monitoring</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="pause-and-resume-bpm-services">Pause and resume services</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bdm-management-in-bonita-bpm-portal">BDM Management in Bonita Portal</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="applications">Applications</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_resources.adoc">Resources</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="resource-management">Resource management</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="pages">Pages</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="forms">Forms</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="layouts">Layouts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="themes">Themes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="api-extensions">REST API extensions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="live-update">Live update</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_organization-in-bonita-portal.adoc">Organization in Bonita Portal</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="organization-in-bonita-bpm-portal-overview">Organization in Bonita Portal overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_organization-maintenance.adoc">Organization maintenance</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="import-export-an-organization">Import/export an organization</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="group">Manage groups</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="role">Manage roles</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_user.adoc">Manage users</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="manage-a-user">Manage a user</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="deactivate-a-user">Deactivate a user</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="custom-user-information-in-bonita-bpm-portal">Custom User Information in Bonita Portal</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="analytics">Analytics</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_user-profiles.adoc">User profiles</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="administrator-rights">Administrator rights</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="process-manager">Process manager</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="custom-profiles">Custom profiles</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="deploying-profiles-with-export-and-import">Deploy profiles with export and import</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_look-feel.adoc">Look &amp; Feel</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="managing-look-feel">Manage Look &amp; Feel</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="creating-a-new-look-feel">Create a new Look &amp; Feel</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="search-index">Search keys</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="maintenance-operation">Bonita Platform Maintenance Operations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_development.adoc">Development</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="software-extensibility">Software extensibility</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_bonita-artifacts.adoc">Bonita artifacts</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_connectors.adoc">Connectors</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="connectors-overview">Connectors overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="connector-development-toolkit">Connector development toolkit</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="creating-an-actor-filter">Create an actor filter</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="api-glossary">API glossary</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_rest-api.adoc">REST API</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-api-overview">REST API overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-api-authentication">REST Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="application-api">application API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bdm-api">bdm API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bpm-api">bpm API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="customuserinfo-api">customuserinfo API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="form-api">form API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="identity-api">identity API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="platform-api">platform API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="portal-api">portal API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="system-api">system API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-api-extensions">REST API extensions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="manage-files-using-upload-servlet-and-rest-api">Manage files using upload servlet and REST API</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_engine-api.adoc">Engine API</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="engine-api-overview">Engine API overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="create-your-first-project-with-the-engine-apis-and-maven">Create your first project with the Engine APIs and Maven</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="configure-client-of-bonita-bpm-engine">Configure connection to Bonita Engine</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="http://documentation.bonitasoft.com/javadoc/api/$7.6/index.html">Javadoc</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_examples.adoc">Examples</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manage-a-process">Manage a process</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="handle-a-failed-activity">Handle a failed activity</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manage-an-organization">Manage an organization</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manage-users">Manage users</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="handling-documents">Handle documents</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="create-administration-tools">Create administration tools</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="restore-default-look-feel">Restore the default Look &amp; Feel</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manage-the-platform">Manage the platform</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="using-list-and-search-methods">List and search methods</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="log-in-with-cas">Log in with CAS</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bonita-bpm-portal-urls">Bonita Portal URLs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_engine-architecture.adoc">Bonita Engine architecture</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="engine-architecture-overview">Bonita Engine architecture overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_services.adoc">Services</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="event-handlers">Event handlers</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="queriable-logging">Queriable logger</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="execution-sequence-states-and-transactions">BPM process / task execution sequence</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_living-application.adoc">Living application</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="customize-living-application-layout">Customize living application layout</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="logging">Logs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="preloading-the-forms-cache">Preload the forms cache</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="building-community-edition-from-source">Build Bonita Community edition from source files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_continuous-integration.adoc">Continuous integration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="automating-builds">Automate builds</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set-up-continuous-integration">Set up continuous integration</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_howtos.adoc">Howtos</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uid-modal-tutorial">Create a modal window using CSS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uid-case-overview-tutorial">Create a case overview page using the UI Designer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="optimize-user-tasklist">Create unique task names for the user task list</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="manage-control-in-forms">Control and validate forms in the UI Designer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="list-of-documents">Manage a list of documents</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bo-multiple-refs-tutorial">Manage multiple references in Business Objects</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="custom-authorization-rule-mapping">Map authorization rules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="rta-mail-template">Use the rich textarea widget in a mail template</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="datetimes-management-tutorial">Manage dates and times in BDM and User Interfaces</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bdm-in-rest-api">Manage BDM in custom Rest APIs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Bonita</span>
+    <span class="version">7.6</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Bonita</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="./">7.6</a>
+        </li>
+        <li class="version">
+          <a href="../7.5/">7.5</a>
+        </li>
+        <li class="version">
+          <a href="../7.4/">7.4</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Bonita ICI</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../bici/latest/">labs</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+  <button class="nav-toggle"></button>
+  <a href="./" class="home-link">
+    <svg height="30" viewBox="0 0 48 48" width="30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 40V28h8v12h10V24h6L24 6 4 24h6v16z" />
+      <path d="M0 0h48v48H0z" fill="none" />
+    </svg>
+  </a>
+  <nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="./">Bonita</a></li>
+    <li><a href="release-notes">Release notes</a></li>
+  </ul>
+</nav>
+  <div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">7.6</button>
+  <div class="version-menu">
+    <a class="version is-current" href="release-notes">7.6</a>
+    <a class="version" href="../7.5/release-notes">7.5</a>
+    <a class="version" href="../7.4/release-notes">7.4</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/bonitasoft/bonita-doc/edit/7.6_asciidoctor/modules/ROOT/pages/release-notes.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Release notes</h1>
+<div class="sect1">
+<h2 id="_bonita_bpm_becomes_bonita"><a class="anchor" href="#_bonita_bpm_becomes_bonita"></a>Bonita BPM becomes Bonita</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Bonita&#8217;s mission is to provide a platform allowing our customers to create highly tailored digital user experiences for their customers and employees. This is the reason why, while staying strongly process-based, the scope of the platform opens, and so is its name.
+Simply Bonita.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_new_values_added"><a class="anchor" href="#_new_values_added"></a>New values added</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="living-application-development-and-deployment"><a class="anchor" href="#living-application-development-and-deployment"></a>Industrialization of Living Applications in Bonita Studio: Profiles</h3>
+<div class="paragraph">
+<p>Our goal is to provide you with as few deployment artifacts as possible when creating applications.<br>
+To achieve this, we need all application resources to be available in the Studio / UI Designer development suite.<br>
+After application descriptors, <a href="profileCreation" class="page">profiles</a> are now available in Bonita Studio.<br>
+In Teamwork editions, you can edit the default profiles mapping with organization entities.<br>
+In Efficiency and Performance editions, you can also create custom profiles, map them to the organization, and create their Bonita Portal menus if needed.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_process_display_name"><a class="anchor" href="#_process_display_name"></a>Process display name</h3>
+<div class="paragraph">
+<p>It is now possible to add a display name for a process, so the development team can still use the technical "name" for a Pool in Bonita Studio and provide a readable name for users in Bonita Portal. If not set, the technical name is used.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_saml_logout"><a class="anchor" href="#_saml_logout"></a>SAML logout</h3>
+<div class="paragraph">
+<p><a href="single-sign-on-with-saml" class="page">SAML logout</a> has been implemented, so that a user logging out of Bonita is also loggued out of all applications managed by the compagny Single-Sign-On system.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_new_api_method_to_protect_task_assignation"><a class="anchor" href="#_new_api_method_to_protect_task_assignation"></a>New API method to protect task assignation</h3>
+<div class="paragraph">
+<p>As an alternative to the current API method, a new method has been developped to prevent AssignHumanTasks to overwrite assignee programmatically. For more information, go to the Java doc.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_improvements"><a class="anchor" href="#_improvements"></a>Improvements</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="ui-designer-performance"><a class="anchor" href="#ui-designer-performance"></a>UI Designer performance improvement: artifacts loading and display</h3>
+<div class="sect3">
+<h4 id="_performance_at_first_display"><a class="anchor" href="#_performance_at_first_display"></a>Performance at first display</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Widgets JavaScript has been minified and contatenated.
+Such optimized versions of the widgets are now part of the .zip file exported from the UI Designer. At runtime the minified versions are used to improve display performance of pages.
+The standard vesion of the widgets is also available in the .zip archive if you need to edit it outside of the UI Designer.
+Reminder: such edited JavaScript won&#8217;t be readable back to the UI Designer, and you will need to take minification in charge to optimize display performances.
+The exported .zip still contains the JSON file, and this is the file used by the UI Designer.</p>
+</li>
+<li>
+<p>Living Application layout doesn&#8217;t reload when user selects another menu option
+As a consequence, the new content is displayed faster.
+Attention: if your applications layout is based on the default layout, see how to <a href="customize-living-application-layout.md#improve-navigation">update your custom layout</a> to take advantage of this improvement.</p>
+</li>
+<li>
+<p>If your pages call REST API extensions on BDM data, a new documentation page has been created to help you make them as efficient as possible.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Performances on realistic pages show a 20% improvement with an Ethernet connection, and a 40% improvement on 3G.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_performance_at_following_displays"><a class="anchor" href="#_performance_at_following_displays"></a>Performance at following displays</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Pages and forms resources are now saved in the browser cache.
+Cache has been set to 6 months, but this is configurable.</p>
+</li>
+<li>
+<p>Cache-busting has been implemented
+As a consequence, any udpate in application artefacts is automatically visible by end users.
+Attention: if you create or edit artifacts outside of the UI Designer, you will need to udpate the artifacts URL to trigger the cache-busting mechanism to reflect the updates.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Performances on realistic pages show a 33% improvement with an Ethernet connection, and a 86% improvement on 3G.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="engine-start-performance"><a class="anchor" href="#engine-start-performance"></a>Engine performance improvement: startup and BPM Services resume</h3>
+<div class="paragraph">
+<p>A major improvement has been integrated, especially for tenants with a lot of processes, processes with large dependencies or processes with a lot of dependencies.
+Tests conducted both internally at Bonitasoft and on customer&#8217;s sites with real production data have shown the following decreases</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>execution time by a factor of 5 to 10</p>
+</li>
+<li>
+<p>JVM Heap memory consumption by a factor of 2 to 3</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_workspace_import_moved_to_a_menu_in_bonita_studio"><a class="anchor" href="#_workspace_import_moved_to_a_menu_in_bonita_studio"></a>Workspace import moved to a menu in Bonita Studio</h3>
+<div class="paragraph">
+<p>Importing an existing workspace into a new version of the studio is no more available in the installer: it has been moved to a new menu "File &gt; Import &gt; Workspace&#8230;&#8203;" in the studio, and is automatically prompted on the first start of the studio.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_button_widget_and_forms_integration_improvements"><a class="anchor" href="#_button_widget_and_forms_integration_improvements"></a>Button widget and forms integration improvements</h3>
+<div class="paragraph">
+<p>The integration of the forms/pages in Bonita (mobile) Portal or applications and the behavior of the Button widget have been improved in order to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>avoid redirecting the current window when the form submitted is displayed in the (mobile) portal and in the applications</p>
+</li>
+<li>
+<p>ignore the target URL on success when the form submitted is displayed in the (mobile) portal.
+In addition to those improvements, an embedded help as been added to the Button widget in the UI Designer, explaining this behavior.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_user_management_page_in_administrator_portal_is_all_new"><a class="anchor" href="#_user_management_page_in_administrator_portal_is_all_new"></a>User management page in Administrator Portal is all new</h3>
+<div class="paragraph">
+<p>To insure the move of all Bonita Portal pages to AngularJS, the User "more" page in the Administrator Portal has been redesigned and reimplemented.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_time_picker_improvement"><a class="anchor" href="#_time_picker_improvement"></a>Time picker improvement</h3>
+<div class="paragraph">
+<p>We brought a little more consistency to time picking in our date/time picker widget: if no time has been set, clicking on button "Today", "Now", or picking a date in the calendar sets the time to "now". If a time has been set, the button "Today" or a date picked in the calendar don&#8217;t change it, whereas the button "Now" changes it to "now".</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_initiator_switch_for_actors"><a class="anchor" href="#_initiator_switch_for_actors"></a>"Initiator" switch for actors</h3>
+<div class="paragraph">
+<p>When defining actors in a pool, it is now possible to remove the "initiator" tag of an actor instead of moving the tag to another actor.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ui_designer_properties_autocomplete_for_variables"><a class="anchor" href="#_ui_designer_properties_autocomplete_for_variables"></a>UI Designer properties autocomplete for variables</h3>
+<div class="paragraph">
+<p>Autocomplete capacity has been added in UI Designer properties fields, to help you input variable names with no risk of typos anymore.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="techonolgy-updates"><a class="anchor" href="#techonolgy-updates"></a>Technology updates</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Bonita Studio now runs on Eclipse Oxygen (4.7).</p>
+</li>
+<li>
+<p>The supported Tomcat version for this new release is Tomcat 8.5.23 (included in the bundle).</p>
+</li>
+<li>
+<p>The product now supports Windows Server 2016 and SQLServer 2016.</p>
+</li>
+<li>
+<p>The SQLServer connector has changed, there is now a single connector, that supports sqlserver 2008, 2012, 2014 &amp; 2016.</p>
+</li>
+<li>
+<p>The product now supports being run on Ubuntu 16.04.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_other_dependency_updates"><a class="anchor" href="#_other_dependency_updates"></a>Other dependency updates</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Hazelcast is updated to Hazlecast 3.8.1 (SP), to improve clustering
+types of installation</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="feature-removals"><a class="anchor" href="#feature-removals"></a>Feature removals</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_early_warning_v6_forms_removal_in_2018"><a class="anchor" href="#_early_warning_v6_forms_removal_in_2018"></a>Early warning: v6 forms removal in 2018</h3>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+In Bonita version released at the end of 2018, V6 GWT forms won&#8217;t be available for modeling or execution.
+By then, we strongly advise you to switch to forms created with Bonita UI Designer to benefit from technologies like html/AngularJS and use contracts in tasks and process instantiation.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_studio_profiles"><a class="anchor" href="#_studio_profiles"></a>Studio profiles</h3>
+<div class="paragraph">
+<p>Developer and Business Analyst profiles in the studio have been removed.
+Now all features are available to all users.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_connectors"><a class="anchor" href="#_connectors"></a>Connectors</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>SugarCRM version API v4 has been <strong>removed</strong>: newer versions of <a href="http://support.sugarcrm.com/Documentation/">SugarCRM expose a REST API</a> that should be used with the REST connector.</p>
+</li>
+<li>
+<p><a href="sap-jco-2" class="page">SAP Connector (jco2)</a> has been <strong>removed from Community edition</strong> due to license incompatibility.</p>
+</li>
+<li>
+<p>Talend connectors have been <strong>removed</strong>: newer versions of <a href="https://help.talend.com/reader/ISPDm8GQ6s0HN0348QulWg/HF8MMjUq3bllDlzOz2lqxw">Talend expose a REST API</a> that should be used with the REST connector.</p>
+</li>
+<li>
+<p>Google Calendar v2 connectors have been <strong>removed</strong>: v2 API are not more supported by Google, use Google Calendar v3 instead.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>NOTE:
+<strong>Migration</strong>: in order to migrate processes using those connectors, you will have to export those connectors from a previous Bonita Studio version and re-import them.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_deprecated_bdm_api"><a class="anchor" href="#_deprecated_bdm_api"></a>Deprecated BDM API</h3>
+<div class="paragraph">
+<p>Since 7.0, BDM APIs and model classes in <code>com.bonitasoft.engine.bdm.<strong></code> packages were deprecated in favor of the Community version in <code>org.bonitasoft.engine.bdm.</strong></code> packages.
+They have been removed in this release.
+If you use a client Java application depending on Engine APIs / models in <code>com.bonitasoft.engine.bdm.<strong></code>, simply change the import declaration with <code>org.bonitasoft.engine.bdm.</strong></code> when upgrading to 7.6.0+.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_configuration_platform_init_enginebonita_platform_init_community_custom_properties_file"><a class="anchor" href="#_configuration_platform_init_enginebonita_platform_init_community_custom_properties_file"></a>Configuration: <code>platform_init_engine/bonita-platform-init-community-custom.properties</code> file</h3>
+<div class="paragraph">
+<p>In previous versions, this file needed to be updated to activate the archive configurability feature (Performance edition).
+The configuration is now easier: the feature is activated by default when using the Performance edition and the file
+has been removed.</p>
+</div>
+<div class="paragraph">
+<p>NOTE:
+<strong>Note</strong>: the migration process automatically removes this file from an existing configuration</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_api_behavior_change"><a class="anchor" href="#_api_behavior_change"></a>API behavior change</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Change method <a href="https://documentation.bonitasoft.com/javadoc/api/7.6/org/bonitasoft/engine/api/GroupAPI.html#updateGroup-long-org.bonitasoft.engine.identity.GroupUpdater-">updateGroup()</a> in identityAPI to forbid group name update when new name already exists.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_limitations_and_known_issues"><a class="anchor" href="#_limitations_and_known_issues"></a>Limitations and known issues</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>MacOS environment: starting from MacOS El Capitan 10.11.4 (March 2016), new security rules block the launch of Bonita Studio. You must temporarily remove security on App launching in <strong>System Preferences</strong>&gt;<strong>Security &amp; Confidentiality</strong>.</p>
+</li>
+<li>
+<p>Process display name is now used everywhere in Bonita Portal (when it has been set in the process design) except in the default provided Jasper reports.</p>
+</li>
+<li>
+<p>The default living application layout does not re-encode the URL passed to the living application iframe anymore.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bug_fixes"><a class="anchor" href="#_bug_fixes"></a>Bug fixes</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_fixes_in_bonita_7_6_3"><a class="anchor" href="#_fixes_in_bonita_7_6_3"></a>Fixes in Bonita 7.6.3</h3>
+<div class="sect3">
+<h4 id="_fixes_in_documentation"><a class="anchor" href="#_fixes_in_documentation"></a>Fixes in Documentation</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>BS-17930 Documentation about 'Changing technical user' needs more detailed explanations</p>
+</li>
+<li>
+<p>BS-18134 Workaround or guidance missing for time-zoned Java 8 Date types usage in REST API extensions</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_fixes_in_engine_component"><a class="anchor" href="#_fixes_in_engine_component"></a>Fixes in Engine component</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>BS-17976 URL query string parsing on parameter 'filter' is too strict in dynamic security scripts</p>
+</li>
+<li>
+<p>BS-17977 apiAccessor.processAPI.updateDueDateOfTask doesn&#8217;t do anything after migration to 7.6.1</p>
+</li>
+<li>
+<p>BS-18003 Engine should not try to delete event trigger instance on flownodes that don&#8217;t have any</p>
+</li>
+<li>
+<p>BS-18017 Task Due date is always reset by the engine even if no expression is set</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_fixes_in_studio_component"><a class="anchor" href="#_fixes_in_studio_component"></a>Fixes in Studio component</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>BS-16454 Cannot initialize a business object with a query with parameters - value not saved in Studio</p>
+</li>
+<li>
+<p>BS-17965 Redeploy profile (after rename) fails if some deployed artifacts are using this profile</p>
+</li>
+<li>
+<p>BS-18113 Process configuration failed to migrate anonymousUserName and anonymousPassword</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_fixes_in_ui_designer_component"><a class="anchor" href="#_fixes_in_ui_designer_component"></a>Fixes in UI Designer component</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>BS-18008 UI Designer fail to load default widgets when running in Turkish environment</p>
+</li>
+<li>
+<p>BS-18012 SELECT widget sets NULL value when no element selected</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_fixes_in_web_component"><a class="anchor" href="#_fixes_in_web_component"></a>Fixes in Web component</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>BS-17668 Hamburger button should not be displayed in layout when there are no menu</p>
+</li>
+<li>
+<p>BS-17927 Typo in the TaskList&#8217;s page.properties file, generates an error at Edit in the Portal</p>
+</li>
+<li>
+<p>BS-18020 Cache is enabled on REST APIs when called through Custom Pages</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_fixes_in_bonita_7_6_2"><a class="anchor" href="#_fixes_in_bonita_7_6_2"></a>Fixes in Bonita 7.6.2</h3>
+<div class="sect3">
+<h4 id="_fixes_in_documentation_2"><a class="anchor" href="#_fixes_in_documentation_2"></a>Fixes in Documentation</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>BS-17902 Broken link in documentation</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_fixes_in_engine_component_2"><a class="anchor" href="#_fixes_in_engine_component_2"></a>Fixes in Engine component</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>BS-13653 Unique index in group_ table contains nullable fields</p>
+</li>
+<li>
+<p>BS-17456 Connector Generate pdf from and office document (document-converter) fails in Widlfly</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_fixes_in_studio_component_2"><a class="anchor" href="#_fixes_in_studio_component_2"></a>Fixes in Studio component</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>BS-17819 Diagram view in portal displays 3rd lane collapsed over 2nd lane</p>
+</li>
+<li>
+<p>BS-17859 Rename a duplicated default profile in the Studio leads to en error</p>
+</li>
+<li>
+<p>BS-17898 Studio does not exit nicely when calling workspace API without a valid license</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_fixes_in_ui_designer_component_2"><a class="anchor" href="#_fixes_in_ui_designer_component_2"></a>Fixes in UI Designer component</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>BS-17623 UID artifacts using UI Bootstrap migrated at Studio import time no longer work</p>
+</li>
+<li>
+<p>BS-17852 Previewing a Fragment delete the associated .json file</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_fixes_in_web_component_2"><a class="anchor" href="#_fixes_in_web_component_2"></a>Fixes in Web component</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>BS-17694 Mobile portal doesn&#8217;t show "Unable to log in' when credentials are wrong on Widlfly</p>
+</li>
+<li>
+<p>BS-17714 Translation key missing for "Process: " string in case&#8217;s "More details" portal page</p>
+</li>
+<li>
+<p>BS-17733 'Content-Disposition' header is filtered by RESTlet in REST API Extension</p>
+</li>
+<li>
+<p>BS-17736 Default jaas-standard.cfg unclear in setup tool vs server/conf</p>
+</li>
+<li>
+<p>BS-17826 bdm/businessData/ API returns response of type "text/plain" instead of "application/json"</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_fixes_in_bonita_7_6_1"><a class="anchor" href="#_fixes_in_bonita_7_6_1"></a>Fixes in Bonita 7.6.1</h3>
+<div class="sect3">
+<h4 id="_fixes_in_documentation_3"><a class="anchor" href="#_fixes_in_documentation_3"></a>Fixes in Documentation</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>BS-16698 Links to nowhere in the 'Execute REST calls and integrate the results in your application'</p>
+</li>
+<li>
+<p>BS-16862 Cannot fully deploy a REST API extension with Engine APIs</p>
+</li>
+<li>
+<p>BS-17598 "Create your own password validator" steps lead to maven error: Could not find artifact</p>
+</li>
+<li>
+<p>BS-17659 "BDM Management in Bonita Portal" section leads customer to believe updating the BDM in production is supported</p>
+</li>
+<li>
+<p>BS-17699 Broken link to 7.6 Engine Javadoc</p>
+</li>
+<li>
+<p>BS-17770 Studio preferences Documentation still speaks about Studio profiles</p>
+</li>
+<li>
+<p>BS-17795 Single sign-on with SAML not described with WildFly</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_fixes_in_engine_component_3"><a class="anchor" href="#_fixes_in_engine_component_3"></a>Fixes in Engine component</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>BS-344 Admin / Failed Task / Connectors are not listed in the execution order specified in process definition</p>
+</li>
+<li>
+<p>BS-16047 Hibernate Sql Server dialect implementation doesn&#8217;t set the Datatype to nvarchar automatically in the BDM fuctionnality</p>
+</li>
+<li>
+<p>BS-16189 updateActorsOfUserTask break idx_uq_pending_mapping unique constraint</p>
+</li>
+<li>
+<p>BS-16985 searchAssignedTasksSupervisedBy() returns duplicate tasks</p>
+</li>
+<li>
+<p>BS-17054 Engine API: getUsersInGroup() returns both active and inactive users</p>
+</li>
+<li>
+<p>BS-17106 In admin/tasks, "Pending" view should not display executing tasks</p>
+</li>
+<li>
+<p>BS-17251 apiAccessor.processAPI.getHumanTaskInstances doesn&#8217;t work in a call activity</p>
+</li>
+<li>
+<p>BS-17304 Cannot use "" character for database name defined in database.properties and used by setup tool</p>
+</li>
+<li>
+<p>BS-17312 Incorrect exception message for invalid multiple contract input</p>
+</li>
+<li>
+<p>BS-17373 Java API client library issue with LocalDate Serialization</p>
+</li>
+<li>
+<p>BS-17449 Profiles drop down list on the Portal also displays profiles used only for applications</p>
+</li>
+<li>
+<p>BS-17530 getProcessDefinitionIdFromProcessInstanceId() always logs stack trace if exception raised</p>
+</li>
+<li>
+<p>BS-17533 Same user returned several times as a possible process initiator in administrator view</p>
+</li>
+<li>
+<p>BS-17589 BDM REST api returns all elements when doing a query with parameter c=0</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_fixes_in_studio_component_3"><a class="anchor" href="#_fixes_in_studio_component_3"></a>Fixes in Studio component</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>BS-1758 SVN synchronization problem with REST API extension</p>
+</li>
+<li>
+<p>BS-17646 Cannot create a repository with same name but different case</p>
+</li>
+<li>
+<p>BS-17664 Groovy editor completion crash</p>
+</li>
+<li>
+<p>BS-17665 On MacOS, installer always uses the same path, no matter the version (7.6.0 and higher)</p>
+</li>
+<li>
+<p>BS-17682 In application descriptor App or Portal "menu", clicking out of the table doesn&#8217;t save the modification</p>
+</li>
+<li>
+<p>BS-17703 Import workspace doesn&#8217;t work if repository name contains a space (Windows only)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_fixes_in_ui_designer_component_3"><a class="anchor" href="#_fixes_in_ui_designer_component_3"></a>Fixes in UI Designer component</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>BS-16235 Action "Remove from collection" doesn&#8217;t delete the correct item</p>
+</li>
+<li>
+<p>BS-17669 "Create form" tooltip not translated</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_fixes_in_web_component_3"><a class="anchor" href="#_fixes_in_web_component_3"></a>Fixes in Web component</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>BS-2919 2 comments are added when assigning a task as admin (duplicates the following issue)</p>
+</li>
+<li>
+<p>BS-16010 Organization manager cannot be removed from Portal</p>
+</li>
+<li>
+<p>BS-16690 Double click on process "Delete" button generates error in logs</p>
+</li>
+<li>
+<p>BS-17317 Assigning task as Administrator produces double "task is now assigned" comments</p>
+</li>
+<li>
+<p>BS-17449 Profiles drop down list on the Portal also displays profiles used only for applications</p>
+</li>
+<li>
+<p>BS-17604 By default, import servlets are not filtered by authorization mechanism</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_fixes_in_bonita_7_6"><a class="anchor" href="#_fixes_in_bonita_7_6"></a>Fixes in Bonita 7.6</h3>
+<div class="sect3">
+<h4 id="_fixes_in_documentation_4"><a class="anchor" href="#_fixes_in_documentation_4"></a>Fixes in Documentation</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>BS-16697 internal.properties doc still not enough</p>
+</li>
+<li>
+<p>BS-16862 Cannot fully deploy a REST API extension with Engine APIs</p>
+</li>
+<li>
+<p>BS-16884 bpm/processSupervisor missing in the documentation</p>
+</li>
+<li>
+<p>BS-16955 Link from 7.3+ documentation website to Corporate blog/news is incorrect</p>
+</li>
+<li>
+<p>BS-16970 Install a Bonita BPM cluster Doc page unclear</p>
+</li>
+<li>
+<p>BS-17061 Missing doc info: diagram REST API is only available in Subscription edition</p>
+</li>
+<li>
+<p>BS-17251 apiAccessor.processAPI.getHumanTaskInstances doesn&#8217;t work in call activity</p>
+</li>
+<li>
+<p>BS-17479 IE11 missing from 7.5 list of supported browsers</p>
+</li>
+<li>
+<p>BS-17527 Javadoc navigation bars rendering glitch</p>
+</li>
+<li>
+<p>BS-17598 "Create your own password validator" steps lead to maven error: Could not find artifact</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_fixes_in_engine_component_4"><a class="anchor" href="#_fixes_in_engine_component_4"></a>Fixes in Engine component</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>BS-11460 Slowness in retrieving Dependencies blocks server from starting up</p>
+</li>
+<li>
+<p>BS-15944 StaleObjectStateException: Row was updated or deleted by another transaction or unsaved-value mapping was incorrect</p>
+</li>
+<li>
+<p>BS-15960 Using REST API to call BDM decreases the performance</p>
+</li>
+<li>
+<p>BS-15975 process instance id and flownode instance id not found when executing the work for the Start event</p>
+</li>
+<li>
+<p>BS-16519 Inconsistent behavior of Bonita Portal for multiple group with same name</p>
+</li>
+<li>
+<p>BS-16595 "My Tasks" view displays executing tasks</p>
+</li>
+<li>
+<p>BS-16612 Re-Import organisation file: errors and duplicate if some element name contains slash character</p>
+</li>
+<li>
+<p>BS-16791 Can not have two extensions within the same REST API extension definition if one&#8217;s pathTemplate is a prefix of the other&#8217;s</p>
+</li>
+<li>
+<p>BS-16862 Cannot fully deploy a REST API extension with Engine APIs</p>
+</li>
+<li>
+<p>BS-16868 When there is communication issues with database sever, the works are lost</p>
+</li>
+<li>
+<p>BS-16960 Issue with REST Connector stuck on sockRead no default timeout.</p>
+</li>
+<li>
+<p>BS-16969 No license error in the logs when the performance activeProfile is set but the license is not performance</p>
+</li>
+<li>
+<p>BS-16980 spring-web-4.3.7.RELEASE.jar requires more recent version of jackson than the ones included in the bonita.war</p>
+</li>
+<li>
+<p>BS-16999 Cannot use $ and \ character for password defined in database.properties and use by setup tool</p>
+</li>
+<li>
+<p>BS-17527 Javadoc navigation bars rendering glitch</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_fixes_in_studio_component_4"><a class="anchor" href="#_fixes_in_studio_component_4"></a>Fixes in Studio component</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>BS-16686 Studio migration 7.5 result in empty workspace</p>
+</li>
+<li>
+<p>BS-16928 Links to documentation on Studio welcome page lead to the wrong doc version</p>
+</li>
+<li>
+<p>BS-16971 Provided engine variables are not available in pattern expression completion</p>
+</li>
+<li>
+<p>BS-16991 Not possible to remove "initiator" flag on an actor in the Studio</p>
+</li>
+<li>
+<p>BS-17047 BDM pom generated from studio does not have all required dependencies</p>
+</li>
+<li>
+<p>BS-17049 Groovy script size limited to 64k</p>
+</li>
+<li>
+<p>BS-17067 Unable to create a new parameter from connector config</p>
+</li>
+<li>
+<p>BS-17093 Expression editor return type set at null</p>
+</li>
+<li>
+<p>BS-17121 Workspace API succeeds to build on rare ocassions</p>
+</li>
+<li>
+<p>BS-17127 Focus problem on CTRL+f search pop-up in groovy script editor</p>
+</li>
+<li>
+<p>BS-17154 Installer try to load invalid URL on macOS</p>
+</li>
+<li>
+<p>BS-17156 .bar file generation failed: corrupted .proc file</p>
+</li>
+<li>
+<p>BS-17199 "select / unselect all" buttons from export organization dialog box do not refresh validation status</p>
+</li>
+<li>
+<p>BS-17206 CTRL+A does not work in pattern expression editor</p>
+</li>
+<li>
+<p>BS-17210 Download defaut confirmation layout does not work for V6 forms</p>
+</li>
+<li>
+<p>BS-17299 Call activity Data to send fetch Data button throw error and broken empty popup</p>
+</li>
+<li>
+<p>BS-17447 "Multiple Document" type lost in migration and operation fails</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_fixes_in_uidesigner_component"><a class="anchor" href="#_fixes_in_uidesigner_component"></a>Fixes in UIDesigner component</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>BS-16708 Time picker doesn&#8217;t behave the same if, in the date picker, a date is selected or if Today is selected</p>
+</li>
+<li>
+<p>BS-16854 Part of "Filters" embedded help is not translated</p>
+</li>
+<li>
+<p>BS-16923 Put only 1 proposal instead of 3 in time picker</p>
+</li>
+<li>
+<p>BS-16977 Link widget additional url parameters are not passed (based on a contribution of a Community member)</p>
+</li>
+<li>
+<p>BS-16983 File viewer and link widget use wrong docbase URL to display document</p>
+</li>
+<li>
+<p>BS-16996 External System Document not usable in file viewer widget or Overview</p>
+</li>
+<li>
+<p>BS-17278 Cannot update custom widget property</p>
+</li>
+<li>
+<p>BS-17526 Label property of input widget has not correct type</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_fixes_in_web_component_4"><a class="anchor" href="#_fixes_in_web_component_4"></a>Fixes in Web component</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>BS-15849 Internal Server Error in Report when report has a space, and clicking on date range.</p>
+</li>
+<li>
+<p>BS-15960 Using REST API to call BDM decreases the performance</p>
+</li>
+<li>
+<p>BS-16097 Dynamic CaseContextPermissionRule implementation always provides access when requested by an archived case</p>
+</li>
+<li>
+<p>BS-16234 Download servlets not secured by authorization filter + dynamic rule invalid</p>
+</li>
+<li>
+<p>BS-16324 Living Application ressources are not cached</p>
+</li>
+<li>
+<p>BS-16449 Administrator "Do for" raises a 403 error when security.rest.api.authorizations.check.enabled is set to false</p>
+</li>
+<li>
+<p>BS-16481 Process Manager profile can&#8217;t Edit case variable</p>
+</li>
+<li>
+<p>BS-16519 Inconsistent behavior of Bonita Portal for multiple group with same name</p>
+</li>
+<li>
+<p>BS-16595 "My Tasks" view displays executing tasks</p>
+</li>
+<li>
+<p>BS-16612 Re-Import organisation file: errors and duplicate if some element name contains slash character</p>
+</li>
+<li>
+<p>BS-16678 Portal displays "Successfully updated categories" when the category is not created</p>
+</li>
+<li>
+<p>BS-16685 Executing a task or instantiating a process from Mobile Portal redirects to Portal</p>
+</li>
+<li>
+<p>BS-16756 Resize window cuts the Instantiation form</p>
+</li>
+<li>
+<p>BS-16774 Get HTTP 400 Error page, on redirect after submit task in the portal and on Mobile</p>
+</li>
+<li>
+<p>BS-16790 ClientAbortException are generated in the log files when a submit button redirect on success on an application page</p>
+</li>
+<li>
+<p>BS-16791 Can not have two extensions within the same REST API extension definition if one&#8217;s pathTemplate is a prefix of the other&#8217;s</p>
+</li>
+<li>
+<p>BS-16858 Pager empty pager_bottom using Bonita Wildfly Bundle in HTTPS in Chrome</p>
+</li>
+<li>
+<p>BS-16929 Security Issue: Autocomplete Enabled inForm</p>
+</li>
+<li>
+<p>BS-16953 CustomPage servlets do not set a content-type in the response</p>
+</li>
+<li>
+<p>BS-16980 spring-web-4.3.7.RELEASE.jar requires more recent version of jackson than the ones included in the bonita.war</p>
+</li>
+<li>
+<p>BS-16992 CannotResolveClassException: org.apache.catalina.util.ParameterMap on engine on Wildfly when portal is on separate Tomcat</p>
+</li>
+<li>
+<p>BS-17119 Cannot load ressources or classes from the custom Rest API</p>
+</li>
+<li>
+<p>BS-17176 new line in human step comment are lost when the comment is displayed in the portal</p>
+</li>
+<li>
+<p>BS-17204 Layout iframe always display a border</p>
+</li>
+<li>
+<p>BS-17207 Calendar Date picker + Suggest box v6 are not displayed under/above their input fields in Chrome v61 when the scroll bar is used</p>
+</li>
+<li>
+<p>BS-17231 CSRF token cookie missing when accessing a form URL directly after loging in with SAML</p>
+</li>
+<li>
+<p>BS-17285 Profile token loss makes "View case design" show blank page in Process Manager&#8217;s Cases tab</p>
+</li>
+<li>
+<p>BS-17495 displayName Update breaks the view diagram</p>
+</li>
+<li>
+<p>BS-17550 Do not encode URL param on redirect in living application servlet</p>
+</li>
+<li>
+<p>BS-17574 v6 form broken when task name contains special character</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_acknowledgments"><a class="anchor" href="#_acknowledgments"></a>Acknowledgments</h4>
+<div class="paragraph">
+<p>Thank you <a href="https://github.com/domtoupin">Dominique Toupin</a> (Engine) and <a href="https://github.com/tonipamies">Antoni Pàmies</a> (UI Designer) for your contribution.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer>
+  <div class="footer-header">
+    <h3>Get useful info curated for you</h3>
+    <input type="email" placeholder="Email address *" />
+    <button type="submit">Subscribe</button>
+  </div>
+  <div class="footer-body">
+    <div class="footer-content">
+      <p>
+        Bonitasoft fully supports digital operations and IT modernization with Bonita, an open-source and extensible
+        platform for automation and optimization of business processes.
+        The Bonita platform accelerates development and production with clear separation between capabilities for visual
+        programming and for coding.
+        Bonita integrates with existing information systems, orchestrates heterogeneous systems, and provides deep
+        visibility into processes across the organization.
+      </p>
+    </div>
+    <div class="social-links">
+      <ul>
+        <!-- Twitter image -->
+        <li class="social-icon">
+          <a href="https://twitter.com/bonitasoft" target="_blank">
+            <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+            </svg>
+          </a>
+        </li>
+        <!-- Facebook image -->
+        <li class="social-icon">
+          <a href="https://www.facebook.com/bonitasoftbpm" target="_blank">
+            <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <title>Facebook icon</title>
+              <path
+                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+            </svg>
+          </a>
+        </li>
+        <!-- Linkedin image -->
+        <li class="social-icon">
+          <a href="https://www.linkedin.com/company/bonitasoft/" target="_blank">
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <title>LinkedIn icon</title>
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+          </a>
+        </li>
+        <!-- RSS image -->
+        <li class="social-icon">
+          <a href="https://www.bonitasoft.com/blog/rss" target="_blank">
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <title>RSS icon</title>
+              <path
+                d="M19.199 24C19.199 13.467 10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24h-4.801zM3.291 17.415c1.814 0 3.293 1.479 3.293 3.295 0 1.813-1.485 3.29-3.301 3.29C1.47 24 0 22.526 0 20.71s1.475-3.294 3.291-3.295zM15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909 7.184 15.909 15.91z" />
+            </svg>
+          </a>
+        </li>
+        <!-- Youtube image -->
+        <li class="social-icon">
+          <a href="https://www.youtube.com/user/BonitaSoft" target="_blank">
+            <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <title>YouTube icon</title>
+              <path
+                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="social-links">
+      <ul class="border-right">
+        <li><a href="https://www.bonitasoft.com/downloads">Download</a></li>
+        <li><a href="https://www.bonitasoft.com/events">Events</a></li>
+        <li><a href="https://community.bonitasoft.com/">Community</a></li>
+        <li><a href="https://www.bonitasoft.com/sitemap">Site map</a></li>
+        <li><a href="https://www.bonitasoft.com/bonitasoft-website-legal-terms-use">Terms of use</a></li>
+      </ul>
+    </div>
+    <div class="footer-footer">
+      <p>
+        &copy; Bonitasoft, S.A. All rights reserved.
+        <span>
+          <a href="https://www.bonitasoft.com/privacy">Privacy,</a>
+          <a href="https://www.bonitasoft.com/legal-notices">Legal notices</a>
+        </span>
+      </p>
+      <a class="footer-bonita-logo" href="https://bonitasoft.github.io"></a>
+    </div>
+  </div>
+</footer><script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script type="text/javascript"> docsearch({
+    apiKey: '16267f96d135c47df8454efd5b448c9a',
+    indexName: 'bonitasoft',
+    inputSelector: '#search-query',
+    debug: false // Set debug to true if you want to inspect the dropdown
+  });
+</script>
+<script type="text/javascript"> docsearch({
+    apiKey: '16267f96d135c47df8454efd5b448c9a',
+    indexName: 'bonitasoft',
+    inputSelector: '#search-query-mobile',
+    debug: false // Set debug to true if you want to inspect the dropdown
+    /*algoliaOptions: {
+      'facetFilters': ["tags:7.6", "tags:bonita"]
+    },*/
+  });
+</script>
+  </body>
+</html>
