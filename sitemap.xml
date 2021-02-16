@@ -6,4 +6,7 @@
 <sitemap>
 <loc>https://bonitasoft.github.io/sitemap-bonita.xml</loc>
 </sitemap>
+<sitemap>
+<loc>https://bonitasoft.github.io/sitemap-cloud.xml</loc>
+</sitemap>
 </sitemapindex>
