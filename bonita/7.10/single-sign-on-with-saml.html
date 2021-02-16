@@ -1,0 +1,2045 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SAML SSO configuration :: Bonita Documentation</title>
+    <link rel="canonical" href="https://bonitasoft.github.io/bonita/7.10/single-sign-on-with-saml">
+    <meta name="generator" content="Antora 2.3.4">
+<link rel="stylesheet" href="../../_/stylesheets/site.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="navbar-item">
+        <a class="bonita-logo" href="https://bonitasoft.github.io"></a>
+      </div>
+
+    </div>
+
+    <div class="search-content">
+      <fieldset>
+        <input type="text" id="search-query-mobile" placeholder="Search..." />
+        <div class="icons-container">
+          <div id="search-icon"></div>
+        </div>
+      </fieldset>
+    </div>
+
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-item is-hoverable">
+        <a href="https://community.bonitasoft.com/" class="navbar-link">Community</a>
+      </div>
+      <div class="navbar-item is-hoverable">
+        <a class="navbar-link" href="/bonita/7.10/">Bonita</a>
+      </div>
+      <div class="navbar-item is-hoverable">
+        <a class="navbar-link" href="/bici/latest/">Bonita ICI</a>
+      </div>
+    </div>
+
+    <div class="theme-switch-wrapper">
+      <input type="checkbox" name="" onclick="toggleDarkThemeMode(this)">
+    </div>
+
+    <div class="navbar-item search-item hide-for-print">
+      <input type="text" placeholder="Search Docs" class="search-bar query ds-input" id="search-query">
+      <i class="search-icon" aria-hidden="true"></i>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="bonita" data-version="7.10">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="./">Bonita</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_getting-started-tutorial.adoc">Getting started tutorial</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="what-is-bonita">What is Bonita?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bonita-studio-download-installation">Download and install</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="draw-bpmn-diagram">Draw a BPMN diagram</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="define-business-data-model">Define business data model (BDM)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="declare-business-variables">Declare business variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="declare-contracts">Declare contracts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="create-web-user-interfaces">Create web user Interfaces</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="define-who-can-do-what">Define who can do what</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="configure-email-connector">Configure an email connector</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="design-application-page">Design an application page</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="create-application">Create an application</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="migration-tool">Migration tool change log</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_application-and-process-design.adoc">Application and Process Design</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bonita-bpm-overview">Bonita overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_application-and-process-design-overview.adoc">Application and process design overview</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="key-concepts">Key concepts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="comparison-of-7-x-and-6-x">Comparison of 7.x and 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lifecycle-and-profiles">Lifecycle and profiles</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="design-methodology">Design methodology</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bonita-bpm-studio-preferences">Bonita Studio preferences</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bonita-bpm-studio-hints-and-tips">Bonita Studio hints and tips</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_organization.adoc">Organization</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="organization-overview">Organization overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="approaches-to-managing-organizations-and-actor-mapping">Approaches to managing organizations and actor mapping</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="organization-management-in-bonita-bpm-studio">Organization management in Bonita Studio</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="custom-user-information-in-bonita-bpm-studio">Custom User Information in Bonita Studio</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="ldap-synchronizer">LDAP synchronizer</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_profiles.adoc">Profiles</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="profiles-overview">Profiles overview</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="profileCreation">Profiles editor</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_process-modeling.adoc">Process modeling</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_diagrams.adoc">Diagrams</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="diagram-overview">Diagram overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="pools-and-lanes">Pools and lanes</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="diagram-tasks">Tasks</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="gateways">Gateways</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="transitions">Transitions</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="events">Events</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="called-processes">Called processes</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="event-subprocesses">Event subprocesses</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="text-annotations">Text annotations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="naming-conventions">Naming conventions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="refactoring">Refactoring</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="actors">Actors</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="actor-filtering">Actor filters</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="iteration">Iteration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_data.adoc">Data</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="data-handling-overview">Data handling overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="define-and-deploy-the-bdm">Define and deploy the BDM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bdm-access-control">Define access control on business objects</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="specify-data-in-a-process-definition">Specify data in a process definition</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="parameters">Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="contracts-and-contexts">Contracts and contexts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="documents">Documents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="create-a-complex-data-type">Complex data types</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="define-a-search-index">Search keys</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="expressions-and-scripts">Expressions and scripts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="operations">Operations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_page-and-form-development.adoc">Page and form development</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="page-and-form-development-overview">Page and form development overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_using-the-ui-designer.adoc">UI Designer</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="ui-designer-overview">UI Designer overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="create-or-modify-a-page">Create or modify UI artifacts</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="widgets">Widgets</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="widget-properties">Widget properties</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_widget-use-examples.adoc">Widget use examples</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="repeat-a-container-for-a-collection-of-data">Repeat a container for a collection of data</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="fragments">Fragments</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="custom-widgets">Custom widgets</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="variables">Variables</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="appearance">Appearance</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="assets">Assets</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="multi-language-pages">Multi-language pages</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="migrate-a-form-from-6-x">Migrate a form from 6.x</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="cache-configuration-and-policy">Cache configuration and policy</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="applicationCreation">Application descriptor</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_connectivity.adoc">Connectivity</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="connectivity-overview">Connectivity overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="alfresco">Alfresco</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="cmis">CMIS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_database.adoc">Database</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="list-of-database-connectors">List of database connectors</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="database-connector-configuration">Database connector configuration</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="graphical-query-builder">Graphical query builder</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="initialize-a-variable-from-a-database-without-scripting-or-java-code">Initialize a variable from a database without scripting or Java code</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="insert-data-in-a-docx-odt-template">Insert data in a .docx/.odt template</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="google-calendar">Google Calendar</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="ldap">LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="messaging">Messaging</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="generate-pdf-from-an-office-document">Generate PDF from an Office document</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="salesforce">Salesforce</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="sap-jco-3">SAP JCo 3</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="script">Script</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="twitter">Twitter</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="uipath">UiPath</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_web-service.adoc">Web service</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="web-service-connector-overview">Web service connector overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="#web-service-tutorial.adoc">Web service connector tutorial</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_reporting.adoc">Reporting</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="reporting-overview">Reporting overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set-up-a-reporting-database">Set up a reporting database</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set-up-kpis">Set up KPIs</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="create-a-report">Create a report</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="import-and-export-a-process">Import and export a process</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_process-configuration.adoc">Process configuration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="process-configuration-overview">Process configuration overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="environments">Environments</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="configuring-a-process">Configure a process</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="manage-jar-files">Manage JAR files</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="managing-dependencies">Manage dependencies</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_process-testing.adoc">Process testing</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="process-testing-overview">Process testing overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="configure-a-test-organization">Configure a test organization</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="run-a-process-from-bonita-bpm-studio-for-testing">Run a process from Bonita Studio for testing</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="log-files">Log files</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="project_deploy_in_dev_suite">Project deployment in Bonita Development Suite</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="build-a-process-for-deployment">Build a process for deployment</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_installation.adoc">Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bonita-bpm-installation-overview">Bonita installation overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bonita-bpm-studio-installation">Bonita Studio installation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_basic-bonita-platform-installation.adoc">Basic Bonita Platform installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="hardware-and-software-requirements">Hardware and software requirements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tomcat-bundle">Tomcat bundle</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="custom-deployment">Custom Deployment into existing Tomcat installation</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="convert-wildfly-into-tomcat">Convert a WildFly into a Tomcat installation</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="BonitaBPM_platform_setup">Platform configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="database-configuration">Database creation and customization to work with Bonita</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="first-steps-after-setup">First steps after setup</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="licenses">Licenses</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bonita-docker-installation">Bonita docker installation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_advanced-bonita-platform-installation.adoc">Advanced Bonita Platform installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_security-and-authentication.adoc">Security and authentication</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="user-authentication-overview">User authentication overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="active-directory-or-ldap-authentication">Active Directory or LDAP authentication</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="single-sign-on-with-cas">Single sign-on with CAS</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="4">
+    <a class="nav-link" href="single-sign-on-with-saml">Single sign-on with SAML</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="single-sign-on-with-kerberos">Single sign-on with Kerberos</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="enforce-password-policy">Enforce password policy</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="rest-api-authorization">REST API authorization</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="csrf-security">CSRF security</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="enable-cors-in-tomcat-bundle">Enable CORS in Tomcat bundle</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="ssl">SSL</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tenant_admin_credentials">Tenant administrator credentials</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="guest-user">Guest user access</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set-log-and-archive-levels">Set log and archive levels</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="configurable-archive">Configurable Archive</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_performance.adoc">Performance</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="performance-tuning">Performance tuning</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="performance-troubleshooting">Performance troubleshooting</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="purge-tool">Purging unnecessary archive data</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="use-gzip-compression">Use gzip compression</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="two-main-types-of-deployment">Two main types of deployment</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_bonita-in-a-cluster.adoc">Bonita in a cluster</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="overview-of-bonita-bpm-in-a-cluster">Overview of Bonita in a cluster</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="install-a-bonita-bpm-cluster">Install a Bonita cluster</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cluster-administration">Cluster administration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="multi-tenancy-and-tenant-configuration">Multi-tenancy and tenant configuration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="embed-engine">Embed engine - Lab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_platform-installation-examples.adoc">Platform installation examples</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="ubuntu-openjdk-tomcat-postgresql">Ubuntu + OpenJDK + Tomcat + PostgreSQL</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bonita-as-windows-service">Install Tomcat with Bonita as a service in Windows</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="back-up-bonita-bpm-platform">Back up Bonita Platform</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_migration.adoc">Migration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="migration-overview">Migration overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#migrate-from-an-earlier-version-of-bonita-bpm.adoc">Migrate from an earlier version of Bonita</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="upgrade-from-community-to-a-subscription-edition">Community to Subscription upgrade</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_bonita-portal-administration.adoc">Bonita Portal Administration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_bonita-portal-interface.adoc">Bonita Portal interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bonita-bpm-portal-interface-overview">Bonita Portal overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="user-task-list">User task list</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="languages">Languages</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="log-in-and-log-out">Log in and log out</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="about">About Bonita Portal</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="mobile-portal">Mobile Portal</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_process-maintenance.adoc">Process maintenance</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="processes">Processes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="cases">Cases</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tasks">Tasks</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="monitoring">Monitoring</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="pause-and-resume-bpm-services">Pause and resume services</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bdm-management-in-bonita-bpm-portal">BDM Management in Bonita Portal</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="applications">Applications</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_resources.adoc">Resources</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="resource-management">Resource management</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="pages">Pages</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="forms">Forms</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="layouts">Layouts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="themes">Themes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="api-extensions">REST API extensions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="live-update">Live update</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_organization-in-bonita-portal.adoc">Organization in Bonita Portal</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="organization-in-bonita-bpm-portal-overview">Organization in Bonita Portal overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_organization-maintenance.adoc">Organization maintenance</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="import-export-an-organization">Import/export an organization</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="group">Manage groups</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="role">Manage roles</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_user.adoc">Manage users</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="manage-a-user">Manage a user</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="deactivate-a-user">Deactivate a user</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="custom-user-information-in-bonita-bpm-portal">Custom User Information in Bonita Portal</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="analytics">Analytics</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_user-profiles.adoc">User profiles</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="administrator-rights">Administrator rights</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="process-manager">Process manager</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="custom-profiles">Custom profiles</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="deploying-profiles-with-export-and-import">Deploy profiles with export and import</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_look-feel.adoc">Look &amp; Feel</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="managing-look-feel">Manage Look &amp; Feel</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="creating-a-new-look-feel">Create a new Look &amp; Feel</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="search-index">Search keys</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="runtime-monitoring">Bonita Runtime Monitoring</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="maintenance-operation">Bonita Runtime Maintenance Operations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_development.adoc">Development</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="software-extensibility">Software extensibility</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_bonita-artifacts.adoc">Bonita artifacts</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_connectors.adoc">Connectors</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="connectors-overview">Connectors overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="connector-archetype">Bonita connector archetype</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="actor-filter-archetype">Create an actor filter</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="api-glossary">API glossary</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_rest-api.adoc">REST API</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-api-overview">REST API overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-api-authentication">REST Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="application-api">application API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="access-control-api">access control API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bdm-api">bdm API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bpm-api">bpm API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="customuserinfo-api">customuserinfo API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="form-api">form API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="identity-api">identity API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="platform-api">platform API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="portal-api">portal API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="system-api">system API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tenant-api">tenant API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-api-extensions">REST API extensions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="manage-files-using-upload-servlet-and-rest-api">Manage files using upload servlet and REST API</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_engine-api.adoc">Engine API</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="engine-api-overview">Engine API overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="create-your-first-project-with-the-engine-apis-and-maven">Create your first project with the Engine APIs and Maven</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="configure-client-of-bonita-bpm-engine">Configure connection to Bonita Engine</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="http://documentation.bonitasoft.com/javadoc/api/$7.10/index.html">Javadoc</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_examples.adoc">Examples</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manage-a-process">Manage a process</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="handle-a-failed-activity">Handle a failed activity</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manage-an-organization">Manage an organization</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manage-users">Manage users</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="handling-documents">Handle documents</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="create-administration-tools">Create administration tools</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="restore-default-look-feel">Restore the default Look &amp; Feel</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manage-the-platform">Manage the platform</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="using-list-and-search-methods">List and search methods</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="log-in-with-cas">Log in with CAS</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bonita-bpm-portal-urls">Bonita Portal URLs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_engine-architecture.adoc">Bonita Engine architecture</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="engine-architecture-overview">Bonita Engine architecture overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_services.adoc">Services</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="event-handlers">Event handlers</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="queriable-logging">Queriable logger</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="work-execution-audit">Work execution audit</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="timers-execution">Timers execution</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="connectors-execution">Connectors execution</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="execution-sequence-states-and-transactions">BPM process / task execution sequence</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_living-application.adoc">Living application</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bonita-layout">Bonita Layout</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="living-application-layout">Living application layout</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="customize-layouts">Customize layouts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="customize-living-application-theme">Customize living application theme</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="logging">Logs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="workspaces-and-repositories">Workspaces and projects</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="building-community-edition-from-source">Build Bonita Community edition from source files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_continuous-integration.adoc">Continuous integration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="automating-builds">Automate builds</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set-up-continuous-integration">Set up continuous integration</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_howtos.adoc">Howtos</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uid-modal-tutorial">Create a modal window using CSS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uid-case-overview-tutorial">Create a case overview page using the UI Designer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="optimize-user-tasklist">Create unique task names for the user task list</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="manage-control-in-forms">Control and validate forms in the UI Designer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="list-of-documents">Manage a list of documents</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bo-multiple-refs-tutorial">Manage multiple references in Business Objects</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="custom-authorization-rule-mapping">Map authorization rules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="rta-mail-template">Use the rich textarea widget in a mail template</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="datetimes-management-tutorial">Manage dates and times in BDM and User Interfaces</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bdm-in-rest-api">Manage BDM in custom Rest APIs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="share-a-repository-on-github">Share a project on GitHub Enterprise Edition</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="git-versioning-community-edition">Use Git for versioning with Community Edition</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="migrate-a-svn-repository-to-github">Migrate a SVN repository to a Git repository</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="configure-maven">Configure Maven</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uid-vertical-tabs-container-tutorial">Create a vertical tabs container for all devices</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="groovy-in-bonita">Use Groovy in Bonita</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="responsiveness-with-community-edition">Create a responsive web application with Community edition</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="use-bonita-acm">Enable Adaptive Case Management with Bonita</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Bonita</span>
+    <span class="version">7.10</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Bonita</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="./">7.10</a>
+        </li>
+        <li class="version">
+          <a href="../7.9/">7.9</a>
+        </li>
+        <li class="version">
+          <a href="../7.8/">7.8</a>
+        </li>
+        <li class="version">
+          <a href="../7.7/">7.7</a>
+        </li>
+        <li class="version">
+          <a href="../7.6/">7.6</a>
+        </li>
+        <li class="version">
+          <a href="../7.5/">7.5</a>
+        </li>
+        <li class="version">
+          <a href="../7.4/">7.4</a>
+        </li>
+        <li class="version">
+          <a href="../7.3/">7.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Bonita ICI</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../bici/latest/">labs</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+  <button class="nav-toggle"></button>
+  <a href="./" class="home-link">
+    <svg height="30" viewBox="0 0 48 48" width="30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 40V28h8v12h10V24h6L24 6 4 24h6v16z" />
+      <path d="M0 0h48v48H0z" fill="none" />
+    </svg>
+  </a>
+  <nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="./">Bonita</a></li>
+    <li><a href="#_installation.adoc">Installation</a></li>
+    <li><a href="#_advanced-bonita-platform-installation.adoc">Advanced Bonita Platform installation</a></li>
+    <li><a href="#_security-and-authentication.adoc">Security and authentication</a></li>
+    <li><a href="single-sign-on-with-saml">Single sign-on with SAML</a></li>
+  </ul>
+</nav>
+  <div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">7.10</button>
+  <div class="version-menu">
+    <a class="version is-current" href="single-sign-on-with-saml">7.10</a>
+    <a class="version" href="../7.9/single-sign-on-with-saml">7.9</a>
+    <a class="version" href="../7.8/single-sign-on-with-saml">7.8</a>
+    <a class="version" href="../7.7/single-sign-on-with-saml">7.7</a>
+    <a class="version" href="../7.6/single-sign-on-with-saml">7.6</a>
+    <a class="version" href="../7.5/single-sign-on-with-saml">7.5</a>
+    <a class="version is-missing" href="../7.4/">7.4</a>
+    <a class="version is-missing" href="../7.3/">7.3</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/bonitasoft/bonita-doc/edit/7.10_asciidoctor/modules/ROOT/pages/single-sign-on-with-saml.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">SAML SSO configuration</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Bonita can be configured to use the SAML protocol to provide single sign-on (SSO), as long as you already have a SAML Identity Provider server up and running (IdP).</p>
+</div>
+<div class="paragraph">
+<p>NOTE:
+<strong>Note:</strong> For Enterprise, Performance, Efficiency, and Teamwork editions only.</p>
+</div>
+<div class="paragraph">
+<p>This information applies to a Bonita platform deployed from a bundle, not to the Engine launched from Bonita Studio. <code>&lt;BUNDLE_HOME&gt;</code> refers to the root directory of the bundle.</p>
+</div>
+<div class="paragraph">
+<p>SAML configuration is at tenant level. Each tenant can use a different authentication method (over SAML or not).</p>
+</div>
+<div class="paragraph">
+<p>NOTE:
+<strong>Note:</strong> Bonita uses <a href="http://www.keycloak.org/">Keycloak</a> as SAML Service Provider adapter.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_saml_overview_for_bonita"><a class="anchor" href="#_saml_overview_for_bonita"></a>SAML overview for Bonita</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This is an overview that relates the steps required to integrate a bonita bundle with an SAML Identity Provider.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/images/saml-overview.png" alt="Authentication over SAML"></span></p>
+</div>
+<div class="paragraph">
+<p>Here some details about the Bonita SAML2 module,
+it is composed of:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A servlet filter that intercept all the requests to bonita portal pages</p>
+<div class="paragraph">
+<p>It checks if the user is already logged in on Bonita</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If already logged in =&gt; Allow the access</p>
+</li>
+<li>
+<p>If not logged in =&gt; Redirect to IdP (with user info)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>One Assertion Consumer Service ACS URL (technically this is also handled by the servlet filter through a different URL mapping  <code>/saml</code>),</p>
+<div class="paragraph">
+<p>This service validates and process the SAML response :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Decode SAMLResponse</p>
+</li>
+<li>
+<p>Check if the answer is valid (certificate, date, origin)</p>
+</li>
+<li>
+<p>Extract the username from it (NameId or subject attribute)</p>
+</li>
+<li>
+<p>Connect to bonita using username</p>
+</li>
+<li>
+<p>Redirect to the initial requested resource (relayState)</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
++
+ Bonita "username" should match the NameId or one attribute of the subject returned by the IdP in the response.
+ If some users need to be able to log in without having an account on the IDP, you can authorize it by activating an option in the file <code>authenticationManager-config.properties</code> (see 2. below). Users will then be able to log in using the portal login page (/login.jsp) provided they have a bonita account and their password is different from their username.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configure_bonita_bundle_for_saml"><a class="anchor" href="#_configure_bonita_bundle_for_saml"></a>Configure Bonita Bundle for SAML</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You need to execute the following actions in the folder of each tenant for which you want to support authentication over SAML.
+If you want this configuration to also apply to each tenant created later, make sure to also perform those actions in the <em>template</em> tenant configuration folder:
+<code>&lt;BUNDLE_HOME&gt;/setup/platform_conf/current/tenant_template_*</code> (if you have not started the Bonita bundle yet, the files are located in <code>&lt;BUNDLE_HOME&gt;/setup/platform_conf/initial/tenant_template_*</code>)</p>
+</div>
+<div class="paragraph">
+<p>The bundle already contains the files needed to use SAML with Bonita platform.
+To configure Bonita for SAML:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>If you do not already have one:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Download a Subscription edition bundle from the customer portal</p>
+</li>
+<li>
+<p><a href="_basic-bonita-platform-installation">Configure</a> it as needed</p>
+</li>
+<li>
+<p>Run it a first time, so that the first default tenant is created (TENANT_ID = 1)</p>
+</li>
+<li>
+<p>Stop it before modifying the configuration files below</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>In the tenant_portal folder of each existing tenant: <code>&lt;BUNDLE_HOME&gt;/setup/platform_conf/current/tenants/&lt;TENANT_ID&gt;/tenant_portal</code>,
+edit the authenticationManager-config.properties as follows:</p>
+<div class="listingblock">
+<div class="content">
+<pre>    --&gt;  #auth.AuthenticationManager = org.bonitasoft.console.common.server.auth.impl.standard.StandardAuthenticationManagerImpl
+    --&gt;  auth.AuthenticationManager = org.bonitasoft.console.common.server.auth.impl.saml.SAML2AuthenticationManagerImpl
+    --&gt;  saml.filter.active = true
+    --&gt;  saml.auth.standard.allowed = false
+    --&gt;  saml.logout.global = false
+    --&gt;  auth.tenant.admin.username = install
+    --&gt;  auth.passphrase = BonitaBPM
+
+         #auth.AuthenticationManager = org.bonitasoft.console.common.server.auth.impl.kerberos.RemoteAuthenticationManagerImpl
+         # kerberos.filter.active = true
+         # kerberos.auth.standard.allowed = false
+         # auth.tenant.admin.username = install
+    --&gt;  auth.tenant.standard.whitelist = william.jobs
+         # auth.passphrase = Bonita
+
+         #auth.AuthenticationManager = org.bonitasoft.console.common.server.auth.impl.oauth.OAuthAuthenticationManagerImpl
+         # OAuth.serviceProvider = LinkedIn
+         # OAuth.consumerKey = ove2vcdjptar
+         (...)
+    --&gt;  logout.link.hidden=true</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Make sure to <a href="multi-tenancy-and-tenant-configuration#toc2">set the right tenant admin username</a>.
+ It is recommended to also replace the value of the passphrase (property auth.passphrase) which is used by the engine to verify the authentication request.
+ The value must be the same as in the file <strong>bonita-tenant-sp-custom.properties</strong>.<br>
+ If you need users to be able to log in without having an account on the IDP, you can authorize it by setting the property <code>saml.auth.standard.allowed</code> to true. Users will then be able to log in using the portal login page (/login.jsp) provided they have a bonita account and their password is different from their username.<br>
+ If only a limited group of users need to bypass SAML authentication method you can restrain it by setting the property <code>saml.auth.standard.allowed</code> to false and setting the property <code>auth.tenant.standard.whitelist</code> with the list of authorized usernames (comma separated).</p>
+</div>
+</li>
+<li>
+<p>In the tenant_engine folder of each existing tenant: <code>&lt;BUNDLE_HOME&gt;/setup/platform_conf/current/tenants/&lt;TENANT_ID&gt;/tenant_engine/</code>,
+edit the file <strong>bonita-tenant-sp-custom.xml</strong> to uncomment the bean passphraseOrPasswordAuthenticationService:</p>
+<div class="listingblock">
+<div class="content">
+<pre>     &lt;bean id="passphraseOrPasswordAuthenticationService" class="com.bonitasoft.engine.authentication.impl.PassphraseOrPasswordAuthenticationService" lazy-init="true"&gt;
+        &lt;constructor-arg name="logger" ref="tenantTechnicalLoggerService" /&gt;
+        &lt;constructor-arg name="identityService" ref="identityService" /&gt;
+        &lt;constructor-arg name="configuredPassphrase" value="${authentication.service.ref.passphrase}" /&gt;
+    &lt;/bean&gt;</pre>
+</div>
+</div>
+</li>
+<li>
+<p>In the tenant_engine folder of each existing tenant: <code>&lt;BUNDLE_HOME&gt;/setup/platform_conf/current/tenants/&lt;TENANT_ID&gt;/tenant_engine/</code>
+edit the file bonita-tenant-sp-custom.properties as follows:</p>
+<div class="listingblock">
+<div class="content">
+<pre>         # Authentication service to use. Some are natively provided:
+         # authenticationService
+         #   * binded to bonita authentication mode
+         #   * impl: org.bonitasoft.engine.authentication.impl.AuthenticationServiceImpl
+         # jaasAuthenticationService
+         #   * to use JAAS
+         #   * impl: com.bonitasoft.engine.authentication.impl.JAASGenericAuthenticationServiceImpl
+         #   * this is the one to configure SSO over CAS (CAS properties to be defined hereafter
+         # noAuthenticationService
+         #   * does no authentication on the engine side
+         #   * impl: com.bonitasoft.engine.authentication.impl.NoAuthenticationServiceImpl
+         # passphraseOrPasswordAuthenticationService
+         #   * Used by SAML2 implementation, login only if a passphrase is valid, or if a username/password is valid.
+         #   * Requires PassphraseOrPasswordAuthenticationService bean to be uncommented in bonita-tenant-sp-custom.xml
+         #   * impl: com.bonitasoft.engine.authentication.impl.PassphraseOrPasswordAuthenticationService
+         # you can provide your own implementation in bonita-tenant-sp-custom.xml and refer to the bean name of your choice
+    --&gt;  authentication.service.ref.name=passphraseOrPasswordAuthenticationService
+
+         # If authentication.service.ref.name equals "PassphraseOrPasswordAuthenticationService",
+         # you need to configure the following passphrase
+    --&gt;  authentication.service.ref.passphrase=BonitaBPM
+
+         # CAS authentication delegate : enables the user, providing login/password,
+         # to be logged in automatically against CAS web application
+         # To be used in conjunction with the generic authentication service configured with CAS (jaasAuthenticationService)
+         #authenticator.delegate=casAuthenticatorDelegate
+         #authentication.delegate.cas.server.url.prefix=http://ip_address:port
+         #authentication.delegate.cas.service.url=http://ip_address:port/bonita/loginservice</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>It is recommended to also replace the value of the passphrase (property auth.passphrase). The value must be the same as in the file <strong>authenticationManager-config.properties</strong> updated previously.</p>
+</div>
+</li>
+<li>
+<p>If your Identity Provider (IdP) requires requests to be signed, generate a private key.
+For example on linux, you can use the command ssh-keygen, then go to &#8220;cd ~/.ssh&#8221; to retrieve the key from the file id_rsa (more id_rsa, then copy the key).</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>NOTE:
+<strong>Note:</strong> The expected format for Keys and certificates is PEM (with or without the comment header and footer).<br></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the tenant_portal folder of each existing tenant: <code>&lt;BUNDLE_HOME&gt;/setup/platform_conf/current/tenants/&lt;TENANT_ID&gt;/tenant_portal</code>,<br>
+edit the file <strong>keycloak-saml.xml</strong> to setup Bonita webapp as a Service provider working with your IdP.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The entityID is the Service Provider given to your bonita installation. You can change it if you want but you need to provide it to your IdP.</p>
+</li>
+<li>
+<p>The sslPolicy option may need to be changed if Bonita Portal and the IdP are not both accessed via HTTPS. Possible values for this property are: ALL, EXTERNAL, and NONE. For ALL, all requests must come in via HTTPS. For EXTERNAL, only non-private IP addresses must come over via HTTPS. For NONE, no requests are required to come over via HTTPS.</p>
+</li>
+<li>
+<p>If your <strong>IdP requires the SSO requests to be signed</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>make sure you have signing="true" inside the Key node of the SP</p>
+</li>
+<li>
+<p>replace the following strings in the Keys:Key section of the SP:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>put your private key here</p>
+</li>
+<li>
+<p>put your certificate here</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>with you current Bonita server&#8217;s private key and certificate.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>make sure you have the following inside the IDP node:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>signaturesRequired="true"</p>
+</li>
+<li>
+<p>signatureAlgorithm="the_algorithm_used_by_your_IDP"  (default value: RSA_SHA256)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>make sure you have signRequest="true" inside the SingleSignOnService node</p>
+</li>
+<li>
+<p>make sure you have the following in the SingleLogoutService node:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>signRequest="true"</p>
+</li>
+<li>
+<p>signResponse="true"</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>If your <strong>IdP encrypts the assertions</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>make sure you have encryption="true" inside the Key node of the SP</p>
+</li>
+<li>
+<p>replace the following strings in the Keys:Key section of the SP:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>put your private key here</p>
+</li>
+<li>
+<p>put your certificate here
+with you current Bonita server&#8217;s private key.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>If your <strong>IdP responses are signed</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>make sure you have signing="true" inside the Key node of the IDP</p>
+</li>
+<li>
+<p>replace the following strings in the Keys:Key section of the IDP:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>put your certificate here</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>with the certificate provided by the IdP.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>make sure you have signatureAlgorithm="the_algorithm_used_by_your_IDP"  (default value: RSA_SHA256) inside the IDP node</p>
+</li>
+<li>
+<p>make sure you have validateResponseSignature="true" inside the SingleSignOnService node</p>
+</li>
+<li>
+<p>make sure you have the following in the SingleLogoutService node:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>validateRequestSignature="true"</p>
+</li>
+<li>
+<p>validateResponseSignature="true"</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The IDP entityID attribute needs to be replaced with the entity ID of the IdP.</p>
+</li>
+<li>
+<p>The PrincipalNameMapping policy indicates how to retrieve the subject attribute that matches a bonita user account username from the IdP response.
+The policy can either be FROM_NAME_ID or FROM_ATTRIBUTE (in that case you need to specify the name of the subject attribute to use).</p>
+</li>
+<li>
+<p>You may also need to change the requestBinding and/or responseBinding from POST to REDIRECT depending on your IdP configuration.</p>
+</li>
+<li>
+<p>The url binding to your IdP also needs to be define by replacing the following string:</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="http://idp.saml.binding.url.to.change" class="bare">http://idp.saml.binding.url.to.change</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>NOTE:
+About SAML assertions encryption by the IdP: When the assertions encryption is active, the IdP uses a random key which in turn is encrypted with the SP&#8217;s public key.<br>
+The SP uses its private key to decrypt the random key which in turn is used to decrypt the SAML assertion.
+This ensures that only the SP can decrypt the SAML assertion.</p>
+</div>
+<div class="paragraph">
+<p>WARNING:
+Due to an <a href="https://issues.redhat.com/browse/KEYCLOAK-4377">issue</a> with the version of Keycloak embedded in this version of Bonita, responses that are both signed and encrypted cannot be validated. As a result, the IdP needs to either sign the request or encrypt it (but not both) for the single sign on to work with Bonita.</p>
+</div>
+<div class="paragraph">
+<p>NOTE:
+<strong>Note 2:</strong> <em>If your IdP neither requires the SSO requests to be signed nor encrypts its own responses, you can remove the Keys node from the SP and set the attributes signaturesRequired, signRequest and signResponse to false.</em><br>
+<em>If your IdP responses are not signed, you can remove the Keys node from the IDP and set the attributes validateRequestSignature and validateResponseSignature to false.</em></p>
+</div>
+<div class="paragraph">
+<p>NOTE:
+<strong>Note 3:</strong> More configuration options can be found in <a href="https://www.keycloak.org/docs/latest/securing_apps/index.html#_saml-general-config">Keycloak official documentation</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>       &lt;keycloak-saml-adapter&gt;
+           &lt;SP entityID="bonita"
+               sslPolicy="EXTERNAL"
+               nameIDPolicyFormat="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"
+               forceAuthentication="false"
+               isPassive="false"
+               turnOffChangeSessionIdOnLogin="true"&gt;
+               &lt;Keys&gt;
+        --&gt;        &lt;Key signing="true"
+        --&gt;             encryption="true"&gt;
+        --&gt;            &lt;PrivateKeyPem&gt;put your private key here&lt;/PrivateKeyPem&gt;
+        --&gt;            &lt;CertificatePem&gt;put your certificate here&lt;/CertificatePem&gt;
+                   &lt;/Key&gt;
+               &lt;/Keys&gt;
+               &lt;PrincipalNameMapping policy="FROM_ATTRIBUTE" attribute="username"/&gt;
+               &lt;IDP entityID="idp entity ID to change"
+        --&gt;         signaturesRequired="true"
+        --&gt;         signatureAlgorithm="RSA_SHA256"&gt;
+        --&gt;        &lt;SingleSignOnService signRequest="true"
+        --&gt;           validateResponseSignature="true"
+                      requestBinding="POST"
+                      responseBinding="POST"
+        --&gt;           bindingUrl="http://idp.saml.binding.url.to.change"/&gt;
+        --&gt;        &lt;SingleLogoutService signRequest="true"
+        --&gt;           signResponse="true"
+        --&gt;           validateRequestSignature="true"
+        --&gt;           validateResponseSignature="true"
+                      requestBinding="POST"
+                      responseBinding="POST"
+        --&gt;           postBindingUrl="http://idp.saml.binding.url.to.change"
+        --&gt;           redirectBindingUrl="http://idp.saml.binding.url.to.change"/&gt;
+                   &lt;Keys&gt;
+        --&gt;            &lt;Key signing="true"&gt;
+        --&gt;            &lt;CertificatePem&gt;put your certificate here&lt;/CertificatePem&gt;
+                       &lt;/Key&gt;
+                   &lt;/Keys&gt;
+               &lt;/IDP&gt;
+            &lt;/SP&gt;
+       &lt;/keycloak-saml-adapter&gt;</pre>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>If your Identity Provider is corectly configured (see the section <em>Configure the Identity Provider</em>), you are done.
+Then you can try to access a portal page, an app page or a form URL (or just <code><a href="http://&lt;host&gt;:&lt;port&gt;/bonita">?tenant=&lt;tenantId&gt;</a></code>) and make sure that you are redirected to your Identity Provider to log in (unless you are already logged in).<br>
+Note that if you try to access <code><a href="http://&lt;bundle" class="bare">http://&lt;bundle</a> host&gt;:&lt;port&gt;/bonita/login.jsp</code>, then you won&#8217;t be redirected as this page still needs to be accessible in order for the tenant administrator (or another user if you set the property <code>saml.auth.standard.allowed</code> to true) to be able to log in without an account on the Identity Provider.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>WARNING:
+<strong>Note:</strong> If your Bonita platform is behind a proxy server, You need to make sure the reverse proxy is configured
+to include the correct <code>Host:</code> header to the requests and the application server is configured to use this header (it is usually the case by default).
+This is required so that <code>HttpServletRequest.getRequestURL</code> returns the URL used by the user and not the internal URL used by the reverse proxy.<br>
+For example, if you are running Apache &gt;=2.0.31 as reverse proxy, this configuration is controlled by the property <a href="http://httpd.apache.org/docs/2.2/mod/mod_proxy.html#proxypreservehost">ProxyPreserveHost</a>.
+If you need more fine tuning or if you cannot update the reverse proxy configuration, you can consult the official documentation for <a href="https://tomcat.apache.org/connectors-doc/common_howto/proxy.html">Tomcat</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configure_the_identity_provider"><a class="anchor" href="#_configure_the_identity_provider"></a>Configure the Identity Provider</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Your IdP should declare a Service Provider named <code>bonita</code> (or the value of the <code>entityID</code> set in the file <strong>keycloack-saml.xml</strong> of Bonita bundle if it is different) with the following configuration:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ACS URL or SAML Processing URL: <code>http[s]://&lt;bundle host&gt;:&lt;port&gt;/bonita/saml</code></p>
+</li>
+<li>
+<p>request binding and response binding configured with the same values as in <strong>keycloack-saml.xml</strong> (<code>POST</code> or <code>REDIRECT</code>)</p>
+</li>
+<li>
+<p><code>Client signature required</code> configured with the same values as the property <code>signRequest</code> in <strong>keycloack-saml.xml</strong></p>
+</li>
+<li>
+<p>if the IdP requires the client Bonita server (the SP) to sign its requests, make sure the IdP has access to Bonita server&#8217;s certificate (the same that has been set in the SP:Keys:Key section of the <strong>keycloak-saml.xml</strong>)</p>
+</li>
+<li>
+<p>if the IdP responses are signed, make sure the certificate of the IdP has been set in the IDP:Keys:Key section of the <strong>keycloack-saml.xml</strong></p>
+</li>
+<li>
+<p>the Name ID or a user attribute of the user principal sent back by the IdP should match the username of the user accounts in Bonita and the PrincipalNameMapping policy (and attribute value) in <strong>keycloack-saml.xml</strong> should reflect that</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>NOTE:
+<strong>Note:</strong> If the IdP declares a redirect/target URL, it might override the target URL set by the Service Provider request, and you may always end up on the same page after logging in. In that case, try to remove the redirect URL. Bonita supports redirection to the URL initially requested after logging in on the IdP, provided the IdP doesn&#8217;t force this URL.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configure_logout_behaviour"><a class="anchor" href="#_configure_logout_behaviour"></a>Configure logout behaviour</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If your Bonita platform is configured to manage authentication over SAML, when users log out of Bonita Portal, they do not log out of the SAML Identity Provider (IdP).
+Therefore they are not logged out of all applications that are using the IdP.
+To avoid this, you have two options :</p>
+</div>
+<h4 id="_hide_the_logout_button_of_the_portal" class="discrete">Hide the logout button of the portal</h4>
+<div class="paragraph">
+<p>This is the most commonly used solution. Users are logged in as long as they don&#8217;t close their web browser (unless their session times out).
+To do this, set the <code>logout.link.hidden</code> option to <code>true</code> in <code>authenticationManager-config.properties</code> located in <code>&lt;BUNDLE_HOME&gt;/setup/platform_conf/initial/tenant_template_portal</code> for not initialized platform or <code>&lt;BUNDLE_HOME&gt;/setup/platform_conf/current/tenant_template_portal</code> and <code>&lt;BUNDLE_HOME&gt;/setup/platform_conf/current/tenants/[TENANT_ID]/tenant_portal/</code>.</p>
+</div>
+<div class="paragraph">
+<p>NOTE:
+<strong>Note:</strong> When a user logs out from the IdP directly, Bonita Portal&#8217;s session will remain active. The user&#8217;s session time to live will be reset
+to the configured session timeout value upon each user interaction with the server.</p>
+</div>
+<h4 id="_setup_bonita_platform_for_saml_global_logout" class="discrete">Setup Bonita platform for SAML global logout</h4>
+<div class="paragraph">
+<p>Global logout allows to log out from the Identity Provider as well as all the registered Service Providers when logging out from Bonita platform. This is sometimes required for example if users are on public computers.
+As Identity Providers do not necessarily support single logout and have different ways of handling it (there are several SAML Single Logout methods), Bonita only offers SAML global logout as an experimental feature. Meaning that this feature has only been tested with Keycloack server acting as Identity Provider.
+Therefore, there is no guaranty that the global logout will work with your Identity Provider. However, if your IdP supports the Service Provider initiated flow of SAML&#8217;s Web Browser Single Logout profile, single logout is likely to work.
+To setup Bonita for global logout:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Set the <code>saml.logout.global</code> option to <code>true</code> in <code>authenticationManager-config.properties</code> located in <code>&lt;BUNDLE_HOME&gt;/setup/platform_conf/initial/tenant_template_portal</code> for not initialized platform or <code>&lt;BUNDLE_HOME&gt;/setup/platform_conf/current/tenant_template_portal</code> and <code>&lt;BUNDLE_HOME&gt;/setup/platform_conf/current/tenants/&lt;TENANT_ID&gt;/tenant_portal/</code>.</p>
+</li>
+<li>
+<p>Update the SingleLogoutService section of <code>keycloak-saml.xml</code> located in <code>&lt;BUNDLE_HOME&gt;/setup/platform_conf/initial/tenant_template_portal</code> for not initialized platform or <code>&lt;BUNDLE_HOME&gt;/setup/platform_conf/current/tenant_template_portal</code> and <code>&lt;BUNDLE_HOME&gt;/setup/platform_conf/current/tenants/&lt;TENANT_ID&gt;/tenant_portal/</code> to match your Identity Provider configuration.</p>
+</li>
+<li>
+<p>Update your Identity Provider configuration to setup the Logout Service POST/Redirect Binding URL to <Bonita_server_URL>/bonita/samlLogout</Bonita_server_URL></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>NOTE:
+<strong>Note:</strong> If the single logout flow supported by your IdP is not the same as the one supported by Bonita platform, the preferred solution to handle it anyway is to intercept the requests to /logoutService and handle the logout programmatically.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_troubleshoot"><a class="anchor" href="#_troubleshoot"></a>Troubleshoot</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To troubleshoot SSO login issues, you need to add a logging handler for the package <code>org.keycloak</code> and increase the <a href="logging" class="page">log level</a> to <code>ALL</code> for the packages <code>org.bonitasoft</code>, <code>com.bonitasoft</code>, and <code>org.keycloak</code> in order for errors to be displayed in the log files bonita-*.log (by default, they are not).</p>
+</div>
+<div class="paragraph">
+<p>In order to do that in a Tomcat bundle, you need to edit the file `<BUNDLE_HOME>/server/conf/logging.properties.</BUNDLE_HOME></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Add the lines:</p>
+<div class="listingblock">
+<div class="content">
+<pre>org.keycloak.handlers = 5bonita.org.apache.juli.AsyncFileHandler
+org.keycloak.level = ALL</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Update the existing lines (to set the level to <code>ALL</code>):</p>
+<div class="listingblock">
+<div class="content">
+<pre>org.bonitasoft.level = ALL
+com.bonitasoft.level = ALL</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Edit the <em>logger</em> tags which <em>category</em> matches <code>org.bonitasoft</code> and <code>com.bonitasoft</code> packages: change the <em>level</em> <em>name</em> attribute of each <em>logger</em> to <code>ALL</code> and add a new logger with the <em>category</em> <code>org.keyclock</code> (also with a <em>level</em> <em>name</em> set to <code>ALL</code>).</p>
+</div>
+<h4 id="_common_error_examples" class="discrete">Common error examples</h4>
+<div class="paragraph">
+<p><strong>Symptom:</strong> After configuring SAML SSO in Bonita, the Bonita Portal login page does not redirect to the SSO login page.<br>
+<strong>Possible Solutions:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Check all the Bonita configuration settings are correct.</p>
+</li>
+<li>
+<p>Make sure <code>setup[.sh][.bat] push</code> has been executed and the server restarted after the changes.</p>
+</li>
+<li>
+<p>Try cleaning the cache and cookies of the web browser.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Symptom:</strong> The following stacktrace appears in the Bonita server log :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>2018-10-10 13:22:45,921 SEVERE [org.bonitasoft.console.common.server.sso.filter.InternalSSOFilter] (default task-1) java.lang.RuntimeException: Sp signing key must have a PublicKey or Certificate defined: java.lang.RuntimeException: java.lang.RuntimeException: Sp signing key must have a PublicKey or Certificate defined
+	at org.keycloak.adapters.saml.config.parsers.DeploymentBuilder.build(DeploymentBuilder.java:119)
+	at org.bonitasoft.console.common.server.auth.impl.saml.BonitaSAML2Filter.getSamlDeployment(BonitaSAML2Filter.java:174)
+	(...)
+Caused by: java.lang.RuntimeException: Sp signing key must have a PublicKey or Certificate defined
+	at org.keycloak.adapters.saml.config.parsers.DeploymentBuilder.build(DeploymentBuilder.java:115)
+	... 51 more</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Problem:</strong> The signing of the requests has been enabled in the <strong>keycloak-saml.xml</strong> file, but there is no &lt;CertificatePem&gt; in the Keys:Key section of the SP.<br>
+<strong>Solution:</strong> Add Bonita server&#8217;s certificate in the Keys:Key section of the SP.</p>
+</div>
+<div class="paragraph">
+<p><strong>Symptom:</strong> The following stacktrace appears in the Bonita server log :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>2018-10-11 20:11:37,314 ERROR [org.keycloak.adapters.saml.profile.webbrowsersso.WebBrowserSsoAuthenticationHandler] (default task-1) Failed to verify saml response signature: org.keycloak.common.VerificationException: Invalid signature on document
+	at org.keycloak.adapters.saml.profile.AbstractSamlAuthenticationHandler.verifyPostBindingSignature(AbstractSamlAuthenticationHandler.java:520)
+	at org.keycloak.adapters.saml.profile.AbstractSamlAuthenticationHandler.validateSamlSignature(AbstractSamlAuthenticationHandler.java:271)
+	(...)</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Problem:</strong> The SAML module of the Bonita server has tried to validate the signature of the response sent by the IdP using the &lt;CertificatePem&gt; stored in the IDP:Keys:Key section of the <strong>keycloak-saml.xml</strong> file, but:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>either the validation has failed because the private key used by the IdP to sign the response does not match the certificate used by the SAML module.</p>
+</li>
+<li>
+<p>or the IdP does not really sign the response (in that case, by activating all the logs for the <code>org.keyclock</code> package, you should also see a message <code>Cannot find Signature element</code>).<br>
+<strong>Solution:</strong> Make sure the certificate in the Keys:Key section of the IdP is indeed the one belonging to the private key being used by the IdP to sign its responses. Also make sure the IdP is configured to indeed sign the response. If not you can also change the IDP:Keys:Key section of the <strong>keycloak-saml.xml</strong> to put signing to false and the IDP:SingleSignOnService section to put validateResponseSignature to false.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Symptom:</strong> The following stacktrace appears in the Bonita server log :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>2018-10-11 20:54:22,258 ERROR [org.keycloak.adapters.saml.profile.webbrowsersso.WebBrowserSsoAuthenticationHandler] (default task-2) Error extracting SAML assertion: Encryptd assertion and decrypt private key is null
+2018-10-11 20:54:22,260 ERROR [io.undertow.request] (default task-2) UT005023: Exception handling request to /bonita/saml: java.lang.NullPointerException
+	at org.keycloak.adapters.saml.profile.AbstractSamlAuthenticationHandler.handleLoginResponse(AbstractSamlAuthenticationHandler.java:366)
+	at org.keycloak.adapters.saml.profile.AbstractSamlAuthenticationHandler.handleSamlResponse(AbstractSamlAuthenticationHandler.java:213)
+	(...)</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Problem:</strong> The IdP has sent an encrypted assertion in its response, but the SAML module can not find Bonita server&#8217;s private key in the <strong>keycloak-saml.xml</strong> file, and so it can not decrypt the assertion.<br>
+<strong>Solution:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Make sure you have encryption="true" inside the Key node of the SP.</p>
+</li>
+<li>
+<p>Add Bonita server&#8217;s private key in the Keys:Key section of the SP.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Symptom:</strong> Bonita portal URL profile and page parameters (or any other) after the hash (<mark>) are lost in redirections. As a result once the SAML login page redirects back to Bonita portal, the portal displays the first page of the default profile.<br>
+<strong>Problem:</strong> The hash part of an URL is not sent server-side. It only exists in the web browser. That explains this behavior.<br>
+<strong>Solution:</strong>
+The workaround is to put the parameters as regular URL query parameters. Bonita portal has a mechanism that will convert them to hash parameters if they need to be (this only works since version 7.8.1 of Bonita).<br>
+For example instead of <code>&lt;server_URL&gt;/bonita/portal/homepage</mark>?_p=caselistinguser&amp;_pf=2</code>, use <code>&lt;server_URL&gt;/bonita/portal/homepage?_p=caselistinguser&amp;_pf=2</code></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_manage_passwords"><a class="anchor" href="#_manage_passwords"></a>Manage passwords</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When your Bonita platform is configured to manage authentication over SAML, the user password are managed in your SAML Identity Provider (IdP).
+However, when you create a user in Bonita Portal, specifying a password is mandatory. This password is ignored when logging in with the IdP.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ldap_synchronizer_and_saml"><a class="anchor" href="#_ldap_synchronizer_and_saml"></a>LDAP synchronizer and SAML</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you are using an LDAP service and the <a href="ldap-synchronizer" class="page">LDAP synchronizer</a> to manage your user data,<br>
+you can continue to do this and manage authentication over SAML.<br>
+The LDAP synchronizer user must be registered in Bonita (no need for an SAML IdP account). It is recommended though to use the tenant admin account.
+We recommend that you use LDAP as your master source for information, synchronizing the relevant information with your Bonita platform.</p>
+</div>
+<div class="paragraph">
+<p>NOTE:
+<strong>Note :</strong> By default the <a href="ldap-synchronizer" class="page">LDAP synchronizer</a> sets the password of the accounts created with the same value as the username. So, even if you allow standard authentication (by setting the property <code>saml.auth.standard.allowed</code> in <strong>authenticationManager-config.properties</strong>), users won&#8217;t be able to log in with the portal login page directly without going through the IdP.<br></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_single_sign_on_with_saml_using_the_rest_api"><a class="anchor" href="#_single_sign_on_with_saml_using_the_rest_api"></a>Single sign-on with SAML using the REST API</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>SAML is a browser-oriented protocol (based on http automatic redirection, forms, etc&#8230;&#8203;), therefore only resources that require a direct access from a web browser are handled by the SAML filter.
+Access to other resources won&#8217;t trigger an SAML authentication process.
+Here is the subset of pages filtered by the SAML filter:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>/saml</p>
+</li>
+<li>
+<p>/samlLogout</p>
+</li>
+<li>
+<p>/portal/homepage</p>
+</li>
+<li>
+<p>/portal/resource/*</p>
+</li>
+<li>
+<p>/portal/form/*</p>
+</li>
+<li>
+<p>/mobile/*</p>
+</li>
+<li>
+<p>/apps/*</p>
+</li>
+<li>
+<p>/logoutservice</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>REST API are not part of them, but if an http session already exists thanks to cookies, REST API can be used.</p>
+</div>
+<div class="paragraph">
+<p>The recommended way to authenticate to Bonita Portal to use the REST API is to use the <a href="rest-api-overview.md#bonita-authentication">login service</a>..</p>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer>
+  <div class="footer-header">
+    <h3>Get useful info curated for you</h3>
+    <input type="email" placeholder="Email address *" />
+    <button type="submit">Subscribe</button>
+  </div>
+  <div class="footer-body">
+    <div class="footer-content">
+      <p>
+        Bonitasoft fully supports digital operations and IT modernization with Bonita, an open-source and extensible
+        platform for automation and optimization of business processes.
+        The Bonita platform accelerates development and production with clear separation between capabilities for visual
+        programming and for coding.
+        Bonita integrates with existing information systems, orchestrates heterogeneous systems, and provides deep
+        visibility into processes across the organization.
+      </p>
+    </div>
+    <div class="social-links">
+      <ul>
+        <!-- Twitter image -->
+        <li class="social-icon">
+          <a href="https://twitter.com/bonitasoft" target="_blank">
+            <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+            </svg>
+          </a>
+        </li>
+        <!-- Facebook image -->
+        <li class="social-icon">
+          <a href="https://www.facebook.com/bonitasoftbpm" target="_blank">
+            <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <title>Facebook icon</title>
+              <path
+                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+            </svg>
+          </a>
+        </li>
+        <!-- Linkedin image -->
+        <li class="social-icon">
+          <a href="https://www.linkedin.com/company/bonitasoft/" target="_blank">
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <title>LinkedIn icon</title>
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+          </a>
+        </li>
+        <!-- RSS image -->
+        <li class="social-icon">
+          <a href="https://www.bonitasoft.com/blog/rss" target="_blank">
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <title>RSS icon</title>
+              <path
+                d="M19.199 24C19.199 13.467 10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24h-4.801zM3.291 17.415c1.814 0 3.293 1.479 3.293 3.295 0 1.813-1.485 3.29-3.301 3.29C1.47 24 0 22.526 0 20.71s1.475-3.294 3.291-3.295zM15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909 7.184 15.909 15.91z" />
+            </svg>
+          </a>
+        </li>
+        <!-- Youtube image -->
+        <li class="social-icon">
+          <a href="https://www.youtube.com/user/BonitaSoft" target="_blank">
+            <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <title>YouTube icon</title>
+              <path
+                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="social-links">
+      <ul class="border-right">
+        <li><a href="https://www.bonitasoft.com/downloads">Download</a></li>
+        <li><a href="https://www.bonitasoft.com/events">Events</a></li>
+        <li><a href="https://community.bonitasoft.com/">Community</a></li>
+        <li><a href="https://www.bonitasoft.com/sitemap">Site map</a></li>
+        <li><a href="https://www.bonitasoft.com/bonitasoft-website-legal-terms-use">Terms of use</a></li>
+      </ul>
+    </div>
+    <div class="footer-footer">
+      <p>
+        &copy; Bonitasoft, S.A. All rights reserved.
+        <span>
+          <a href="https://www.bonitasoft.com/privacy">Privacy,</a>
+          <a href="https://www.bonitasoft.com/legal-notices">Legal notices</a>
+        </span>
+      </p>
+      <a class="footer-bonita-logo" href="https://bonitasoft.github.io"></a>
+    </div>
+  </div>
+</footer><script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script type="text/javascript"> docsearch({
+    apiKey: '16267f96d135c47df8454efd5b448c9a',
+    indexName: 'bonitasoft',
+    inputSelector: '#search-query',
+    debug: false // Set debug to true if you want to inspect the dropdown
+  });
+</script>
+<script type="text/javascript"> docsearch({
+    apiKey: '16267f96d135c47df8454efd5b448c9a',
+    indexName: 'bonitasoft',
+    inputSelector: '#search-query-mobile',
+    debug: false // Set debug to true if you want to inspect the dropdown
+    /*algoliaOptions: {
+      'facetFilters': ["tags:7.10", "tags:bonita"]
+    },*/
+  });
+</script>
+  </body>
+</html>
