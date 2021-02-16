@@ -1,0 +1,2546 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Getting started tutorial :: Bonita Documentation</title>
+    <link rel="canonical" href="https://bonitasoft.github.io/bonita/7.5/getting-started-tutorial">
+    <meta name="generator" content="Antora 2.3.4">
+<link rel="stylesheet" href="../../_/stylesheets/site.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="navbar-item">
+        <a class="bonita-logo" href="https://bonitasoft.github.io"></a>
+      </div>
+
+    </div>
+
+    <div class="search-content">
+      <fieldset>
+        <input type="text" id="search-query-mobile" placeholder="Search..." />
+        <div class="icons-container">
+          <div id="search-icon"></div>
+        </div>
+      </fieldset>
+    </div>
+
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-item is-hoverable">
+        <a href="https://community.bonitasoft.com/" class="navbar-link">Community</a>
+      </div>
+      <div class="navbar-item is-hoverable">
+        <a class="navbar-link" href="/bonita/7.5/">Bonita</a>
+      </div>
+      <div class="navbar-item is-hoverable">
+        <a class="navbar-link" href="/bici/latest/">Bonita ICI</a>
+      </div>
+    </div>
+
+    <div class="theme-switch-wrapper">
+      <input type="checkbox" name="" onclick="toggleDarkThemeMode(this)">
+    </div>
+
+    <div class="navbar-item search-item hide-for-print">
+      <input type="text" placeholder="Search Docs" class="search-bar query ds-input" id="search-query">
+      <i class="search-icon" aria-hidden="true"></i>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="bonita" data-version="7.4">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="./">Bonita</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="migration-tool">Migration tool change log</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_application-and-process-design.adoc">Application and Process Design</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bonita-bpm-overview">Bonita BPM overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_application-and-process-design-overview.adoc">Application and process design overview</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="getting-started-tutorial">Getting started tutorial</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="key-concepts">Key concepts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="comparison-of-7-x-and-6-x">Comparison of 7.x and 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lifecycle-and-profiles">Lifecycle and profiles</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="design-methodology">Design methodology</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bonita-bpm-studio-preferences">Bonita BPM Studio preferences</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bonita-bpm-studio-hints-and-tips">Bonita BPM Studio hints and tips</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_process-modeling.adoc">Process modeling</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_diagrams.adoc">Diagrams</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="diagram-overview">Diagram overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="pools-and-lanes">Pools and lanes</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="diagram-tasks">Tasks</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="gateways">Gateways</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="transitions">Transitions</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="events">Events</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="called-processes">Called processes</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="event-subprocesses">Event subprocesses</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="text-annotations">Text annotations</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="migrate-a-process-from-bonita-open-solution-5-x">Migrate a process from Bonita Open Solution 5.x</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="naming-conventions">Naming conventions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="generate-process-documentation">Generate process documentation</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="refactoring">Refactoring</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="actors">Actors</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="actor-filtering">Actor filters</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="iteration">Iteration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_data.adoc">Data</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="data-handling-overview">Data handling overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="define-and-deploy-the-bdm">Define and deploy the BDM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="specify-data-in-a-process-definition">Specify data in a process definition</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="parameters">Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="contracts-and-contexts">Contracts and contexts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="documents">Documents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="create-a-complex-data-type">Complex data types</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="define-a-search-index">Define a search key</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="expressions-and-scripts">Expressions and scripts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="operations">Operations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_page-and-form-development.adoc">Page and form development</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="page-and-form-development-overview">Page and form development overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_using-the-ui-designer.adoc">UI Designer</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="ui-designer-overview">UI Designer overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="create-or-modify-a-page">Create or modify UI artifacts</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="widgets">Widgets</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="widget-properties">Widget properties</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_widget-use-examples.adoc">Widget use examples</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="repeat-a-container-for-a-collection-of-data">Repeat a container for a collection of data</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="fragments">Fragments</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="custom-widgets">Custom widgets</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="variables">Variables</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="appearance">Appearance</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="assets">Assets</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="multi-language-pages">Multi-language pages</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="migrate-a-form-from-6-x">Migrate a form from 6.x</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="6-x-legacy-forms">6.x legacy forms</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_connectivity.adoc">Connectivity</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="connectivity-overview">Connectivity overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="alfresco">Alfresco</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="cmis">CMIS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_database.adoc">Database</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="list-of-database-connectors">List of database connectors</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="database-connector-configuration">Database connector configuration</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="graphical-query-builder">Graphical query builder</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="initialize-a-variable-from-a-database-without-scripting-or-java-code">Initialize a variable from a database without scripting or Java code</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="insert-data-in-a-docx-odt-template">Insert data in a .docx/.odt template</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="google-calendar">Google Calendar</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="jasper-5">Jasper</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="ldap">LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="messaging">Messaging</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="generate-pdf-from-an-office-document">Generate PDF from an Office document</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="salesforce">Salesforce</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="sap-jco-2">SAP JCo 2</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="sap-jco-3">SAP JCo 3</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="script">Script</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="sugar-crm">SugarCRM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="talend-job-launcher">Talend Job launcher</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="talend-tis-job-launcher">Talend TIS Job launcher</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="twitter">Twitter</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_web-service.adoc">Web service</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="web-service-connector-overview">Web service connector overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="web-service-tutorial">Web service connector tutorial</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_organization.adoc">Organization</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="organization-overview">Organization overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="approaches-to-managing-organizations-and-actor-mapping">Approaches to managing organizations and actor mapping</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="organization-management-in-bonita-bpm-studio">Organization management in Bonita BPM Studio</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="custom-user-information-in-bonita-bpm-studio">Custom User Information in Bonita BPM Studio</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="ldap-synchronizer">LDAP synchronizer</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_reporting.adoc">Reporting</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="reporting-overview">Reporting overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set-up-a-reporting-database">Set up a reporting database</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set-up-kpis">Set up KPIs</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="create-a-report">Create a report</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="import-and-export-a-process">Import and export a process</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_process-configuration.adoc">Process configuration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="process-configuration-overview">Process configuration overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="environments">Environments</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="configuring-a-process">Configure a process</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="manage-jar-files">Manage JAR files</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="managing-dependencies">Manage dependencies</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_process-testing.adoc">Process testing</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="process-testing-overview">Process testing overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="configure-a-test-organization">Configure a test organization</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="run-a-process-from-bonita-bpm-studio-for-testing">Run a process from Bonita BPM Studio for testing</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="log-files">Log files</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="build-a-process-for-deployment">Build a process for deployment</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="workspaces-and-repositories">Workspaces and repositories</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_installation.adoc">Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bonita-bpm-installation-overview">Bonita BPM installation overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bonita-bpm-studio-installation">Bonita BPM Studio installation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_basic-bonita-bpm-platform-installation.adoc">Basic Bonita BPM Platform installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="hardware-and-software-requirements">Hardware and software requirements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tomcat-bundle">Tomcat bundle</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="wildfly-bundle">WildFly bundle</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="deploy-bundle">Deploy bundle</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="BonitaBPM_platform_setup">Platform configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="database-configuration">Database creation and customization to work with Bonita BPM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="first-steps-after-setup">First steps after setup</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="licenses">Licenses</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_advanced-bonita-bpm-platform-installation.adoc">Advanced Bonita BPM Platform installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_security-and-authentication.adoc">Security and authentication</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="user-authentication-overview">User authentication overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="active-directory-or-ldap-authentication">Active Directory or LDAP authentication</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="single-sign-on-with-cas">Single sign-on with CAS</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="enforce-password-policy">Enforce password policy</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="rest-api-authorization">REST API authorization</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="csrf-security">CSRF security</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="enable-cors-in-tomcat-bundle">Enable CORS in Tomcat bundle</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="ssl">SSL</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tenant_admin_credentials">Tenant administrator credentials</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set-log-and-archive-levels">Set log and archive levels</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="configurable-archive">Configurable Archive</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="performance-tuning">Performance tuning</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="performance-troubleshooting">Performance troubleshooting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="use-gzip-compression">Use gzip compression</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="two-main-types-of-deployment">Two main types of deployment</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_bonita-bpm-in-a-cluster.adoc">Bonita BPM in a cluster</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="overview-of-bonita-bpm-in-a-cluster">Overview of Bonita BPM in a cluster</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="install-a-bonita-bpm-cluster">Install a Bonita BPM cluster</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="cluster-administration">Cluster administration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="multi-tenancy-and-tenant-configuration">Multi-tenancy and tenant configuration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_platform-installation-examples.adoc">Platform installation examples</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="red-hat-oracle-jvm-weblogic-oracle">Red Hat + Oracle JVM + WebLogic + Oracle</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="ubuntu-openjdk-tomcat-postgresql">Ubuntu + OpenJDK + Tomcat + PostgreSQL</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bonita-as-windows-service">Install Tomcat with Bonita as a service in Windows</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="back-up-bonita-bpm-platform">Back up Bonita BPM Platform</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_migration.adoc">Migration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="migration-overview">Migration overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="migrate-from-an-earlier-version-of-bonita-bpm">Migrate from an earlier version of Bonita BPM</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="upgrade-from-community-to-a-subscription-edition">Community to Subscription upgrade</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_bonita-bpm-portal-administration.adoc">Bonita BPM Portal Administration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_bonita-bpm-portal-interface.adoc">Bonita BPM Portal interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bonita-bpm-portal-interface-overview">Bonita BPM Portal overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="user-task-list">User task list</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="languages">Languages</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="log-in-and-log-out">Log in and log out</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="about">About Bonita BPM Portal</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="mobile-portal">Mobile Portal</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_process-maintenance.adoc">Process maintenance</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="processes">Processes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="cases">Cases</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tasks">Tasks</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="subtasks">Subtasks</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="monitoring">Monitoring</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="pause-and-resume-bpm-services">Pause and resume BPM services</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bdm-management-in-bonita-bpm-portal">BDM Management in Bonita BPM Portal</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="applications">Applications</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_resources.adoc">Resources</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="resource-management">Resource management</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="pages">Pages</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="forms">Forms</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="layouts">Layouts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="themes">Themes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="api-extensions">REST API extensions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="live-update">Live update</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_organization-in-bonita-bpm-portal.adoc">Organization in Bonita BPM Portal</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="organization-in-bonita-bpm-portal-overview">Organization in Bonita BPM Portal overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_organization-maintenance.adoc">Organization maintenance</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="import-export-an-organization">Import/export an organization</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="group">Manage groups</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="role">Manage roles</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_user.adoc">Manage users</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="manage-a-user">Manage a user</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="deactivate-a-user">Deactivate a user</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="custom-user-information-in-bonita-bpm-portal">Custom User Information in Bonita BPM Portal</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="analytics">Analytics</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_user-profiles.adoc">User profiles</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="profiles-overview">Profiles overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="administrator-rights">Administrator rights</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="process-manager">Process manager</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="custom-profiles">Custom profiles</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="deploying-profiles-with-export-and-import">Deploy profiles with export and import</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_look-feel.adoc">Look &amp; Feel</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="managing-look-feel">Manage Look &amp; Feel</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="creating-a-new-look-feel">Create a new Look &amp; Feel</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="search-index">Search keys</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_development.adoc">Development</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="software-extensibility">Software extensibility</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_bonita-bpm-artifacts.adoc">Bonita BPM artifacts</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_connectors.adoc">Connectors</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="connectors-overview">Connectors overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="connector-development-toolkit">Connector development toolkit</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="creating-an-actor-filter">Create an actor filter</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="api-glossary">API glossary</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_rest-api.adoc">REST API</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-api-overview">REST API overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="application-api">application API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bdm-api">bdm API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bpm-api">bpm API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="customuserinfo-api">customuserinfo API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="form-api">form API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="identity-api">identity API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="platform-api">platform API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="portal-api">portal API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="system-api">system API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-api-extensions">REST API extensions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="manage-files-using-upload-servlet-and-rest-api">Manage files using upload servlet and REST API</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_engine-api.adoc">Engine API</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="engine-api-overview">Engine API overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="create-your-first-project-with-the-engine-apis-and-maven">Create your first project with the Engine APIs and Maven</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="configure-client-of-bonita-bpm-engine">Configure connection to Bonita BPM Engine</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="http://documentation.bonitasoft.com/javadoc/api/$7.4/index.html">Javadoc</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_examples.adoc">Examples</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manage-a-process">Manage a process</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="handle-a-failed-activity">Handle a failed activity</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manage-an-organization">Manage an organization</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manage-users">Manage users</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="handling-documents">Handle documents</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="create-administration-tools">Create administration tools</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="restore-default-look-feel">Restore the default Look &amp; Feel</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manage-the-platform">Manage the platform</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="using-list-and-search-methods">List and search methods</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="log-in-with-cas">Log in with CAS</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bonita-bpm-portal-urls">Bonita BPM Portal URLs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_engine-architecture.adoc">Bonita BPM Engine architecture</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="engine-architecture-overview">Bonita BPM Engine architecture overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_services.adoc">Services</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="event-handlers">Event handlers</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="queriable-logging">Queriable logger</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="technical-logging">Technical logger</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="execution-sequence-states-and-transactions">Execution sequence, states, and transactions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="shared-transactions">Shared transactions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_living-application.adoc">Living application</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="customize-living-application-layout">Customize living application layout</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="logging">Logs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="preloading-the-forms-cache">Preload the forms cache</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="building-community-edition-from-source">Build Bonita BPM Community edition from source files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_continuous-integration.adoc">Continuous integration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="automating-builds">Automate builds</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set-up-continuous-integration">Set up continuous integration</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_howtos.adoc">Howtos</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uid-modal-tutorial">Create a modal window using CSS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uid-case-overview-tutorial">Create a case overview page using the UI Designer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="optimize-user-tasklist">Create unique task names for the user task list</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="manage-control-in-forms">Control and validate forms in the UI Designer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="list-of-documents">Manage a list of documents</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bo-multiple-refs-tutorial">Manage multiple references in Business Objects</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="custom-authorization-rule-mapping">Map authorization rules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="rta-mail-template">Use the rich textarea widget in a mail template</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dates-management-tutorial">Manage dates in BDM and User Interfaces</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Bonita</span>
+    <span class="version">7.4</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Bonita</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../7.5/">7.5</a>
+        </li>
+        <li class="version is-current">
+          <a href="./">7.4</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Bonita ICI</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../bici/latest/">labs</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+  <button class="nav-toggle"></button>
+  <a href="../7.5/" class="home-link">
+    <svg height="30" viewBox="0 0 48 48" width="30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 40V28h8v12h10V24h6L24 6 4 24h6v16z" />
+      <path d="M0 0h48v48H0z" fill="none" />
+    </svg>
+  </a>
+  <nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="./">Bonita</a></li>
+    <li><a href="#_application-and-process-design.adoc">Application and Process Design</a></li>
+    <li><a href="#_application-and-process-design-overview.adoc">Application and process design overview</a></li>
+    <li><a href="getting-started-tutorial">Getting started tutorial</a></li>
+  </ul>
+</nav>
+  <div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">7.4</button>
+  <div class="version-menu">
+    <a class="version" href="../7.5/getting-started-tutorial">7.5</a>
+    <a class="version is-current" href="getting-started-tutorial">7.4</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/bonitasoft/bonita-doc/edit/7.4_asciidoc/modules/ROOT/pages/getting-started-tutorial.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Getting started tutorial</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This tutorial explains how to create an application that includes a process. The application is created using the Bonita BPM Community edition, and uses features that are available in all editions. The example application is a business travel tool, and is similar to the simple travel request process that was used in the getting started tutorial for earlier versions of Bonita BPM.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+these instructions are also available as a <a href="http://www.bonitasoft.com/resources/videos/getting-started-tutorial">video</a>. The complete solution is available on <a href="https://github.com/Bonitasoft-Community/getting-started-turorial">GitHub</a>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Note that example solution is available on <a href="https://github.com/Bonitasoft-Community/getting-started-turorial">GitHub repository</a>.</p>
+</div>
+<div class="paragraph">
+<p>Here is the use-case: <em>An employee opens the Travel Tool application to view their pending and approved travel requests. They create a new travel request. Then the request is sent to the employee&#8217;s manager.
+The manager reviews the request and approves or refuses it.</em>
+In a real travel management application, there would be several process steps after approval: estimating costs, possibly getting a second level of approval if the cost passes a certain threshold, submitting an expenses claim after the travel, reviewing the expenses claim, escalating anything out of policy, and authorizing payment. However, for this tutorial you will consider only the first part of the process, where a travel request is submitted and then reviewed.</p>
+</div>
+<div class="paragraph">
+<p>This tutorial assumes that you are a developer using Bonita BPM for the first time.
+It gives instructions for using Bonita BPM Studio, the UI Designer, and Bonita BPM Portal. It assumes you are familiar with JavaScript, JSON and REST APIs.</p>
+</div>
+<div class="paragraph">
+<p>Use Bonita BPM Studio to define your process, including using the UI Designer to create pages and forms. Then use Bonita BPM Portal to build the application.</p>
+</div>
+<div class="paragraph">
+<p>This is the recommended sequence for creating an application, but generally application pages, data model and processes are defined in parallel and evolve as you go deeper in the application details:</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_design_application_pages"><a class="anchor" href="#_design_application_pages"></a>Design application pages</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The first step in creating an application is to design the application pages in the UI Designer using dummy data, creating a prototype application as seen by users. This enables you to review the application with the stakeholders and get validation of the application design before proceeding to more complex tasks.</p>
+</div>
+<div class="paragraph">
+<p>The Bonita BPM Studio UI Designer is an environment for creating application pages and forms. To start the UI Designer, click the UI Designer icon in the Bonita BPM Studio coolbar (at the top of the screen). The UI Designer opens in a browser.</p>
+</div>
+<div class="paragraph">
+<p>The travel tool has a home page that displays a list of pending and approved travel requests to the current user. It contains a button for starting a new travel request.</p>
+</div>
+<div class="paragraph">
+<p>There are also some forms that are associated with the travel management process:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Create a travel request</p>
+</li>
+<li>
+<p>Review a travel request and approve or refuse it</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The easiest way to create these forms is from the process definition, so that is what you will do later in the tutorial.</p>
+</div>
+<div class="paragraph">
+<p>The following sections explain how to create the application page and then populate it with dummy data. At any stage, you can click <strong><em>Preview</em></strong> and see a preview of the layout of the page as it will appear to users.
+Remember to click <strong><em>Save</em></strong> to save your work frequently.</p>
+</div>
+<h4 id="_create_travel_tool_home_page" class="discrete">Create travel tool home page</h4>
+<div class="paragraph">
+<p>In Bonita BPM Studio, start the UI Designer by clicking the icon in the coolbar. This opens the UI Designer in your browser, at the home page.</p>
+</div>
+<div class="paragraph">
+<p>In the UI Designer home page, click on the <strong><em>Create</em></strong> button. This brings a pop-up.<br>
+In the pop-up, set the type to <em>Application page</em> and name to <em>TravelTool</em>.<br>
+The name must not contain spaces or special characters.<br>
+This name is used in Bonita BPM to identify the page. It is not displayed to the application user.<br>
+Click on <strong><em>Create</em></strong>. This opens the new page in the Page editor.</p>
+</div>
+<div class="paragraph">
+<p>Create the page structure by dragging widgets from the palette on the left and dropping them on the whiteboard (the central panel).
+Specify the characteristics of a widget by selecting it and updating the properties in the panel on the right. Add the following widgets:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A TEXT widget, with the <strong>Text</strong> property set to <em>username</em>.</p>
+</li>
+<li>
+<p>A TITLE widget, with the <strong>Text</strong> property set to <em>Travel tool</em>.</p>
+</li>
+<li>
+<p>A TEXT widget, with text introducing the application: <code>This page lists your pending and approved travel requests.</code></p>
+</li>
+<li>
+<p>A CONTAINER for the user pending requests, with the following widgets:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>A TITLE widget with a lower title level than the page title (for example, "Level 3"), with the text <code>My pending requests</code>.</p>
+</li>
+<li>
+<p>A TABLE widget for listing pending travel requests, with the following properties:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Headers</strong> set to <code>Departure date, Number of nights, Hotel needed, Destination, Reason</code></p>
+</li>
+<li>
+<p><strong>Columns key</strong> set to <code>departureDate, numberOfNights, hotelNeeded, destination, reason</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>A LINK widget with text <code>Create new travel request</code> and <strong>Style</strong> property set to primary.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>A CONTAINER for the user approved requests, with the following widgets:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>A TITLE widget with a lower title level than the page title, with the text <code>My approved requests</code>.</p>
+</li>
+<li>
+<p>A TABLE widget for listing approved travel requests, with the following properties:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Headers</strong> set to <code>Departure date, Number of nights, Hotel needed, Destination, Reason</code>.</p>
+</li>
+<li>
+<p><strong>Columns key</strong> set to <code>departureDate, numberOfNights, hotelNeeded, destination, reason</code>.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When you have added the widgets, click <strong><em>Preview</em></strong> to see how the page displays.<br>
+Change the arrangement of the widgets in the whiteboard using drag and drop and using the <strong>Width</strong> property, until you are happy with the result.</p>
+</div>
+<div class="paragraph">
+<p>Remember to click the topmost <strong><em>Save</em></strong> button, or type <code>Ctrl+S</code> to save your work.</p>
+</div>
+<h4 id="_add_dummy_data" class="discrete">Add dummy data</h4>
+<div class="paragraph">
+<p>Now use some dummy data to see how the tables will look when there is data.<br>
+First create a variable containing the data, and then bind the variable to the widget <strong>Value</strong> property.<br>
+In the application, the real data will be business data retrieved by a REST API call.<br>
+The dummy data for the travel requests is in JSON. You need two JSON variables, <code>myPendingRequests</code> and <code>myApprovedRequests</code>.</p>
+</div>
+<div class="paragraph">
+<p>To create <strong>myPendingRequests</strong>:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the <strong>Variables</strong> panel (at the bottom of the page), click <strong><em>Create a new variable</em></strong>.</p>
+</li>
+<li>
+<p>Enter the variable name, <strong>myPendingRequests</strong>.</p>
+</li>
+<li>
+<p>Select the JSON type.</p>
+</li>
+<li>
+<p>Enter this value:</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">  [
+      {
+          "userId": 3,
+          "destination": "Grenoble",
+          "departureDate": "2016-02-09",
+          "numberOfNights": 1,
+          "hotelNeeded": true,
+          "reason": "Bonita BPM 7.2 launch",
+          "status": "pending",
+          "refusalReason": ""
+      },
+      {
+          "userId": 3,
+          "departureDate": "2016-10-09",
+          "numberOfNights": 3,
+          "hotelNeeded": false,
+          "destination": "Paris",
+          "reason": "Open source conference",
+          "status": "pending",
+          "refusalReason": ""
+      },
+      {
+          "userId": 3,
+          "departureDate": "2016-07-07",
+          "numberOfNights": 4,
+          "hotelNeeded": false,
+          "destination": "San Francisco",
+          "reason": "BPAD training",
+          "status": "pending",
+          "refusalReason": ""
+      }
+  ]</code></pre>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Click <strong><em>Save</em></strong>.</p>
+</li>
+<li>
+<p>Select the table widget for the pending requests.</p>
+</li>
+<li>
+<p>In the <strong>Content</strong> property, click the link icon at the right ("fx"), then click in the box and choose <code>myPendingRequests</code> from the list of variables (start typing the variable name to get auto-completion).</p>
+</li>
+<li>
+<p>Click <strong><em>Preview</em></strong> to see the page with data for pending requests.<br>
+Now follow the same steps to create <code>myApprovedRequests</code> with the following content:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">  [
+   {
+       "userId": 3,
+       "destination": "Tokyo",
+       "departureDate": "2016-10-10",
+       "numberOfNights": 5,
+       "hotelNeeded": true,
+       "reason": "BPM for HR conference",
+       "status": "approved",
+       "refusalReason": ""
+   },
+   {
+       "userId": 3,
+       "departureDate": "2015-12-11",
+       "numberOfNights": 3,
+       "hotelNeeded": false,
+       "destination": "San Francisco",
+       "reason": "Meetings with team",
+       "status": "approved",
+       "refusalReason": ""
+   }
+  ]</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>When you have defined this variable, select the table widget for the approved requests and set the value of the <strong>Content</strong> property to <code>myApprovedRequests</code> (remember to click on the "bind" icon).</p>
+</div>
+<h4 id="_review_and_improve_the_page" class="discrete">Review and improve the page</h4>
+<div class="paragraph">
+<p>You now have a prototype of the <em>TravelTool</em> page with dummy data. View the prototype, and adjust the arrangement of the widgets until you are happy with the appearance of the page.<br>
+You can drag and drop widgets to reorder them, and you can change properties including <strong>Width</strong> and <strong>Alignment</strong>. For example, to improve this page, you could make the following changes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Select the username widget, and change the <strong>Alignment</strong> to <code>right</code>.</p>
+</li>
+<li>
+<p>Select the "Travel Tool" title and drag it beside the username. The size of the username widget will automatically adjust, so that both widgets are in the same row.</p>
+</li>
+<li>
+<p>Select the "Create new travel request" link widget and change the <strong>Alignment</strong> to <code>center</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_create_the_data_model"><a class="anchor" href="#_create_the_data_model"></a>Create the data model</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>There are two stages to defining variables: first you define the business data model, and then you specify how the process handles objects of the model.<br>
+The model is defined as a set of Java objects, and the process uses instances of these objects. If you are not familiar with the terminology, all you need to remember is that the model is the global definition, with a collection of structured variables.<br>
+For your process, you select the subset that is relevant.</p>
+</div>
+<div class="paragraph">
+<p>First, we will create the business data model, which will then be available for all processes. We will use a model with one object:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em>TravelRequest</em> contains the details of the travel that is being requested and its approval status.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To define the business data model:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Go to the <strong>Development</strong> menu, choose <strong>Business Data Model</strong>, and then choose <strong>Manage&#8230;&#8203;</strong>. This opens the dialog to manage the business data model.</p>
+</li>
+<li>
+<p>Beside the list of business object types, click <strong><em>Add</em></strong>. A temporary type name, such as <em>BusinessObject1</em> is added to the list.</p>
+</li>
+<li>
+<p>Click on the temporary name, and change it to <em>TravelRequest</em>.</p>
+</li>
+<li>
+<p>Select the <em>TravelRequest</em> business object type, and add its attributes. This table shows the attributes and their types:</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Variable</th>
+<th class="tableblock halign-left valign-top">Data type</th>
+<th class="tableblock halign-left valign-top">Mandatory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">userId</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Long</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">departureDate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Date</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">numberOfNights</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">hotelNeeded</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">destination</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">reason</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">refusalReason</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">no</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>To add each attribute:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the <strong>Attributes</strong> tab, click <strong><em>Add</em></strong>. A temporary attribute name ("attribute1") is added to the Name column.</p>
+</li>
+<li>
+<p>Change the temporary name to the attribute name.</p>
+</li>
+<li>
+<p>Select the type from the drop-down list. To display the list, click at the right end of the <strong>Type</strong> column.</p>
+</li>
+<li>
+<p>There are no <strong>Multiple</strong> attributes in this object, so you can ignore this column.</p>
+</li>
+<li>
+<p>In the <strong>Mandatory</strong> column, check the box for the attributes that are mandatory.</p>
+</li>
+<li>
+<p>Add a custom query that you will use to search for data using both the userId and the status:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>In the <strong>Queries</strong> tab, select <strong>Custom</strong>.</p>
+</li>
+<li>
+<p>Click <strong><em>Add</em></strong>. A temporary query name ("query1") is added to the <strong>Name</strong> column.</p>
+</li>
+<li>
+<p>Change the temporary name to <code>findByUserIdAndStatus</code>.</p>
+</li>
+<li>
+<p>Click in the query column, and then click the edit icon at the right. This opens a popup with a proposed custom query that uses all the attributes.</p>
+</li>
+<li>
+<p>In the <strong>JPQL Query</strong> field, remove these lines:</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>AND t.departureDate = :departureDate
+AND t.numberOfNights = :numberOfNights
+AND t.hotelNeeded = :hotelNeeded
+AND t.destination = :destination
+AND t.reason = :reason
+AND t.refusalReason = :refusalReason</pre>
+</div>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>In the Parameters list, delete all the attributes except <em>userId</em> and <em>status</em>.</p>
+</li>
+<li>
+<p>Click <strong><em>OK</em></strong> to save the query.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Click <strong><em>Finish</em></strong> to save the business data model.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_create_the_process_definition"><a class="anchor" href="#_create_the_process_definition"></a>Create the process definition</h2>
+<div class="sectionbody">
+<h4 id="_create_the_diagram" class="discrete">Create the diagram</h4>
+<div class="paragraph">
+<p>The first stage is to create the new diagram, which you do using Bonita BPM Studio. While you are working on a diagram, save your work from time to time, by clicking the <strong><em>Save</em></strong> icon in the coolbar (at the top of the screen) or typing <code>Ctrl+S</code>.<br>
+Create the diagram as follows:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Click <strong><em>New diagram</em></strong> on the Bonita BPM Studio Welcome page. This creates an almost empty diagram for you to start updating:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The large rectangle with a name at the left is the <strong>pool</strong>.</p>
+</li>
+<li>
+<p>Inside the pool there is a <strong>lane</strong>, which is also a rectangle. You can see the border of the lane at the left side, beside the pool name.
+The other borders of the lane coincide with the pool border so are not visible.</p>
+</li>
+<li>
+<p>The green circle in the lane is a <strong>start event</strong>.</p>
+</li>
+<li>
+<p>The blue box in the lane is a <strong>human task</strong>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>The first thing to do is to give the diagram a more descriptive name. Click on the diagram outside the pool, then go to the <strong>Details</strong> panel. This is the area on the bottom-right of the screen.</p>
+</li>
+<li>
+<p>In the <strong>General</strong> tab, <strong>Diagram</strong> pane, click <strong><em>Edit&#8230;&#8203;</em></strong> next to the <strong>Name</strong> field.</p>
+</li>
+<li>
+<p>Enter the new diagram name, <em>Simple Travel Request</em>, in the popup and click <strong><em>OK</em></strong>. You can see in the tab at the top of the whiteboard that the diagram name has changed.</p>
+</li>
+<li>
+<p>Now give the Pool a more descriptive name. Select the pool by clicking in the space between the pool border and the lane border at the left side of the diagram.
+Then go to the <strong>Details</strong> panel, <strong>General</strong> tab, <strong>Pool</strong> pane, and click <strong><em>Edit&#8230;&#8203;</em></strong> next to the <strong>Name</strong> field. Enter the new pool name, <em>Travel Request</em>, in the popup.
+When you have renamed the diagram and the pool, the diagram looks like this:</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/images/images-6_0/7.0-getting-started-renamed-diagram.png" alt="Diagram with names changed">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Now add the tasks to the diagram. This process starts when an employee fills in a travel request form. You do not need to create a task for this because it is this action that triggers the process to start. This is known as process initiation. A <strong>form for process initiation</strong> is defined at the pool level.</p>
+</li>
+<li>
+<p>Define what happens after the user submits a request form: the manager reviews the travel request and approves or refuses it. You can use the example task that was added to the diagram automatically. Click on the task name and change it to <em>Manager review</em>.</p>
+</li>
+<li>
+<p>In a future evolution of this process, the next task would be to send the travel request details to the admin team so they can handle the booking. For now, though we are just interested in getting the first part of the process working, so add an end after the review task. You can do this by dragging the end icon (red circle) from the palette to the whiteboard, and then connecting to the <em>Manager review</em> task with a flow element.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>When you have finished, your diagram should look like this:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/images/images-6_0/7.0-getting-started-completed-diagram.png" alt="Completed diagram">
+</div>
+</div>
+<h4 id="_define_business_variables" class="discrete">Define business variables</h4>
+<div class="paragraph">
+<p>You have already defined the data model, but now you need to specify how the model is applied to this process.<br>
+Define a <em>travelRequest</em> business variable, which is an instance of the <em>TravelRequest</em> object type. Follow these steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Select the pool.</p>
+</li>
+<li>
+<p>Go to the <strong>Details</strong> panel, <strong>Data</strong> tab, <strong>Pool variables</strong> pane and click <strong><em>Add&#8230;&#8203;</em></strong> beside the Business variables box.</p>
+</li>
+<li>
+<p>In the Name field, type <em>travelRequest</em>.</p>
+</li>
+<li>
+<p>Add a description to document your development if you want to.</p>
+</li>
+<li>
+<p>From the Business Object list, choose <em>TravelRequest</em>.</p>
+</li>
+<li>
+<p>Do not configure the default value. The default value uses information that is in the contract, so you will define it later.</p>
+</li>
+<li>
+<p>Click <strong><em>Finish</em></strong> to save the definition.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The attributes of <em>travelRequest</em> are the information that is used in the process. There are no other variables to define.</p>
+</div>
+<h4 id="_create_contracts" class="discrete">Create contracts</h4>
+<div class="paragraph">
+<p>A contract is the specification of what a form must return to the process instance. Define a contract for process instantiation, and for each human task.</p>
+</div>
+<div class="paragraph">
+<p>The contract does not need to include information that is sent from the process instance to the form. This is included in the context, which is the set of information passed to the form. You cannot configure the context.</p>
+</div>
+<div class="paragraph">
+<p>The information that you specify in the contract is a subset of the information used in the process.<br>
+To specify the process instantiation contract, select the pool and follow these steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Go to the <strong>Details</strong> panel, <strong>Execution</strong> tab, <strong>Contract</strong> pane.</p>
+</li>
+<li>
+<p>In the <strong>Inputs</strong> tab, click <strong><em>Add from data&#8230;&#8203;</em></strong>. This opens a popup for creating the contract using the business data variables that are defined for the process.</p>
+</li>
+<li>
+<p>Select <em>travelRequest</em> and click <strong><em>Next</em></strong>.</p>
+</li>
+<li>
+<p>Specify the attributes to include. By default, all the attributes are checked, so uncheck those that are not relevant: <em>userId</em>, <em>status</em> and <em>refusalReason</em>.</p>
+</li>
+<li>
+<p>Leave the radio button on automatic generation of initialization script.</p>
+</li>
+<li>
+<p>Click <strong><em>Finish</em></strong> and safely ignore the warning related to contract generation as we will take care of those in time.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Now that the case instantiation contract is set up, we will add two constraints on its values.<br>
+The first one will ensure that the departure date is in the future and the second will validate that the number of nights is greater or equal to zero.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Still in the <strong>Contract</strong> pane, switch to the <strong>Constraints</strong> tab and click <strong><em>Add</em></strong>. This adds a placeholder constraint.</p>
+</li>
+<li>
+<p>Click on the placeholder name and change it to <em>departureInFuture</em>.</p>
+</li>
+<li>
+<p>Click in the <strong>Expression</strong> field, then click on the icon that appears at the right of the field. This opens a popup where you can enter the constraint expression.</p>
+</li>
+<li>
+<p>Define the constraint with this script:<code>new Date().getTime() &lt;travelRequestInput.departureDate.getTime()</code></p>
+</li>
+<li>
+<p>In the <strong>Error message</strong> column, add this text: <code>Departure date must be in the future.</code></p>
+</li>
+<li>
+<p>Add a second constraint as following:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Name: <code>zeroOrMoreNights</code></p>
+</li>
+<li>
+<p>Expression: <code>travelRequestInput.numberOfNights &gt;= 0</code></p>
+</li>
+<li>
+<p>Error message: <code>Number of nights must be greater or equal to zero.</code></p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>In the <strong>Details</strong> panel, <strong>Contract</strong> pane, <strong>Inputs</strong> tab click the arrow next to <strong>travelRequestInput</strong> to expand the list of attributes.<br>
+For each attribute, add a <strong>Description</strong>. The description is displayed in the automatically generated form used for process testing, so include information that will help the user complete the form correctly, as follows:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Attribute</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">departureDate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specify the date that the travel starts</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">numberOfNights</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enter the number of nights</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">hotelNeeded</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specify if you need a hotel reservation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">destination</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enter the destination city</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">reason</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Explain the reason for this travel. Give the business justification</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The process instantiation contract is now complete.</p>
+</div>
+<div class="paragraph">
+<p>The contract for the <em>Manager review</em> task only has two inputs, <em>status</em> and <em>refusalReason</em>, so you can create it directly instead of from data.<br>
+It also has a constraint: a <em>refusalReason</em> must be specified if the manager refuses the request. To define this contract:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Select the <em>Manager review</em> task.</p>
+</li>
+<li>
+<p>Go to the <strong>Details</strong> panel, <strong>Execution</strong> tab, <strong>Contract</strong> pane.</p>
+</li>
+<li>
+<p>In the <strong>Inputs</strong> tab, click <strong><em>Add</em></strong> and specify the following attributes:</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Multiple</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Text</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indicate whether you approve or refuse this request</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">refusalReason</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Text</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If you refuse a request, you must give a reason</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Go to the <strong>Constraints</strong> tab and click <strong><em>Add</em></strong>. This adds a placeholder constraint.</p>
+</li>
+<li>
+<p>Click on the placeholder name and change it to <em>reasonRequired</em>.</p>
+</li>
+<li>
+<p>Click in the <strong>Expression</strong> field, then click on the icon that appears at the right of the field. This opens a popup where you can enter the constraint expression.</p>
+</li>
+<li>
+<p>Define the constraint with this script:
+<code>status=="approved" || (status=="refused" &amp;&amp; !"".equals(refusalReason))</code></p>
+</li>
+<li>
+<p>In the <strong>Error message</strong> column, add this text: <code>If you refuse a request, you must give a reason.</code></p>
+</li>
+</ol>
+</div>
+<h4 id="_define_business_object_initial_values" class="discrete">Define business object initial values</h4>
+<div class="paragraph">
+<p>Now that the contract is defined, you can configure the initial value of <em>travelRequest</em>, as follows:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Select the pool and go to the <strong>Details</strong> panel, <strong>Data</strong> tab, <strong>Pool variables</strong> pane.</p>
+</li>
+<li>
+<p>Double-click <em>travelRequest</em> to edit it.</p>
+</li>
+<li>
+<p>Click the pencil icon beside the <strong>Default value</strong> field. This opens the expression editor.</p>
+</li>
+<li>
+<p>An <em>initTravelRequest()</em> script was automatically generated to initialize our data with the contract. We will complete this script by setting up the <em>userId</em> and <em>status</em> attributes.<br>
+Insert the following code after the first line:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">travelRequestVar.userId = BonitaUsers.getProcessInstanceInitiator(apiAccessor, processInstanceId).id
+travelRequestVar.status = "pending"</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Click <strong><em>OK</em></strong> to save the expression.</p>
+</li>
+<li>
+<p>Click <strong><em>OK</em></strong> again to save the updated object definition.</p>
+</li>
+</ol>
+</div>
+<h4 id="_update_business_object_with_review_data" class="discrete">Update business object with review data</h4>
+<div class="paragraph">
+<p>You need to define operations to update the business object with the values entered for <em>status</em> and <em>refusalReason</em> in the <em>Manager review</em> form.<br>
+Select the <em>Manager review</em> task, and go to the <strong>Details</strong> panel, <strong>Execution</strong> tab, <strong>Operations</strong> pane. First define the operation for <em>status</em>, as follows:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Create a new operation by clicking <strong><em>Add</em></strong>.</p>
+</li>
+<li>
+<p>In the first field, click the down-arrow to display a list of variables on which an operation can be performed, and double-click <em>travelRequest</em>.</p>
+</li>
+<li>
+<p>Click <strong><em>Takes value of</em></strong>. This opens a popup listing the available operations. Choose <strong><em>Use a Java method</em></strong>. The popup displays a list of available methods. Click <strong><em>setStatus(String) - void</em></strong>, and then click <strong><em>OK</em></strong>.</p>
+</li>
+<li>
+<p>In the last field, click the down-arrow to display a list of variables, and double-click <em>status</em>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Repeat these steps for to define the operation for <em>refusalReason</em>.</p>
+</div>
+<div class="paragraph">
+<p>When both of the operations are defined, the <strong>Details</strong> panel should look like this:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/images/images-6_0/7.0-getting-started-operations.png" alt="Manager review operations">
+</div>
+</div>
+<h4 id="_specify_actors" class="discrete">Specify actors</h4>
+<div class="paragraph">
+<p>The next stage is to define who carries out the steps in the process. This is done by assigning <a href="actors" class="page">actors</a>.<br>
+An actor is a placeholder for the person who will do a task.<br>
+When you configure a process, you make the connection between the actors defined in the process definition and the real-world people who will do process steps.<br>
+Bonita BPM Studio comes with a test organization, called ACME, which you can use for testing. In this example, we have two people, the employee who initiates the process, and the employee&#8217;s manager.<br>
+The managers are also employees, so you can use the same actor for process instantiation and for the review task, but use a filter to specify who does the approval step. This is how it works:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the diagram, select the pool and go to the <strong>Details</strong> panel, <strong>General</strong> tab, <strong>Actors</strong> pane. This is where you define all the actors for the process.<br>
+By default, there is already an Employee actor, which is defined for testing. You can change the organization and the actors later, but for initial testing, this will work fine.<br>
+The default settings mean that any employee in the organization can start a case of the travel request process. You do not need to change anything.</p>
+</li>
+<li>
+<p>Next, select the <em>Manager review</em> step and define who can do this. This step will be done by the manager of the person who initiated the request.<br>
+All the managers are also employees, and the employee actor is defined for the lane, so check the button for <strong>Use the actor defined in the lane</strong>.</p>
+</li>
+<li>
+<p>To make sure that the review task is sent to the right manager, use an actor filter:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Click the actor filter <strong><em>Set&#8230;&#8203;</em></strong> button.</p>
+</li>
+<li>
+<p>Open up the list of process actor filters.</p>
+</li>
+<li>
+<p>Select <strong>Initiator manager</strong>. This means that the review task is to be done by the manager of the person who submitted the request that initiated the process. Click <strong><em>Next</em></strong></p>
+</li>
+<li>
+<p>Specify a name for the actor filter definition, <em>requestersManager</em>, and click <strong><em>Finish</em></strong>.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The process is now defined. The next section shows you how to configure and run it to verify that the process definition is correct before you define forms and create the application.</p>
+</div>
+<h4 id="_run_process_with_temporary_forms" class="discrete">Run process with temporary forms</h4>
+<div class="paragraph">
+<p>You can run a process that is in development before you create forms, by using temporary forms that are created automatically.<br>
+This section explains how to configure the process and run it from Bonita BPM Studio.</p>
+</div>
+<div class="paragraph">
+<p>Before you can run the process, you need to configure it. Use the default setting for almost everything for the first tests.<br>
+There are just two things to configure for this example process, the actor mapping and the name of the test user.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open the Configuration dialog, by clicking <strong><em>Configure</em></strong> in the coolbar.</p>
+</li>
+<li>
+<p>Click <strong>Actor mapping</strong> in the menu on the left of the popup. The actor mapping box lists the actors and shows the default mapping: The Employee actor is mapped to a group called acme, which contains all the employees of the example organization called ACME. You do not need to change this.</p>
+</li>
+<li>
+<p>Now specify the name of the test user. For this example, we can specify the user Helen Kelly, in the ACME test organization. Her manager is William Jobs. Click <strong>Authentication</strong> in the left menu, and specify Helen&#8217;s username, <code>helen.kelly</code>, and password, <code>bpm</code>.</p>
+</li>
+<li>
+<p>The configuration is now complete, so click <strong><em>Finish</em></strong>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Now you can run the process and see the temporary forms, to check that the process definition is correct.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Click <strong><em>Run</em></strong> in the coolbar. This opens a browser window, logs you in to Bonita BPM Portal as Helen, and displays the travel request form.</p>
+</li>
+<li>
+<p>Fill out the form. Make sure that you use the right format for each field in the temporary forms ("yyyy-mm-dd" format for dates and either "true" or "false" value for booleans).<br>
+When you have filled out the form, click <strong><em>Start</em></strong>. This submits the form and starts the process instance.</p>
+</li>
+<li>
+<p>At the top-right of the Portal window, click the arrow beside Helen&#8217;s name and choose <strong><em>Logout</em></strong>.</p>
+</li>
+<li>
+<p>Log in as Helen&#8217;s manager, William Jobs, with username <code>william.jobs</code> and password <code>bpm</code>. The <strong>Tasks</strong> view is displayed, where there is a task called <em>Manager review</em>.</p>
+</li>
+<li>
+<p>Select the <em>Manager review</em> task and click <strong><em>Do it</em></strong>. The temporary form for the manager review is displayed.
+It contains fields for the items defined in the contract for this step, but not the information that Helen entered in the request.
+When you create your own forms, you will add this information, so that the manger can see the details of the request before approving or refusing it.<br>
+For now, you can see the form, so you have verified that the process definition is correct.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_create_forms"><a class="anchor" href="#_create_forms"></a>Create forms</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The easiest way to create a process form is to generate it automatically from the contract. This automatically creates a mapping between the process and the form and defines form data. You can then update the form manually to add or remove field, and to change the layout.</p>
+</div>
+<div class="paragraph">
+<p>While using the UI Designer, click <strong><em>Save</em></strong> frequently to save your work.</p>
+</div>
+<div class="paragraph">
+<p>To create the process instantiation form:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In Bonita BPM Studio, select the pool and go to the <strong>Details</strong> panel, <strong>Execution</strong> tab, <strong>Contract</strong> pane.</p>
+</li>
+<li>
+<p>At the top-right of the <strong>Details</strong> panel, click the UI Designer icon. This opens the UI Designer in a browser window, with the automatically generated form.</p>
+</li>
+<li>
+<p>Change the form name. All forms that are generated automatically are called <em>newForm</em>, so you must rename them to avoid confusion.
+To do this, double-click on the name in the top bar, and then specify a new form name, <em>submitTravelRequest</em>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The form is now created. A form is a UI Designer page that is mapped to a process and a contract. A page is a collection of widgets, and each field is defined by a widget.<br>
+Widgets are arranged in rows and each row is divided into 12 columns. Each widget has a width that spans across one or more column. In addition to their width, widgets have a set of editable properties that can be set on the right side of the window.</p>
+</div>
+<div class="paragraph">
+<p>To change the appearance and behavior of a page, you update the widgets. At any time, you can click <strong><em>Preview</em></strong> to see how the page will look to a user.<br>
+To have more space to update the page, you can hide the <strong>Variables</strong> and <strong>Assets</strong> tabs, by clicking on the down-arrow.</p>
+</div>
+<div class="paragraph">
+<p>Before improving the look of the form, we will enforce some validation rules on the different fields:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Drag a <strong>Form container</strong> widget from the palette on a new row on the top of you form.<br>
+Note: when holding the new widget and hovering the area at the top of the form, a greyed area representing a new row will appear.</p>
+</li>
+<li>
+<p>Drag all (including "Submit" button) of the other widgets of your form except for the <em>Container</em> widget inside the <em>Form container</em>. Note: a Container widget is a widget that is used to group other widget. It does not have a label and is identified by a solid grey border.</p>
+</li>
+<li>
+<p>Select the now empty <em>Container</em> widget and remove it.</p>
+</li>
+<li>
+<p>Select the <em>Destination</em> widget and set the <em>Required</em> property to <em>yes</em>.
+Repeat the operation for the <em>Departure Date</em>, <em>Number Of Nights</em> and <em>Reason</em> widgets.</p>
+</li>
+<li>
+<p>Select the <em>Number Of Nights</em> widget and set its <em>Min value</em> property to <em>0</em>.</p>
+</li>
+<li>
+<p>Select the <em>Submit</em> widget and click on the binding icon ("fx") next to the <em>Disabled</em> property.
+Enter this script in the text field that just appeared: <code>$form.$invalid</code> <br>
+This will enable the Submit button only when the form content is valid.</p>
+</li>
+<li>
+<p>Preview the form and try to enter some values to make sure that the validation works.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The form should now look like this in the page editor:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/images/images-6_0/7.2-getting-started-inst-form-validation.png" alt="Process instantiation form">
+</div>
+</div>
+<div class="paragraph">
+<p>Now that the form is functional, we are going to improve its appearance to make it more user-friendly:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Select the title widget, and change the <strong>Text</strong> property to <code>Submit a new travel request</code>.</p>
+</li>
+<li>
+<p>Make the Departure date widget narrower. To do this, select it and change the value of the <strong>Width</strong> property to 4 columns.</p>
+</li>
+<li>
+<p>Move the Destination widget up to the top of the form (below the title).</p>
+</li>
+<li>
+<p>Move the Number of nights and Hotel needed widgets to the same row as the Departure date, and reduce the widths. Note: when you add a widget to a row, it automatically takes all the remaining columns, so set the width after you move the widgets.</p>
+</li>
+<li>
+<p>Clear the initial value for Number of nights to show the placeholder at run time:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>In the <strong>Variables</strong> panel (at the bottom of the page), locate the row containing the <em>formInput</em> variable.</p>
+</li>
+<li>
+<p>Click on the pencil icon located at the right side of this row.</p>
+</li>
+<li>
+<p>Change the value of the <em>numberOfNights</em> attribute from <em>0</em> to <em>null</em>.</p>
+</li>
+<li>
+<p>Click on <strong>Save</strong>.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>When you have finished, the preview of the form looks like this:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/images/images-6_0/7.2-getting-started-inst-form-rendering.png" alt="Process instantiation form">
+</div>
+</div>
+<div class="paragraph">
+<p>Now define the form for the <em>Manager review</em> task. Start by automatically generating the form from the context, then add widgets to display the request details for the manager to review. Follow these steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In Bonita BPM Studio, select the <em>Manager review</em> task and go to the <strong>Details</strong> panel, <strong>Execution</strong> tab, <strong>Contract</strong> pane.</p>
+</li>
+<li>
+<p>At the top-right of the <strong>Details</strong> panel, click the UI Designer icon. This generates a form and opens it in the UI Designer.</p>
+</li>
+<li>
+<p>Change the form name to <em>reviewTravelRequest</em>.</p>
+</li>
+<li>
+<p>Add a variable to get the information that the user enters in the request form. To do this:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>In the <strong>Variables</strong> tab, click <strong><em>Create a new variable</em></strong>.</p>
+</li>
+<li>
+<p>Specify the name, <em>request</em>.</p>
+</li>
+<li>
+<p>Set the <strong>Type</strong> to <strong>External API</strong>.</p>
+</li>
+<li>
+<p>Set the value to <code>../{{context.travelRequest_ref.link}}</code>.</p>
+</li>
+<li>
+<p>Click <strong><em>Save</em></strong>.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Add a variable to hold the different request status values:</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">statusValues</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JSON</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>[ {"label": "Approve request", "value": "approved"},{"label": "Refuse request", "value": "refused"}]</code></p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Edit the <em>formInput</em> variable and set the value for the <em>status</em> attribute to <em>"approved"</em>.</p>
+</li>
+<li>
+<p>Add a <em>Form container</em> widget and move the 3 other widgets inside this container.<br>
+All of the other widgets you will add will also be placed inside the form container.</p>
+</li>
+<li>
+<p>Add a title widget and set its text property to <code>Review travel request</code>.<br>
+Set the <strong>Level</strong> property to Level 4, so it is the same size as the title of the form for creating a request.</p>
+</li>
+<li>
+<p>Add read-only widgets to display the details of the travel request, using the following information:</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Label</th>
+<th class="tableblock halign-left valign-top">Widget type</th>
+<th class="tableblock halign-left valign-top">Value binding</th>
+<th class="tableblock halign-left valign-top">Read-only</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Destination</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Input</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">request.destination</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Departure date</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Input</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">request.departureDate | date</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of nights</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Input</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">request.numberOfNights</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hotel needed</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Checkbox</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">request.hotelNeeded</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reason for travel</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Text area</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">request.reason</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Remove the "Refusal reason" widget that was added automatically, we will replace it by something more user-friendly in the next step.</p>
+</li>
+<li>
+<p>Add a Text area widget with the following properties:</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hidden</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>formInput.status == 'approved'</code> (click on "bind" icon)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Label</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Refusal reason</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>formInput.refusalReason</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The dynamic <em>Hidden</em> property will hide the widget when the request status is set to 'approved'.
+Otherwise, the field will be marked as required and the form validation will prevent the user from refusing a request without a reason.</p>
+</div>
+</li>
+<li>
+<p>Remove the Status widget that was added automatically.</p>
+</li>
+<li>
+<p>Add a Radio buttons widget with the following properties:</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Label</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Review decision</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Available values (click on the binding icon next to the value)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">statusValues</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Displayed keys</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">label</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returned keys</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">value</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Selected Value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>formInput.status</code></p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Select the <em>Submit</em> widget and bind its <em>Disabled</em> property to <code>$form.$invalid</code></p>
+</li>
+<li>
+<p>Preview the form to test the validation and rearrange the widgets until it looks like this in the editor:</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/images/images-6_0/7.2-getting-started-review-form.png" alt="Process instantiation form">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_run_process"><a class="anchor" href="#_run_process"></a>Run process</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can now run the process using the forms that you created. Make sure that you have saved everything in the UI Designer. Then click <strong><em>Run</em></strong> in the Studio coolbar.</p>
+</div>
+<div class="paragraph">
+<p>Fill out the request form as Helen, then log in as William and do the review task. <br>
+When the review form is displayed, it contains the information that Helen entered in the request form. You can approve or refuse the request.</p>
+</div>
+<div class="paragraph">
+<p>You process is now complete, so you can include it in an application.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_build_the_application"><a class="anchor" href="#_build_the_application"></a>Build the application</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section explains how to build the application from the pages and process that you have already created. There are the following steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the UI Designer, update the application page to use business data instead of the dummy JSON data and to specify the connection between the page and the process.</p>
+</li>
+<li>
+<p>In Bonita BPM Portal, create the application.</p>
+</li>
+</ol>
+</div>
+<h4 id="_update_the_application_page" class="discrete">Update the application page</h4>
+<div class="paragraph">
+<p>Create the following variables:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">session</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">External API</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>../API/system/session/unusedId</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">processDef</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">External API</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>../API/bpm/process?p=0&amp;c=1&amp;f=name=Travel%20Request</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Update (edit) the following variables:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">myPendingRequests</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">External API</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>../API/bdm/businessData/com.company.model.TravelRequest?q=findByUserIdAndStatus&amp;p=0&amp;c=10&amp;f=userId={{session.user_id}}&amp;f=status=pending</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">myApprovedRequests</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">External API</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>../API/bdm/businessData/com.company.model.TravelRequest?q=findByUserIdAndStatus&amp;p=0&amp;c=10&amp;f=userId={{session.user_id}}&amp;f=status=approved</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Now update the widgets to use the new variables:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Select the username widget at the top of the page, and update the <strong>Text</strong> to this value: <code>{{session.user_name}}</code>.</p>
+</li>
+<li>
+<p>For both pending and approved requests, set the <strong>Column keys</strong> to <code>departureDate | date, numberOfNights, hotelNeeded, destination, reason</code>, to set the date format.</p>
+</li>
+</ol>
+</div>
+<h4 id="_link_button_to_process" class="discrete">Link button to process</h4>
+<div class="paragraph">
+<p>When the user clicks the button on the Travel Tool page for creating a travel request, the application displays the form for creating a request.<br>
+This is the instantiation form for the Travel Request process.<br>
+To configure this, select the button and set the target URL property by first clicking on the change to bind to an expression button (&#8216;fx&#8217; to the right of the field) and then updating the expression to  <code>"/bonita/portal/resource/process/Travel%20Request/1.0/content/?id="+processDef[0].id</code>.</p>
+</div>
+<div class="paragraph">
+<p>After the user submits the form, the Tasks view of Bonita BPM Portal is displayed.</p>
+</div>
+<h4 id="_build_application" class="discrete">Build application</h4>
+<div class="paragraph">
+<p>To build the Travel Tool application, you need to export the page from the UI Designer, deploy the process, and then create the application in Bonita BPM Portal.</p>
+</div>
+<div class="paragraph">
+<p>To export the page, click the <strong><em>Export</em></strong> icon in the Page editor or on the home page. The page is exported as a zip file in your default browser download location.</p>
+</div>
+<div class="paragraph">
+<p>To deploy the process, you can simply run it from Bonita BPM Studio. If you have no changed the process since you last ran it, it is already deployed.</p>
+</div>
+<div class="paragraph">
+<p>To create your application in Bonita BPM Portal:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Log in to Bonita BPM Portal with the Administrator profile.</p>
+</li>
+<li>
+<p>From the menu bar, choose <strong>Resources</strong>, and then click <strong><em>Add</em></strong> and import the TravelTool page that you exported from the UI Designer.</p>
+</li>
+<li>
+<p>Go to <strong>Applications</strong> and click <strong><em>New</em></strong>.</p>
+</li>
+<li>
+<p>Name your application <em>Travel App</em>, set its URL to <em>travel</em>, and click <strong><em>Create</em></strong>. The application is created.</p>
+</li>
+<li>
+<p>In the list of applications, click the edit (triple dot) icon to configure your new application.</p>
+</li>
+<li>
+<p>In the <strong>Pages</strong> section, click <strong><em>Add</em></strong>.</p>
+</li>
+<li>
+<p>Select the Travel tool page you imported. Set its URL to <em>requests</em>. Click <strong><em>Add</em></strong>.</p>
+</li>
+<li>
+<p>Make this page the application home page by clicking on the home icon that appears when hovering on it.</p>
+</li>
+<li>
+<p>Delete the default home page.</p>
+</li>
+<li>
+<p>Check that the application is correctly defined, by clicking the URL. The travel requests summary page is displayed, with a link to the form to create a new request.
+When you click the link, the form for submitting a new travel requests is displayed.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Congratulations, you have just created your first Living Application!</p>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer>
+  <div class="footer-header">
+    <h3>Get useful info curated for you</h3>
+    <input type="email" placeholder="Email address *" />
+    <button type="submit">Subscribe</button>
+  </div>
+  <div class="footer-body">
+    <div class="footer-content">
+      <p>
+        Bonitasoft fully supports digital operations and IT modernization with Bonita, an open-source and extensible
+        platform for automation and optimization of business processes.
+        The Bonita platform accelerates development and production with clear separation between capabilities for visual
+        programming and for coding.
+        Bonita integrates with existing information systems, orchestrates heterogeneous systems, and provides deep
+        visibility into processes across the organization.
+      </p>
+    </div>
+    <div class="social-links">
+      <ul>
+        <!-- Twitter image -->
+        <li class="social-icon">
+          <a href="https://twitter.com/bonitasoft" target="_blank">
+            <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+            </svg>
+          </a>
+        </li>
+        <!-- Facebook image -->
+        <li class="social-icon">
+          <a href="https://www.facebook.com/bonitasoftbpm" target="_blank">
+            <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <title>Facebook icon</title>
+              <path
+                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+            </svg>
+          </a>
+        </li>
+        <!-- Linkedin image -->
+        <li class="social-icon">
+          <a href="https://www.linkedin.com/company/bonitasoft/" target="_blank">
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <title>LinkedIn icon</title>
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+          </a>
+        </li>
+        <!-- RSS image -->
+        <li class="social-icon">
+          <a href="https://www.bonitasoft.com/blog/rss" target="_blank">
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <title>RSS icon</title>
+              <path
+                d="M19.199 24C19.199 13.467 10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24h-4.801zM3.291 17.415c1.814 0 3.293 1.479 3.293 3.295 0 1.813-1.485 3.29-3.301 3.29C1.47 24 0 22.526 0 20.71s1.475-3.294 3.291-3.295zM15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909 7.184 15.909 15.91z" />
+            </svg>
+          </a>
+        </li>
+        <!-- Youtube image -->
+        <li class="social-icon">
+          <a href="https://www.youtube.com/user/BonitaSoft" target="_blank">
+            <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <title>YouTube icon</title>
+              <path
+                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="social-links">
+      <ul class="border-right">
+        <li><a href="https://www.bonitasoft.com/downloads">Download</a></li>
+        <li><a href="https://www.bonitasoft.com/events">Events</a></li>
+        <li><a href="https://community.bonitasoft.com/">Community</a></li>
+        <li><a href="https://www.bonitasoft.com/sitemap">Site map</a></li>
+        <li><a href="https://www.bonitasoft.com/bonitasoft-website-legal-terms-use">Terms of use</a></li>
+      </ul>
+    </div>
+    <div class="footer-footer">
+      <p>
+        &copy; Bonitasoft, S.A. All rights reserved.
+        <span>
+          <a href="https://www.bonitasoft.com/privacy">Privacy,</a>
+          <a href="https://www.bonitasoft.com/legal-notices">Legal notices</a>
+        </span>
+      </p>
+      <a class="footer-bonita-logo" href="https://bonitasoft.github.io"></a>
+    </div>
+  </div>
+</footer><script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script type="text/javascript"> docsearch({
+    apiKey: '16267f96d135c47df8454efd5b448c9a',
+    indexName: 'bonitasoft',
+    inputSelector: '#search-query',
+    debug: false // Set debug to true if you want to inspect the dropdown
+  });
+</script>
+<script type="text/javascript"> docsearch({
+    apiKey: '16267f96d135c47df8454efd5b448c9a',
+    indexName: 'bonitasoft',
+    inputSelector: '#search-query-mobile',
+    debug: false // Set debug to true if you want to inspect the dropdown
+    /*algoliaOptions: {
+      'facetFilters': ["tags:7.4", "tags:bonita"]
+    },*/
+  });
+</script>
+  </body>
+</html>
