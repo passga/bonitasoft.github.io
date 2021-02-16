@@ -1,0 +1,1822 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Database deletion volume testing :: Bonita Documentation</title>
+    <link rel="canonical" href="https://bonitasoft.github.io/bonita/7.11/purge-tool-deletion-volume-testing">
+    <meta name="generator" content="Antora 2.3.4">
+<link rel="stylesheet" href="../../_/stylesheets/site.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="navbar-item">
+        <a class="bonita-logo" href="https://bonitasoft.github.io"></a>
+      </div>
+
+    </div>
+
+    <div class="search-content">
+      <fieldset>
+        <input type="text" id="search-query-mobile" placeholder="Search..." />
+        <div class="icons-container">
+          <div id="search-icon"></div>
+        </div>
+      </fieldset>
+    </div>
+
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-item is-hoverable">
+        <a href="https://community.bonitasoft.com/" class="navbar-link">Community</a>
+      </div>
+      <div class="navbar-item is-hoverable">
+        <a class="navbar-link" href="/bonita/7.11/">Bonita</a>
+      </div>
+      <div class="navbar-item is-hoverable">
+        <a class="navbar-link" href="/bici/latest/">Bonita ICI</a>
+      </div>
+    </div>
+
+    <div class="theme-switch-wrapper">
+      <input type="checkbox" name="" onclick="toggleDarkThemeMode(this)">
+    </div>
+
+    <div class="navbar-item search-item hide-for-print">
+      <input type="text" placeholder="Search Docs" class="search-bar query ds-input" id="search-query">
+      <i class="search-icon" aria-hidden="true"></i>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="bonita" data-version="7.11">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="./">Bonita</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="what-is-bonita">What is Bonita?</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_getting-started-tutorial.adoc">Getting started tutorial</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tutorial-overview">Tutorial overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bonita-studio-download-installation">Download and install</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="draw-bpmn-diagram">Draw a BPMN diagram</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="define-business-data-model">Define business data model (BDM)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="declare-business-variables">Declare business variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="declare-contracts">Declare contracts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="create-web-user-interfaces">Create web user Interfaces</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="define-who-can-do-what">Define who can do what</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="configure-email-connector">Configure an email connector</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="design-application-page">Design an application page</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="create-application">Create an application</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="migration-tool">Migration tool change log</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_application-and-process-design.adoc">Application and Process Design</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_application-and-process-design-overview.adoc">Application and process design overview</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="key-concepts">Key concepts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="comparison-of-7-x-and-6-x">Comparison of 7.x and 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lifecycle-and-profiles">Lifecycle and profiles</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="design-methodology">Design methodology</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bonita-bpm-studio-preferences">Bonita Studio preferences</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bonita-bpm-studio-hints-and-tips">Bonita Studio hints and tips</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_organization.adoc">Organization</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="organization-overview">Organization overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#approaches-to-managing-organizations-and-actor-mapping.adoc">Approaches to managing organizations and actor mapping</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#organization-management-in-bonita-bpm-studio.adoc">Organization management in Bonita Studio</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#custom-user-information-in-bonita-bpm-studio.adoc">Custom User Information in Bonita Studio</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="ldap-synchronizer">LDAP synchronizer</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_profiles.adoc">Profiles</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="profiles-overview">Profiles overview</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="profileCreation">Profiles editor</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_process-modeling.adoc">Process modeling</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_diagrams.adoc">Diagrams</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="diagram-overview">Diagram overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="pools-and-lanes">Pools and lanes</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="diagram-tasks">Tasks</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="gateways">Gateways</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="transitions">Transitions</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="events">Events</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="called-processes">Called processes</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="event-subprocesses">Event subprocesses</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="text-annotations">Text annotations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="naming-conventions">Naming conventions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="refactoring">Refactoring</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="actors">Actors</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="actor-filtering">Actor filters</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="iteration">Iteration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_data.adoc">Data</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="data-handling-overview">Data handling overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="define-and-deploy-the-bdm">Define and deploy the BDM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bdm-access-control">Define access control on business objects</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="specify-data-in-a-process-definition">Specify data in a process definition</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="parameters">Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="contracts-and-contexts">Contracts and contexts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="documents">Documents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="define-a-search-index">Search keys</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="expressions-and-scripts">Expressions and scripts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="operations">Operations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_page-and-form-development.adoc">Page and form development</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="page-and-form-development-overview">Page and form development overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_using-the-ui-designer.adoc">UI Designer</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="ui-designer-overview">UI Designer overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="create-or-modify-a-page">Create or modify UI artifacts</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="widgets">Widgets</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="widget-properties">Widget properties</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_widget-use-examples.adoc">Widget use examples</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="#repeat-a-container-for-a-collection-of-data.adoc">Repeat a container for a collection of data</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="fragments">Fragments</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="custom-widgets">Custom widgets</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="data-management">Data management</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="variables">Variables</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="appearance">Appearance</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="assets">Assets</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="multi-language-pages">Multi-language pages</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="migrate-a-form-from-6-x">Migrate a form from 6.x</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="cache-configuration-and-policy">Cache configuration and policy</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="applicationCreation">Application descriptor</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_connectivity.adoc">Connectivity</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="connectivity-overview">Connectivity overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="alfresco">Alfresco</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="cmis">CMIS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_database.adoc">Database</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="list-of-database-connectors">List of database connectors</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="database-connector-configuration">Database connector configuration</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="graphical-query-builder">Graphical query builder</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="#initialize-a-variable-from-a-database-without-scripting-or-java-code.adoc">Initialize a variable from a database without scripting or Java code</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="insert-data-in-a-docx-odt-template">Insert data in a .docx/.odt template</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="google-calendar">Google Calendar</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="ldap">LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="messaging">Messaging</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="generate-pdf-from-an-office-document">Generate PDF from an Office document</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="salesforce">Salesforce</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="sap-jco-3">SAP JCo 3</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="script">Script</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="twitter">Twitter</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="uipath">UiPath</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_web-service.adoc">Web service</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="web-service-connector-overview">Web service connector overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="#web-service-tutorial.adoc">Web service connector tutorial</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_reporting.adoc">Reporting</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="reporting-overview">Reporting overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set-up-a-reporting-database">Set up a reporting database</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set-up-kpis">Set up KPIs</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="create-a-report">Create a report</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="import-and-export-a-process">Import and export a process</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_process-configuration.adoc">Process configuration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="process-configuration-overview">Process configuration overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="environments">Environments</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="configuring-a-process">Configure a process</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="manage-jar-files">Manage JAR files</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="managing-dependencies">Manage dependencies</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_process-testing.adoc">Process testing</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="process-testing-overview">Process testing overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="configure-a-test-organization">Configure a test organization</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#run-a-process-from-bonita-bpm-studio-for-testing.adoc">Run a process from Bonita Studio for testing</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="log-files">Log files</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="project_deploy_in_dev_suite">Project deployment in Bonita Development Suite</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="build-a-process-for-deployment">Build a process for deployment</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_installation.adoc">Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bonita-bpm-installation-overview">Bonita installation overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bonita-bpm-studio-installation">Bonita Studio installation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_basic-bonita-platform-installation.adoc">Basic Bonita Platform installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="hardware-and-software-requirements">Hardware and software requirements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tomcat-bundle">Tomcat bundle</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="custom-deployment">Custom Deployment into existing Tomcat installation</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="convert-wildfly-into-tomcat">Convert a WildFly into a Tomcat installation</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="BonitaBPM_platform_setup">Platform configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="database-configuration">Database creation and customization to work with Bonita</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="first-steps-after-setup">First steps after setup</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="licenses">Licenses</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bonita-docker-installation">Bonita docker installation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_advanced-bonita-platform-installation.adoc">Advanced Bonita Platform installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_security-and-authentication.adoc">Security and authentication</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="user-authentication-overview">User authentication overview</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="active-directory-or-ldap-authentication">Active Directory or LDAP authentication</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="single-sign-on-with-cas">Single sign-on with CAS</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="single-sign-on-with-saml">Single sign-on with SAML</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="single-sign-on-with-kerberos">Single sign-on with Kerberos</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="enforce-password-policy">Enforce password policy</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="rest-api-authorization">REST API authorization</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="csrf-security">CSRF security</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="enable-cors-in-tomcat-bundle">Enable CORS in Tomcat bundle</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="ssl">SSL</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tenant_admin_credentials">Tenant administrator credentials</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="guest-user">Guest user access</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set-log-and-archive-levels">Set log and archive levels</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="configurable-archive">Configurable Archive</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_performance.adoc">Performance</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="performance-tuning">Performance tuning</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="performance-troubleshooting">Performance troubleshooting</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="purge-tool">Purging unnecessary archive data</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="use-gzip-compression">Use gzip compression</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="two-main-types-of-deployment">Two main types of deployment</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_bonita-in-a-cluster.adoc">Bonita in a cluster</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="overview-of-bonita-bpm-in-a-cluster">Overview of Bonita in a cluster</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="install-a-bonita-bpm-cluster">Install a Bonita cluster</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="multi-tenancy-and-tenant-configuration">Multi-tenancy and tenant configuration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="embed-engine">Embed engine - Lab</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_platform-installation-examples.adoc">Platform installation examples</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="ubuntu-openjdk-tomcat-postgresql">Ubuntu + OpenJDK + Tomcat + PostgreSQL</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bonita-as-windows-service">Install Tomcat with Bonita as a service in Windows</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#upgrade-from-community-to-a-subscription-edition.adoc">Community to Subscription upgrade</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_bonita-portal-administration.adoc">Bonita Portal Administration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_bonita-portal-interface.adoc">Bonita Portal interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bonita-bpm-portal-interface-overview">Bonita Portal overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="user-task-list">User task list</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="languages">Languages</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="log-in-and-log-out">Log in and log out</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="about">About Bonita Portal</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="mobile-portal">Mobile Portal</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_process-maintenance.adoc">Process maintenance</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="processes">Processes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="cases">Cases</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tasks">Tasks</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="monitoring">Monitoring</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="pause-and-resume-bpm-services">Pause and resume services</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bdm-management-in-bonita-bpm-portal">BDM Management in Bonita Portal</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="applications">Applications</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_resources.adoc">Resources</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="resource-management">Resource management</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="pages">Pages</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="forms">Forms</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="layouts">Layouts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="themes">Themes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="api-extensions">REST API extensions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="live-update">Live update</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_organization-in-bonita-portal.adoc">Organization in Bonita Portal</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="organization-in-bonita-bpm-portal-overview">Organization in Bonita Portal overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_organization-maintenance.adoc">Organization maintenance</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="import-export-an-organization">Import/export an organization</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="group">Manage groups</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="role">Manage roles</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_user.adoc">Manage users</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="manage-a-user">Manage a user</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="deactivate-a-user">Deactivate a user</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="#custom-user-information-in-bonita-bpm-portal.adoc">Custom User Information in Bonita Portal</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="analytics">Analytics</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_user-profiles.adoc">User profiles</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="administrator-rights">Administrator rights</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="process-manager">Process manager</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="custom-profiles">Custom profiles</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="deploying-profiles-with-export-and-import">Deploy profiles with export and import</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_look-feel.adoc">Look &amp; Feel</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="managing-look-feel">Manage Look &amp; Feel</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="creating-a-new-look-feel">Create a new Look &amp; Feel</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="search-index">Search keys</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_monitoring.adoc">Monitoring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="runtime-monitoring">Bonita Runtime Monitoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="work-execution-audit">Work execution audit</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_bonita-platform_administration.adoc">Bonita Platform Administration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="performance-tuning">Performance tuning</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="performance-troubleshooting">Performance troubleshooting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cluster-administration">Cluster administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="maintenance-operation">Bonita Runtime Maintenance Operations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="back-up-bonita-bpm-platform">Back up Bonita Platform</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="configurable-archive">Configurable Archive</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_migration.adoc">Migration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="migration-overview">Migration overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#migrate-from-an-earlier-version-of-bonita-bpm.adoc">Migrate from an earlier version of Bonita</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_development.adoc">Development</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="software-extensibility">Platform extensibility overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_connectors.adoc">Connectors</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="connectors-overview">Connectors overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="connector-archetype">Bonita connector archetype</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="actor-filter-archetype">Create an actor filter</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="api-glossary">API glossary</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_rest-api.adoc">REST API</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-api-overview">REST API overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-api-authentication">REST Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="application-api">application API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="access-control-api">access control API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bdm-api">bdm API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bpm-api">bpm API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="customuserinfo-api">customuserinfo API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="form-api">form API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="identity-api">identity API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="platform-api">platform API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="portal-api">portal API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="system-api">system API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tenant-api">tenant API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-api-extensions">REST API extensions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#manage-files-using-upload-servlet-and-rest-api.adoc">Manage files using upload servlet and REST API</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_engine-api.adoc">Engine API</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="engine-api-overview">Engine API overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#create-your-first-project-with-the-engine-apis-and-maven.adoc">Create your first project with the Engine APIs and Maven</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="configure-client-of-bonita-bpm-engine">Configure connection to Bonita Engine</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="http://documentation.bonitasoft.com/javadoc/api/$7.11/index.html">Javadoc</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_examples.adoc">Examples</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manage-a-process">Manage a process</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="handle-a-failed-activity">Handle a failed activity</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manage-an-organization">Manage an organization</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manage-users">Manage users</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="handling-documents">Handle documents</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="create-administration-tools">Create administration tools</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="restore-default-look-feel">Restore the default Look &amp; Feel</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manage-the-platform">Manage the platform</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="using-list-and-search-methods">List and search methods</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="queriable-logging">Queriable logger</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="log-in-with-cas">Log in with CAS</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bonita-bpm-portal-urls">Bonita Portal URLs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_living-application.adoc">Living application</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bonita-layout">Bonita Layout</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="living-application-layout">Living application layout</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="customize-layouts">Customize layouts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="customize-living-application-theme">Customize living application theme</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="logging">Logs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="workspaces-and-repositories">Workspaces and projects</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_continuous-integration.adoc">Continuous integration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="automating-builds">Automate builds</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="set-up-continuous-integration">Set up continuous integration</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_collaboration.adoc">Collaboration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="project-documentation-generation">Project documentation generation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="shared-project">Using a shared project</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_howtos.adoc">Howtos</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uid-modal-tutorial">Create a modal window using CSS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uid-case-overview-tutorial">Create a case overview page using the UI Designer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="optimize-user-tasklist">Create unique task names for the user task list</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="manage-control-in-forms">Control and validate forms in the UI Designer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="list-of-documents">Manage a list of documents</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bo-multiple-refs-tutorial">Manage multiple references in Business Objects</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="custom-authorization-rule-mapping">Map authorization rules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="rta-mail-template">Use the rich textarea widget in a mail template</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="datetimes-management-tutorial">Manage dates and times in BDM and User Interfaces</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bdm-in-rest-api">Manage BDM in custom Rest APIs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="share-a-repository-on-github">Share a project on GitHub Enterprise Edition</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="git-versioning-community-edition">Use Git for versioning with Community Edition</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="migrate-a-svn-repository-to-github">Migrate a SVN repository to a Git repository</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="configure-maven">Configure Maven</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uid-vertical-tabs-container-tutorial">Create a vertical tabs container for all devices</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="groovy-in-bonita">Use Groovy in Bonita</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="responsiveness-with-community-edition">Create a responsive web application with Community edition</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="use-bonita-acm">Enable Adaptive Case Management with Bonita</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="event-handlers">Create an event handler</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_contributing.adoc">Contributing</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="building-community-edition-from-source">Build Bonita Community edition from source files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_engine-developer-doc.adoc">Bonita Engine developer documentation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="engine-architecture-overview">Bonita Engine architecture overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="engine-flow-node-states">Flow node states</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="timers-execution">Timers execution</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="connectors-execution">Connectors execution</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#_works.adoc">Works</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="work-execution">Work execution</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="work-locking">Work locking</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="execution-sequence-states-and-transactions">BPM process / task execution sequence</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="how-a-flownode-is-executed">How flow node is executed</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="how-a-flownode-is-completed">How a flownode is completed</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="how-a-call-activity-is-executed">How a call activity is executed</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="how-a-process-is-completed">How a process is executed</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="how-an-event-is-executed">How an event is executed</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Bonita</span>
+    <span class="version">7.11</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Bonita</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="./">7.11</a>
+        </li>
+        <li class="version">
+          <a href="../7.10/">7.10</a>
+        </li>
+        <li class="version">
+          <a href="../7.9/">7.9</a>
+        </li>
+        <li class="version">
+          <a href="../7.8/">7.8</a>
+        </li>
+        <li class="version">
+          <a href="../7.7/">7.7</a>
+        </li>
+        <li class="version">
+          <a href="../7.6/">7.6</a>
+        </li>
+        <li class="version">
+          <a href="../7.5/">7.5</a>
+        </li>
+        <li class="version">
+          <a href="../7.4/">7.4</a>
+        </li>
+        <li class="version">
+          <a href="../7.3/">7.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Bonita ICI</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../bici/latest/">labs</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+  <button class="nav-toggle"></button>
+  <a href="./" class="home-link">
+    <svg height="30" viewBox="0 0 48 48" width="30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 40V28h8v12h10V24h6L24 6 4 24h6v16z" />
+      <path d="M0 0h48v48H0z" fill="none" />
+    </svg>
+  </a>
+  <nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="./">Bonita</a></li>
+    <li><a href="purge-tool-deletion-volume-testing">Database deletion volume testing</a></li>
+  </ul>
+</nav>
+  <div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">7.11</button>
+  <div class="version-menu">
+    <a class="version is-current" href="purge-tool-deletion-volume-testing">7.11</a>
+    <a class="version" href="../7.10/purge-tool-deletion-volume-testing">7.10</a>
+    <a class="version" href="../7.9/purge-tool-deletion-volume-testing">7.9</a>
+    <a class="version is-missing" href="../7.8/">7.8</a>
+    <a class="version is-missing" href="../7.7/">7.7</a>
+    <a class="version is-missing" href="../7.6/">7.6</a>
+    <a class="version is-missing" href="../7.5/">7.5</a>
+    <a class="version is-missing" href="../7.4/">7.4</a>
+    <a class="version is-missing" href="../7.3/">7.3</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/bonitasoft/bonita-doc/edit/7.11_asciidoctor/modules/ROOT/pages/purge-tool-deletion-volume-testing.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Database deletion volume testing</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following tests have been run in the following databases.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_testing_environment"><a class="anchor" href="#_testing_environment"></a>Testing environment</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tests were run on Intel Core i7 10th Gen, 8 CPU cores, 16 Gb of RAM.<br>
+Database running inside a docker container.<br>
+Purge tool run from the same machine.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_postgresql_11_x"><a class="anchor" href="#_postgresql_11_x"></a>PostgreSQL 11.x</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Remove 1 160 800 archived cases (corresponds to 6 964 800 lines in the database)<br>
+Total Time: 71m30s</p>
+</div>
+<div class="sect2">
+<h3 id="_execution"><a class="anchor" href="#_execution"></a>Execution</h3>
+<div class="listingblock">
+<div class="content">
+<pre>╰─$ bin/bonita-purge-tool 6547377706517145159 1537600000000
+  ____              _ _                                         _              _
+ |  _ \            (_) |                                       | |            | |
+ | |_) | ___  _ __  _| |_ __ _    _ __  _   _ _ __ __ _  ___   | |_ ___   ___ | |
+ |  _ &lt; / _ \| '_ \| | __/ _` |  | '_ \| | | | '__/ _` |/ _ \  | __/ _ \ / _ \| |
+ | |_) | (_) | | | | | || (_| |  | |_) | |_| | | | (_| |  __/  | || (_) | (_) | |
+ |____/ \___/|_| |_|_|\__\__,_|  | .__/ \__,_|_|  \__, |\___|   \__\___/ \___/|_|
+                                 | |               __/ |
+                                 |_|              |___/
+2020-02-21 18:19:40.072  INFO 8946 -[main] o.bonitasoft.engine.purge.ApplicationKt  : Starting ApplicationKt on manu-DellXPS with PID 8946 (/home/manu/workspace/bonita-purge-tool/build/bonita-purge-tool/lib/bonita-purge-tool.jar started by manu in /home/manu/workspace/bonita-purge-tool/build/bonita-purge-tool)
+2020-02-21 18:19:40.076  INFO 8946 -[main] o.bonitasoft.engine.purge.ApplicationKt  : No active profile set, falling back to default profiles: default
+2020-02-21 18:19:41.551  INFO 8946 -[main] org.bonitasoft.engine.purge.Application  : Using datasource with HikariDataSource (null)
+2020-02-21 18:19:41.711  INFO 8946 -[main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-02-21 18:19:41.798  INFO 8946 -[main] o.bonitasoft.engine.purge.ApplicationKt  : Started ApplicationKt in 2.611 seconds (JVM running for 3.325)
+2020-02-21 18:19:41.828  INFO 8946 -[main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-21 18:19:42.149  INFO 8946 -[main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-21 18:19:42.283  INFO 8946 -[main] o.b.e.purge.DeleteOldProcessInstances    : Database URL is jdbc:postgresql://localhost:5432/bonita
+2020-02-21 18:19:42.284  INFO 8946 -[main] o.b.e.purge.DeleteOldProcessInstances    : Tenant id used is 1
+2020-02-21 18:19:42.284  INFO 8946 -[main] o.b.e.purge.DeleteOldProcessInstances    : All settings can be changed in application.properties file
+2020-02-21 18:19:43.218  INFO 8946 -[main] o.b.e.purge.DeleteOldProcessInstances    : Will purge all archived process instances and their elements for process 'RFS_n_ACT_MOCKED' in version '1.1' that are finished since at least 2018-09-22T09:06:40
+Start the purge using the above parameters? [y/N]
+y
+2020-02-21 18:19:52.609  INFO 8946 -[main] o.b.e.purge.DeleteOldProcessInstances    : Starting archive process instance purge....
+2020-02-21 18:22:00.446  INFO 8946 -[main] o.b.e.purge.DeleteOldProcessInstances    : Deleted 6964800 rows from table ARCH_PROCESS_INSTANCE...
+2020-02-21 18:23:43.453  INFO 8946 -[main] o.b.e.purge.DeleteOldProcessInstances    : Deleted 3299016 rows from table ARCH_CONTRACT_DATA in 103000 ms
+2020-02-21 19:00:04.318  INFO 8946 -[main] o.b.e.purge.DeleteOldProcessInstances    : Deleted 24189472 rows from table ARCH_DATA_INSTANCE in 2180864 ms
+2020-02-21 19:00:04.336  INFO 8946 -[main] o.b.e.purge.DeleteOldProcessInstances    : Deleted 0 rows from table ARCH_DOCUMENT_MAPPING in 17 ms
+2020-02-21 19:09:05.510  INFO 8946 -[main] o.b.e.purge.DeleteOldProcessInstances    : Deleted 23216120 rows from table ARCH_FLOWNODE_INSTANCE in 541173 ms
+2020-02-21 19:09:27.984  INFO 8946 -[main] o.b.e.purge.DeleteOldProcessInstances    : Deleted 2321612 rows from table ARCH_PROCESS_COMMENT in 22474 ms
+2020-02-21 19:09:27.989  INFO 8946 -[main] o.b.e.purge.DeleteOldProcessInstances    : Deleted 0 rows from table ARCH_REF_BIZ_DATA_INST in 5 ms
+2020-02-21 19:09:30.396  INFO 8946 -[main] o.b.e.purge.DeleteOldProcessInstances    : Deleted 0 rows from table ARCH_CONNECTOR_INSTANCE in 2407 ms
+2020-02-21 19:09:30.404  INFO 8946 -[main] o.b.e.purge.DeleteOldProcessInstances    : Deleted 0 rows from table ARCH_CONTRACT_DATA in 7 ms
+2020-02-21 19:29:02.660  INFO 8946 -[main] o.b.e.purge.DeleteOldProcessInstances    : Deleted 4643224 rows from table ARCH_DATA_INSTANCE in 1172256 ms
+2020-02-21 19:31:17.330  INFO 8946 -[main] o.b.e.purge.DeleteOldProcessInstances    : Deleted 8125642 rows from table ARCH_CONNECTOR_INSTANCE in 134669 ms
+2020-02-21 19:31:17.352  INFO 8946 -[main] o.b.e.purge.DeleteOldProcessInstances    : Archive process instance purge completed.
+2020-02-21 19:31:17.353  INFO 8946 -[main] o.b.e.purge.DeleteOldProcessInstances    : Some of the deleted elements may still appear in Bonita Portal for a short while.
+2020-02-21 19:31:17.353  INFO 8946 -[main] o.b.e.purge.DeleteOldProcessInstances    : If you try to access them you will get a not found error. This is the expected behaviour.
+2020-02-21 19:31:17.353  INFO 8946 -[main] org.bonitasoft.engine.purge.Application  : Execution completed in 4295553 ms
+2020-02-21 19:31:17.357  INFO 8946 -[main] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-02-21 19:31:17.358  INFO 8946 -[main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-02-21 19:31:17.366  INFO 8946 -[main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mysql_5_5_x"><a class="anchor" href="#_mysql_5_5_x"></a>MYSQL (5.5.X)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Remove 137 603 archived cases (corresponds to 825 618 lines in the database)<br>
+Total Time: 25 minutes</p>
+</div>
+<div class="sect2">
+<h3 id="_configuration_mysql_cnf"><a class="anchor" href="#_configuration_mysql_cnf"></a>Configuration ( mysql.cnf )</h3>
+<div class="listingblock">
+<div class="content">
+<pre>max_connections = 200
+key_buffer_size = 512M
+innodb_buffer_pool_size = 5500M
+innodb_buffer_pool_instances=8
+125 Gb in the database</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>chunk size :  500 k</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_initial_data_volume"><a class="anchor" href="#_initial_data_volume"></a>Initial data volume</h3>
+<div class="paragraph">
+<p>125 Gb in the database</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">SELECT
+	table_name,
+	table_rows,
+	round(((data_length + index_length) / 1024 / 1024), 2) 'size MB'
+FROM
+	INFORMATION_SCHEMA.TABLES
+WHERE
+	TABLE_SCHEMA = 'bonita'
+order by
+	table_name ASC ;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">segment_name            Size in MB     	NUM_ROWS
+-------------------------------------------------------
+ARCH_FLOWNODE_INSTANCE	       9730254.09      9730254
+ARCH_PROCESS_INSTANCE	       2938758         2938758
+ARCH_DATA_INSTANCE             28696           16179052
+QUERIABLE_LOG                  3044085         3044085
+ARCH_CONTRACT_DATA             0               0
+ARCH_CONTRACT_DATA_BACKUP      6757.02         1075697
+ARCH_CONNECTOR_INSTANCE	       3010846         3010846
+DOCUMENT                       0               0
+ARCH_PROCESS_COMMENT	       976635          976635
+ARCH_REF_BIZ_DATA_INST	       0               0
+ARCH_DOCUMENT_MAPPING	       0               0
+JOB_PARAM                      0               0
+ARCH_MULTI_BIZ_DATA            0               0
+PROCESS_COMMENT                0               0
+MESSAGE_INSTANCE               0               0
+DOCUMENT_MAPPING               0               0
+DATA_INSTANCE                  0               0</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_execution_2"><a class="anchor" href="#_execution_2"></a>Execution</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-log hljs" data-lang="log">╰─$./bin/bonita-purge-tool 7431518296865410294 1537689211864
+
+  ____              _ _                                         _              _
+ |  _ \            (_) |                                       | |            | |
+ | |_) | ___  _ __  _| |_ __ _    _ __  _   _ _ __ __ _  ___   | |_ ___   ___ | |
+ |  _ &lt; / _ \| '_ \| | __/ _` |  | '_ \| | | | '__/ _` |/ _ \  | __/ _ \ / _ \| |
+ | |_) | (_) | | | | | || (_| |  | |_) | |_| | | | (_| |  __/  | || (_) | (_) | |
+ |____/ \___/|_| |_|_|\__\__,_|  | .__/ \__,_|_|  \__, |\___|   \__\___/ \___/|_|
+                                 | |               __/ |
+                                 |_|              |___/
+2020-03-23 18:49:42,436 INFO  Starting ApplicationKt on pascal-XPS-15-9570 with PID 31673 (/home/pascal/development/bonita-purge-tool/build/distributions/bonita-purge-tool/lib/bonita-purge-tool.jar started by pascal in /home/pascal/development/bonita-purge-tool/build/distributions/bonita-purge-tool)
+2020-03-23 18:49:42,438 DEBUG Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2020-03-23 18:49:42,439 INFO  No active profile set, falling back to default profiles: default
+2020-03-23 18:49:43,449 INFO  Using datasource with HikariDataSource
+2020-03-23 18:49:43,553 INFO  Started ApplicationKt in 1.344 seconds (JVM running for 1.757)
+2020-03-23 18:49:43,759 INFO  Database URL is jdbc:mysql://localhost:3307/bonita?allowMultiQueries=true
+2020-03-23 18:49:43,759 INFO  Tenant id used is 1
+2020-03-23 18:49:43,759 INFO  All settings can be changed in application.properties file
+2020-03-23 18:49:45,376 INFO  Will purge all archived process instances and their elements for process 'RFS_n_ACT_MOCKED' in version '1.3' that are finished since at least 2018-09-23T09:53:31.864
+2020-03-23 18:49:45,376 INFO  Starting archive process instance purge...
+2020-03-23 18:49:45,380 DEBUG Executing SQL: CREATE INDEX idx_rootprocid_archprocinst_tmp ON arch_process_instance(rootprocessinstanceid)
+2020-03-23 18:49:52,285 DEBUG SQL command executed in 6905 ms
+2020-03-23 18:49:52,286 DEBUG Executing SQL: DELETE A FROM arch_process_instance A INNER JOIN arch_process_instance B ON A.rootprocessinstanceid = B.rootprocessinstanceid WHERE B.rootprocessinstanceid = B.sourceobjectid AND B.processdefinitionid = ? AND (B.stateid = 6 OR B.stateid = 3 OR B.stateid = 4) AND B.enddate &lt;= ? AND B.tenantId = ?
+2020-03-23 18:50:55,427 INFO  Deleted 825618 rows from table ARCH_PROCESS_INSTANCE in 63141 ms
+2020-03-23 18:50:55,427 DEBUG Executing SQL: DELETE FROM arch_contract_data WHERE kind = 'PROCESS' AND tenantId = ? AND NOT EXISTS ( SELECT ID FROM arch_process_instance b WHERE arch_contract_data.scopeid = b.sourceobjectid AND b.tenantId = ?) LIMIT ?
+2020-03-23 18:50:55,430 INFO  Deleted 0 rows from table arch_contract_data in 3 ms
+2020-03-23 18:50:56,430 DEBUG Executing SQL: DELETE FROM arch_data_instance WHERE arch_data_instance.containertype = 'PROCESS_INSTANCE' AND arch_data_instance.tenantId = ? AND NOT EXISTS ( SELECT id FROM arch_process_instance b WHERE arch_data_instance.containerid = b.sourceobjectid AND b.tenantId = ?) LIMIT ?
+2020-03-23 18:52:02,567 INFO  Deleted 500000 rows from table arch_data_instance in 66137 ms
+2020-03-23 18:53:13,722 INFO  Deleted 500000 rows from table arch_data_instance in 70154 ms
+2020-03-23 18:54:34,795 INFO  Deleted 500000 rows from table arch_data_instance in 80071 ms
+2020-03-23 18:56:00,910 INFO  Deleted 500000 rows from table arch_data_instance in 85115 ms
+2020-03-23 18:57:25,547 INFO  Deleted 500000 rows from table arch_data_instance in 83636 ms
+2020-03-23 18:58:47,634 INFO  Deleted 500000 rows from table arch_data_instance in 81086 ms
+2020-03-23 19:00:08,156 INFO  Deleted 500000 rows from table arch_data_instance in 79522 ms
+2020-03-23 19:01:29,054 INFO  Deleted 500000 rows from table arch_data_instance in 79897 ms
+2020-03-23 19:03:22,682 INFO  Deleted 265693 rows from table arch_data_instance in 112627 ms
+2020-03-23 19:03:23,685 DEBUG Executing SQL: DELETE FROM arch_document_mapping WHERE tenantId = ? AND NOT EXISTS ( SELECT ID FROM arch_process_instance b WHERE arch_document_mapping.processinstanceid = b.sourceobjectid AND b.tenantId = ?) LIMIT ?
+2020-03-23 19:03:23,691 INFO  Deleted 0 rows from table arch_document_mapping in 5 ms
+2020-03-23 19:03:24,691 DEBUG Executing SQL: DELETE FROM arch_flownode_instance WHERE tenantId = ? AND NOT EXISTS ( SELECT id FROM arch_process_instance b WHERE arch_flownode_instance.rootcontainerid = b.rootprocessinstanceid AND b.tenantId = ?) LIMIT ?
+2020-03-23 19:04:22,641 INFO  Deleted 500000 rows from table arch_flownode_instance in 57950 ms
+2020-03-23 19:05:45,568 INFO  Deleted 500000 rows from table arch_flownode_instance in 81927 ms
+2020-03-23 19:07:10,313 INFO  Deleted 500000 rows from table arch_flownode_instance in 83745 ms
+2020-03-23 19:08:35,304 INFO  Deleted 500000 rows from table arch_flownode_instance in 83990 ms
+2020-03-23 19:09:55,926 INFO  Deleted 500000 rows from table arch_flownode_instance in 79622 ms
+2020-03-23 19:11:15,852 INFO  Deleted 252060 rows from table arch_flownode_instance in 78925 ms
+2020-03-23 19:11:16,853 DEBUG Executing SQL: DELETE FROM arch_process_comment WHERE tenantId = ? AND NOT EXISTS ( SELECT ID FROM arch_process_instance b WHERE arch_process_comment.processinstanceid = b.sourceobjectid AND b.tenantId = ?) LIMIT ?
+2020-03-23 19:11:37,423 INFO  Deleted 275206 rows from table arch_process_comment in 20569 ms
+2020-03-23 19:11:38,424 DEBUG Executing SQL: DELETE FROM arch_ref_biz_data_inst WHERE tenantId = ? AND NOT EXISTS ( SELECT id FROM arch_process_instance b WHERE arch_ref_biz_data_inst.orig_proc_inst_id = b.sourceobjectid AND b.tenantId = ?) LIMIT ?
+2020-03-23 19:11:38,429 INFO  Deleted 0 rows from table arch_ref_biz_data_inst in 4 ms
+2020-03-23 19:11:39,430 DEBUG Executing SQL: DELETE FROM arch_connector_instance WHERE containertype = 'process' AND tenantId = ? AND NOT EXISTS ( SELECT id FROM arch_process_instance b WHERE arch_connector_instance.containerid = b.sourceobjectid AND b.tenantId = ?) LIMIT ?
+2020-03-23 19:11:42,190 INFO  Deleted 0 rows from table arch_connector_instance in 2760 ms
+2020-03-23 19:11:43,191 DEBUG Executing SQL: DELETE FROM arch_contract_data WHERE KIND = 'TASK' AND tenantId = ? AND NOT EXISTS ( SELECT id FROM arch_flownode_instance b WHERE arch_contract_data.scopeid = b.sourceobjectid AND b.tenantId = ?) LIMIT ?
+2020-03-23 19:11:43,193 INFO  Deleted 0 rows from table arch_contract_data in 2 ms
+2020-03-23 19:11:44,194 DEBUG Executing SQL: DELETE FROM arch_data_instance WHERE containertype = 'ACTIVITY_INSTANCE' AND tenantId = ? AND NOT EXISTS ( SELECT id FROM arch_flownode_instance b WHERE arch_data_instance.containerid = b.sourceobjectid AND b.tenantId = ?) LIMIT ?
+2020-03-23 19:12:09,429 INFO  Deleted 500000 rows from table arch_data_instance in 25235 ms
+2020-03-23 19:13:21,716 INFO  Deleted 50412 rows from table arch_data_instance in 71287 ms
+2020-03-23 19:13:22,718 DEBUG Executing SQL: DELETE FROM arch_connector_instance WHERE containertype = 'flowNode' AND tenantId = ? AND NOT EXISTS ( SELECT ID FROM arch_flownode_instance b where arch_connector_instance.containerid = b.sourceobjectid AND b.tenantId = ?) LIMIT ?
+2020-03-23 19:13:36,432 INFO  Deleted 500000 rows from table arch_connector_instance in 13714 ms
+2020-03-23 19:14:04,755 INFO  Deleted 463221 rows from table arch_connector_instance in 27322 ms
+2020-03-23 19:14:05,822 INFO  Detected presence of table ARCH_CONTRACT_DATA_BACKUP. Purging it as well.
+2020-03-23 19:14:05,823 DEBUG Executing SQL: DELETE FROM arch_contract_data_backup WHERE KIND = 'PROCESS' AND tenantId = ? AND NOT EXISTS ( SELECT ID FROM arch_process_instance b WHERE arch_contract_data_backup.scopeId = b.sourceobjectid AND b.tenantId = ?) LIMIT ?
+2020-03-23 19:14:58,476 INFO  Deleted 275206 rows from table arch_contract_data_backup in 52653 ms
+2020-03-23 19:14:59,478 DEBUG Executing SQL: DELETE FROM arch_contract_data_backup WHERE KIND = 'TASK' AND tenantId = ? AND NOT EXISTS ( SELECT ID FROM arch_flownode_instance b WHERE arch_contract_data_backup.scopeId = b.sourceobjectid AND b.tenantId = ?) LIMIT ?
+2020-03-23 19:15:09,906 INFO  Deleted 0 rows from table arch_contract_data_backup in 10428 ms
+2020-03-23 19:15:10,909 DEBUG Executing SQL: DROP INDEX idx_rootprocid_archprocinst_tmp ON arch_process_instance
+2020-03-23 19:15:11,035 DEBUG SQL command executed in 126 ms
+2020-03-23 19:15:11,036 INFO  Archive process instance purge completed.
+2020-03-23 19:15:11,036 INFO  Some of the deleted elements may still appear in Bonita Portal for a short while.
+2020-03-23 19:15:11,036 INFO  If you try to access them you will get a not found error. This is the expected behaviour.
+2020-03-23 19:15:11,036 INFO  Execution completed in 1527482 ms
+2020-03-23 19:15:11,036 INFO  According to the database type you use, you may need to execute certain maintenance commands
+2020-03-23 19:15:11,036 INFO  to reclaim space or optimize the newly purged tables.
+2020-03-23 19:15:11,036 INFO  Eg. VACUUM REINDEX on PostgreSQL</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_oracle"><a class="anchor" href="#_oracle"></a>ORACLE</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Remove 59 025 archived cases (corresponds to 354 150 lines in the database)<br>
+Total Time: 66 minutes</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">SELECT
+	table_name,
+	table_rows,
+	round(((data_length + index_length) / 1024 / 1024), 2) 'size MB'
+FROM
+	INFORMATION_SCHEMA.TABLES
+WHERE
+	TABLE_SCHEMA = 'bonita'
+order by
+	table_name ASC ;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">segment_name            Size in MB     	NUM_ROWS
+------------------------------------------------
+ARCH_FLOWNODE_INSTANCE	408             2104224
+ARCH_PROCESS_INSTANCE	72              578238
+ARCH_DATA_INSTANCE      72              470169
+QUERIABLE_LOG           128             389695
+ARCH_CONTRACT_DATA      96              182639
+ARCH_CONNECTOR_INSTANCE	18              168844
+DOCUMENT                56              164716
+ARCH_PROCESS_COMMENT	22              163844
+ARCH_REF_BIZ_DATA_INST	15              148158
+ARCH_DOCUMENT_MAPPING	9               133459
+JOB_PARAM               13              87620
+ARCH_MULTI_BIZ_DATA     2               74079
+PROCESS_COMMENT         8               43764
+MESSAGE_INSTANCE        4               28956
+DOCUMENT_MAPPING        2               28542
+DATA_INSTANCE           5               28408</code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_initial_data_volume_2"><a class="anchor" href="#_initial_data_volume_2"></a>Initial data volume</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">select segment_name, bytes/1024/1024 AS MB, NUM_ROWS
+from dba_segments
+JOIN all_tables ON dba_segments.segment_name = all_tables.table_name
+where segment_type='TABLE' and dba_segments.OWNER ='BONITA'
+ORDER BY NUM_ROWS DESC;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">segment_name            Size in MB     	NUM_ROWS
+------------------------------------------------
+ARCH_FLOWNODE_INSTANCE	408             2104224
+ARCH_PROCESS_INSTANCE	72              578238
+ARCH_DATA_INSTANCE      72              470169
+QUERIABLE_LOG           128             389695
+ARCH_CONTRACT_DATA      96              182639
+ARCH_CONNECTOR_INSTANCE	18              168844
+DOCUMENT                56              164716
+ARCH_PROCESS_COMMENT	22              163844
+ARCH_REF_BIZ_DATA_INST	15              148158
+ARCH_DOCUMENT_MAPPING	9               133459
+JOB_PARAM               13              87620
+ARCH_MULTI_BIZ_DATA     2               74079
+PROCESS_COMMENT         8               43764
+MESSAGE_INSTANCE        4               28956
+DOCUMENT_MAPPING        2               28542
+DATA_INSTANCE           5               28408</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_execution_3"><a class="anchor" href="#_execution_3"></a>Execution</h3>
+<div class="listingblock">
+<div class="content">
+<pre>╰─$ bin/bonita-purge-tool 5488089572307653177 1584631356000                                                                                                                                            2 ↵
+  ____              _ _                                         _              _
+ |  _ \            (_) |                                       | |            | |
+ | |_) | ___  _ __  _| |_ __ _    _ __  _   _ _ __ __ _  ___   | |_ ___   ___ | |
+ |  _ &lt; / _ \| '_ \| | __/ _` |  | '_ \| | | | '__/ _` |/ _ \  | __/ _ \ / _ \| |
+ | |_) | (_) | | | | | || (_| |  | |_) | |_| | | | (_| |  __/  | || (_) | (_) | |
+ |____/ \___/|_| |_|_|\__\__,_|  | .__/ \__,_|_|  \__, |\___|   \__\___/ \___/|_|
+                                 | |               __/ |
+                                 |_|              |___/
+2020-03-19 16:23:01,725 INFO  Starting ApplicationKt on manu-DellXPS with PID 13151 (/home/manu/workspace/bonita-purge-tool/build/bonita-purge-tool/lib/bonita-purge-tool.jar started by manu in /home/manu/workspace/bonita-purge-tool/build/bonita-purge-tool)
+2020-03-19 16:23:01,727 DEBUG Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2020-03-19 16:23:01,728 INFO  No active profile set, falling back to default profiles: default
+2020-03-19 16:23:02,809 INFO  Using datasource with HikariDataSource
+2020-03-19 16:23:02,933 INFO  Started ApplicationKt in 1.46 seconds (JVM running for 1.919)
+2020-03-19 16:23:03,425 INFO  Database URL is jdbc:oracle:thin:@//localhost:1521/ORCLPDB1.localdomain
+2020-03-19 16:23:03,425 INFO  Tenant id used is 1
+2020-03-19 16:23:03,425 INFO  All settings can be changed in application.properties file
+2020-03-19 16:23:03,481 INFO  Will purge all archived process instances and their elements for process 'All Kind Of Elements Auto' in version '1.1' that are finished since at least 2020-03-19T16:22:36
+Start the purge using the above parameters? [y/N]
+y
+2020-03-19 16:23:09,354 INFO  Starting archive process instance purge...
+2020-03-19 16:23:09,366 DEBUG Executing SQL: CREATE INDEX idx_rootprocid_archprocinst_tmp ON arch_process_instance(rootprocessinstanceid)
+2020-03-19 16:23:11,223 DEBUG SQL command executed in 1856 ms
+2020-03-19 16:23:11,224 DEBUG Executing SQL: DELETE FROM ARCH_PROCESS_INSTANCE A WHERE exists ( SELECT rootprocessinstanceid FROM ARCH_PROCESS_INSTANCE B WHERE B.ROOTPROCESSINSTANCEID = B.SOURCEOBJECTID AND A.ROOTPROCESSINSTANCEID = B.ROOTPROCESSINSTANCEID AND PROCESSDEFINITIONID = ? and (STATEID = 6 OR STATEID = 3 OR STATEID = 4) AND ENDDATE &lt;= ?) AND tenantId = ?
+2020-03-19 16:29:38,125 INFO  Deleted 354150 rows from table ARCH_PROCESS_INSTANCE in 386901 ms
+2020-03-19 16:29:38,126 DEBUG Executing SQL: DELETE FROM ARCH_CONTRACT_DATA a WHERE a.KIND = 'PROCESS' AND a.tenantId = ? AND NOT EXISTS ( SELECT ID FROM ARCH_PROCESS_INSTANCE b WHERE a.SCOPEID = b.SOURCEOBJECTID AND b.tenantId = ?)
+2020-03-19 16:31:03,463 INFO  Deleted 39350 rows from table ARCH_CONTRACT_DATA in 85337 ms
+2020-03-19 16:31:03,463 DEBUG Executing SQL: DELETE FROM ARCH_DATA_INSTANCE a WHERE a.CONTAINERTYPE = 'PROCESS_INSTANCE' AND a.tenantId = ? AND NOT EXISTS ( SELECT id FROM ARCH_PROCESS_INSTANCE b WHERE a.CONTAINERID = b.SOURCEOBJECTID AND b.tenantId = ?)
+2020-03-19 16:35:25,170 INFO  Deleted 154056 rows from table ARCH_DATA_INSTANCE in 261706 ms
+2020-03-19 16:35:25,171 DEBUG Executing SQL: DELETE FROM ARCH_DOCUMENT_MAPPING a WHERE a.tenantId = ? AND NOT EXISTS ( SELECT ID FROM ARCH_PROCESS_INSTANCE b WHERE a.PROCESSINSTANCEID = b.SOURCEOBJECTID AND b.tenantId = ?)
+2020-03-19 16:36:54,060 INFO  Deleted 78700 rows from table ARCH_DOCUMENT_MAPPING in 88889 ms
+2020-03-19 16:36:54,060 DEBUG Executing SQL: DELETE FROM ARCH_FLOWNODE_INSTANCE a WHERE a.tenantId = ? AND NOT EXISTS ( SELECT id FROM ARCH_PROCESS_INSTANCE b WHERE a.ROOTCONTAINERID = b.ROOTPROCESSINSTANCEID AND b.tenantId = ?)
+2020-03-19 17:25:07,584 INFO  Deleted 1167526 rows from table ARCH_FLOWNODE_INSTANCE in 2893524 ms
+2020-03-19 17:25:07,585 DEBUG Executing SQL: DELETE FROM ARCH_PROCESS_COMMENT a WHERE a.tenantId = ? AND NOT EXISTS ( SELECT ID FROM ARCH_PROCESS_INSTANCE b WHERE a.PROCESSINSTANCEID = b.SOURCEOBJECTID AND b.tenantId = ?)
+2020-03-19 17:25:07,822 INFO  Deleted 0 rows from table ARCH_PROCESS_COMMENT in 237 ms
+2020-03-19 17:25:07,823 DEBUG Executing SQL: DELETE FROM ARCH_REF_BIZ_DATA_INST a WHERE a.tenantId = ? AND NOT EXISTS ( SELECT ID FROM ARCH_PROCESS_INSTANCE b WHERE a.ORIG_PROC_INST_ID = b.SOURCEOBJECTID AND b.tenantId = ?)
+2020-03-19 17:27:39,818 INFO  Deleted 78700 rows from table ARCH_REF_BIZ_DATA_INST in 151995 ms
+2020-03-19 17:27:39,819 DEBUG Executing SQL: DELETE FROM ARCH_CONNECTOR_INSTANCE a WHERE a.CONTAINERTYPE = 'process' AND a.tenantId = ? AND NOT EXISTS ( SELECT ID FROM ARCH_PROCESS_INSTANCE b WHERE a.CONTAINERID = b.SOURCEOBJECTID AND b.tenantId = ?)
+2020-03-19 17:27:39,885 INFO  Deleted 0 rows from table ARCH_CONNECTOR_INSTANCE in 66 ms
+2020-03-19 17:27:39,885 DEBUG Executing SQL: DELETE FROM ARCH_CONTRACT_DATA a WHERE a.KIND = 'TASK' AND a.tenantId = ? AND NOT EXISTS ( SELECT ID FROM ARCH_FLOWNODE_INSTANCE b WHERE a.SCOPEID = b.SOURCEOBJECTID AND b.tenantId = ?)
+2020-03-19 17:27:40,388 INFO  Deleted 0 rows from table ARCH_CONTRACT_DATA in 503 ms
+2020-03-19 17:27:40,388 DEBUG Executing SQL: DELETE FROM ARCH_DATA_INSTANCE a WHERE a.CONTAINERTYPE = 'ACTIVITY_INSTANCE' AND a.tenantId = ? AND NOT EXISTS ( SELECT id FROM ARCH_FLOWNODE_INSTANCE b WHERE a.CONTAINERID = b.SOURCEOBJECTID AND b.tenantId = ?)
+2020-03-19 17:27:41,044 INFO  Deleted 0 rows from table ARCH_DATA_INSTANCE in 656 ms
+2020-03-19 17:27:41,045 DEBUG Executing SQL: DELETE FROM ARCH_CONNECTOR_INSTANCE a WHERE a.CONTAINERTYPE = 'flowNode' AND a.tenantId = ? AND NOT EXISTS ( SELECT ID FROM ARCH_FLOWNODE_INSTANCE b WHERE a.CONTAINERID = b.SOURCEOBJECTID AND b.tenantId = ?)
+2020-03-19 17:29:12,637 INFO  Deleted 75564 rows from table ARCH_CONNECTOR_INSTANCE in 91592 ms
+2020-03-19 17:29:12,821 DEBUG Executing SQL: DROP INDEX idx_rootprocid_archprocinst_tmp
+2020-03-19 17:29:13,054 DEBUG SQL command executed in 233 ms
+2020-03-19 17:29:13,054 INFO  Archive process instance purge completed.
+2020-03-19 17:29:13,055 INFO  Some of the deleted elements may still appear in Bonita Portal for a short while.
+2020-03-19 17:29:13,055 INFO  If you try to access them you will get a not found error. This is the expected behaviour.
+2020-03-19 17:29:13,055 INFO  Execution completed in 3970120 ms</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ms_sql_server"><a class="anchor" href="#_ms_sql_server"></a>MS SQL Server</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Remove 112 396 archived process instances (corresponds to 674 379 lines in the database)<br>
+Total Time: 5m30s</p>
+</div>
+<div class="sect2">
+<h3 id="_initial_data_volume_3"><a class="anchor" href="#_initial_data_volume_3"></a>Initial data volume</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">SELECT t.Name AS TableName, p.rows AS RowCounts,
+CAST(ROUND((SUM(a.used_pages) / 128.00), 2) AS NUMERIC(36, 2)) AS Used_MB
+FROM sys.tables t
+INNER JOIN sys.indexes i ON t.OBJECT_ID = i.object_id
+INNER JOIN sys.partitions p ON i.object_id = p.OBJECT_ID AND i.index_id = p.index_id
+INNER JOIN sys.allocation_units a ON p.partition_id = a.container_id
+INNER JOIN sys.schemas s ON t.schema_id = s.schema_id
+Where used_pages &lt;&gt; 0
+GROUP BY t.Name, s.Name, p.Rows
+ORDER BY Used_MB DESC</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">TableName               |RowCounts|Used_MB|
+------------------------|---------|-------|
+arch_flownode_instance  |2 948 801|2227.38|
+document                |   227454| 988.68|
+arch_data_instance      |   682875| 385.91|
+arch_process_instance   |  679 506| 321.69|
+queriable_log           |   569821| 293.39|
+arch_process_comment    |   449944| 188.71|
+arch_contract_data      |   341431| 185.84|
+arch_ref_biz_data_inst  |   224972|  71.98|
+arch_connector_instance |   227612|  70.97|
+flownode_instance       |     1498|  46.52|
+arch_document_mapping   |   226026|  42.99|
+process_comment         |     5286|  13.87|
+data_instance           |     1334|   8.64|
+process_instance        |     1428|   8.45|
+ref_biz_data_inst       |     2666|   7.89|
+page                    |       24|   7.88|
+arch_multi_biz_data     |   112486|   6.70|</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_execution_4"><a class="anchor" href="#_execution_4"></a>Execution</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">╰─$ bin/bonita-purge-tool 6186406801545861394 1584703344000                                                                                                                                                  130 ↵
+  ____              _ _                                         _              _
+ |  _ \            (_) |                                       | |            | |
+ | |_) | ___  _ __  _| |_ __ _    _ __  _   _ _ __ __ _  ___   | |_ ___   ___ | |
+ |  _ &lt; / _ \| '_ \| | __/ _` |  | '_ \| | | | '__/ _` |/ _ \  | __/ _ \ / _ \| |
+ | |_) | (_) | | | | | || (_| |  | |_) | |_| | | | (_| |  __/  | || (_) | (_) | |
+ |____/ \___/|_| |_|_|\__\__,_|  | .__/ \__,_|_|  \__, |\___|   \__\___/ \___/|_|
+                                 | |               __/ |
+                                 |_|              |___/
+2020-03-20 12:23:40,671 INFO  Starting ApplicationKt on manu-DellXPS with PID 2760 (/home/manu/workspace/bonita-purge-tool/build/bonita-purge-tool/lib/bonita-purge-tool.jar started by manu in /home/manu/workspace/bonita-purge-tool/build/bonita-purge-tool)
+2020-03-20 12:23:40,673 DEBUG Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2020-03-20 12:23:40,673 INFO  No active profile set, falling back to default profiles: default
+2020-03-20 12:23:41,705 INFO  Using datasource with HikariDataSource
+2020-03-20 12:23:41,830 INFO  Started ApplicationKt in 1.407 seconds (JVM running for 1.872)
+2020-03-20 12:23:42,078 INFO  Database URL is jdbc:sqlserver://localhost:1433;database=bonita
+2020-03-20 12:23:42,078 INFO  Tenant id used is 1
+2020-03-20 12:23:42,078 INFO  All settings can be changed in application.properties file
+2020-03-20 12:23:42,186 INFO  Will purge all archived process instances and their elements for process 'All Kind Of Elements' in version '1.2' that are finished since at least 2020-03-20T12:22:24
+Start the purge using the above parameters? [y/N]
+y
+2020-03-20 12:24:24,225 INFO  Starting archive process instance purge...
+2020-03-20 12:24:24,245 DEBUG Executing SQL: CREATE INDEX idx_rootprocid_archprocinst_tmp ON arch_process_instance(rootprocessinstanceid)
+2020-03-20 12:24:26,432 DEBUG SQL command executed in 2187 ms
+2020-03-20 12:24:26,433 DEBUG Executing SQL: DELETE A FROM arch_process_instance A INNER JOIN arch_process_instance B ON A.rootprocessinstanceid = B.rootprocessinstanceid WHERE B.rootprocessinstanceid = B.sourceobjectid AND B.processdefinitionid = ? AND (B.stateid = 6 OR B.stateid = 3 OR B.stateid = 4) AND B.enddate &lt;= ? AND B.tenantId = ?
+2020-03-20 12:24:48,774 INFO  Deleted 674379 rows from table ARCH_PROCESS_INSTANCE in 22341 ms
+2020-03-20 12:24:48,775 DEBUG Executing SQL: DELETE a FROM arch_contract_data as a WHERE a.kind = 'PROCESS' AND a.tenantId = ? AND NOT EXISTS ( SELECT ID FROM arch_process_instance b WHERE a.scopeid = b.sourceobjectid AND b.tenantId = ?)
+2020-03-20 12:24:52,769 INFO  Deleted 112486 rows from table arch_contract_data in 3994 ms
+2020-03-20 12:24:52,769 DEBUG Executing SQL: DELETE a FROM arch_data_instance as a WHERE a.containertype = 'PROCESS_INSTANCE' AND a.tenantId = ? AND NOT EXISTS ( SELECT id FROM arch_process_instance b WHERE a.containerid = b.sourceobjectid AND b.tenantId = ?)
+2020-03-20 12:25:14,468 INFO  Deleted 449942 rows from table arch_data_instance in 21699 ms
+2020-03-20 12:25:14,468 DEBUG Executing SQL: DELETE a FROM arch_document_mapping as a WHERE a.tenantId = ? AND NOT EXISTS ( SELECT ID FROM arch_process_instance b WHERE a.processinstanceid = b.sourceobjectid AND b.tenantId = ?)
+2020-03-20 12:25:17,323 INFO  Deleted 224793 rows from table arch_document_mapping in 2854 ms
+2020-03-20 12:25:17,324 DEBUG Executing SQL: DELETE a FROM arch_flownode_instance as a WHERE a.tenantId = ? AND NOT EXISTS ( SELECT id FROM arch_process_instance b WHERE a.rootcontainerid = b.rootprocessinstanceid AND b.tenantId = ?)
+2020-03-20 12:28:14,781 INFO  Deleted 2914573 rows from table arch_flownode_instance in 177457 ms
+2020-03-20 12:28:14,781 DEBUG Executing SQL: DELETE a FROM arch_process_comment as a WHERE a.tenantId = ? AND NOT EXISTS ( SELECT ID FROM arch_process_instance b WHERE a.processinstanceid = b.sourceobjectid AND b.tenantId = ?)
+2020-03-20 12:28:23,173 INFO  Deleted 449944 rows from table arch_process_comment in 8392 ms
+2020-03-20 12:28:23,174 DEBUG Executing SQL: DELETE a FROM arch_ref_biz_data_inst as a WHERE a.tenantId = ? AND NOT EXISTS ( SELECT id FROM arch_process_instance b WHERE a.orig_proc_inst_id = b.sourceobjectid AND b.tenantId = ?)
+2020-03-20 12:28:34,153 INFO  Deleted 224972 rows from table arch_ref_biz_data_inst in 10979 ms
+2020-03-20 12:28:34,153 DEBUG Executing SQL: DELETE a FROM arch_connector_instance as a WHERE a.containertype = 'process' AND a.tenantId = ? AND NOT EXISTS ( SELECT id FROM arch_process_instance b WHERE a.containerid = b.sourceobjectid AND b.tenantId = ?)
+2020-03-20 12:28:34,701 INFO  Deleted 0 rows from table arch_connector_instance in 548 ms
+2020-03-20 12:28:34,701 DEBUG Executing SQL: DELETE a FROM arch_contract_data as a WHERE a.KIND = 'TASK' AND a.tenantId = ? AND NOT EXISTS ( SELECT id FROM arch_flownode_instance b WHERE a.scopeid = b.sourceobjectid AND b.tenantId = ?)
+2020-03-20 12:28:45,360 INFO  Deleted 224972 rows from table arch_contract_data in 10659 ms
+2020-03-20 12:28:45,360 DEBUG Executing SQL: DELETE a FROM arch_data_instance as a WHERE a.containertype = 'ACTIVITY_INSTANCE' AND a.tenantId = ? AND NOT EXISTS ( SELECT id FROM arch_flownode_instance b WHERE a.containerid = b.sourceobjectid AND b.tenantId = ?)
+2020-03-20 12:29:06,026 INFO  Deleted 224972 rows from table arch_data_instance in 20666 ms
+2020-03-20 12:29:06,027 DEBUG Executing SQL: DELETE a FROM arch_connector_instance a WHERE a.containertype = 'flowNode' AND a.tenantId = ? AND NOT EXISTS ( SELECT ID FROM arch_flownode_instance b where a.containerid = b.sourceobjectid AND b.tenantId = ?)
+2020-03-20 12:29:12,747 INFO  Deleted 224972 rows from table arch_connector_instance in 6719 ms
+2020-03-20 12:29:12,817 DEBUG Executing SQL: DROP INDEX IF EXISTS idx_rootprocid_archprocinst_tmp ON arch_process_instance
+2020-03-20 12:29:12,822 DEBUG SQL command executed in 5 ms
+2020-03-20 12:29:12,822 INFO  Archive process instance purge completed.
+2020-03-20 12:29:12,823 INFO  Some of the deleted elements may still appear in Bonita Portal for a short while.
+2020-03-20 12:29:12,823 INFO  If you try to access them you will get a not found error. This is the expected behaviour.
+2020-03-20 12:29:12,823 INFO  Execution completed in 330991 ms
+2020-03-20 12:29:12,823 INFO  According to the database type you use, you may need to execute certain maintenance commands
+2020-03-20 12:29:12,823 INFO  to reclaim space or optimize the newly purged tables.
+2020-03-20 12:29:12,823 INFO  Eg. VACUUM REINDEX on PostgreSQL</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer>
+  <div class="footer-header">
+    <h3>Get useful info curated for you</h3>
+    <input type="email" placeholder="Email address *" />
+    <button type="submit">Subscribe</button>
+  </div>
+  <div class="footer-body">
+    <div class="footer-content">
+      <p>
+        Bonitasoft fully supports digital operations and IT modernization with Bonita, an open-source and extensible
+        platform for automation and optimization of business processes.
+        The Bonita platform accelerates development and production with clear separation between capabilities for visual
+        programming and for coding.
+        Bonita integrates with existing information systems, orchestrates heterogeneous systems, and provides deep
+        visibility into processes across the organization.
+      </p>
+    </div>
+    <div class="social-links">
+      <ul>
+        <!-- Twitter image -->
+        <li class="social-icon">
+          <a href="https://twitter.com/bonitasoft" target="_blank">
+            <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+            </svg>
+          </a>
+        </li>
+        <!-- Facebook image -->
+        <li class="social-icon">
+          <a href="https://www.facebook.com/bonitasoftbpm" target="_blank">
+            <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <title>Facebook icon</title>
+              <path
+                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+            </svg>
+          </a>
+        </li>
+        <!-- Linkedin image -->
+        <li class="social-icon">
+          <a href="https://www.linkedin.com/company/bonitasoft/" target="_blank">
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <title>LinkedIn icon</title>
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+          </a>
+        </li>
+        <!-- RSS image -->
+        <li class="social-icon">
+          <a href="https://www.bonitasoft.com/blog/rss" target="_blank">
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <title>RSS icon</title>
+              <path
+                d="M19.199 24C19.199 13.467 10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24h-4.801zM3.291 17.415c1.814 0 3.293 1.479 3.293 3.295 0 1.813-1.485 3.29-3.301 3.29C1.47 24 0 22.526 0 20.71s1.475-3.294 3.291-3.295zM15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909 7.184 15.909 15.91z" />
+            </svg>
+          </a>
+        </li>
+        <!-- Youtube image -->
+        <li class="social-icon">
+          <a href="https://www.youtube.com/user/BonitaSoft" target="_blank">
+            <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <title>YouTube icon</title>
+              <path
+                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="social-links">
+      <ul class="border-right">
+        <li><a href="https://www.bonitasoft.com/downloads">Download</a></li>
+        <li><a href="https://www.bonitasoft.com/events">Events</a></li>
+        <li><a href="https://community.bonitasoft.com/">Community</a></li>
+        <li><a href="https://www.bonitasoft.com/sitemap">Site map</a></li>
+        <li><a href="https://www.bonitasoft.com/bonitasoft-website-legal-terms-use">Terms of use</a></li>
+      </ul>
+    </div>
+    <div class="footer-footer">
+      <p>
+        &copy; Bonitasoft, S.A. All rights reserved.
+        <span>
+          <a href="https://www.bonitasoft.com/privacy">Privacy,</a>
+          <a href="https://www.bonitasoft.com/legal-notices">Legal notices</a>
+        </span>
+      </p>
+      <a class="footer-bonita-logo" href="https://bonitasoft.github.io"></a>
+    </div>
+  </div>
+</footer><script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script type="text/javascript"> docsearch({
+    apiKey: '16267f96d135c47df8454efd5b448c9a',
+    indexName: 'bonitasoft',
+    inputSelector: '#search-query',
+    debug: false // Set debug to true if you want to inspect the dropdown
+  });
+</script>
+<script type="text/javascript"> docsearch({
+    apiKey: '16267f96d135c47df8454efd5b448c9a',
+    indexName: 'bonitasoft',
+    inputSelector: '#search-query-mobile',
+    debug: false // Set debug to true if you want to inspect the dropdown
+    /*algoliaOptions: {
+      'facetFilters': ["tags:7.11", "tags:bonita"]
+    },*/
+  });
+</script>
+  </body>
+</html>
