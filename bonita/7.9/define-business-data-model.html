@@ -13,27 +13,32 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
+      <div class="navbar-item">
+        <a class="bonita-logo" href="https://bonitasoft.github.io"></a>
+      </div>
+
+      <button class="navbar-burger" data-target="search-container">
+        <i class="search-icon" aria-hidden="true"></i>
+      </button>
+
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
         <span></span>
       </button>
-      <div class="navbar-item">
-        <a class="bonita-logo" href="https://bonitasoft.github.io"></a>
-      </div>
-
-    </div>
-
-    <div class="search-content">
-      <fieldset>
-        <input type="text" id="search-query-mobile" placeholder="Search..." />
-        <div class="icons-container">
-          <div id="search-icon"></div>
-        </div>
-      </fieldset>
     </div>
 
     <div id="topbar-nav" class="navbar-menu">
+      <div class="theme-switch-wrapper-mobile">
+        <input type="checkbox" class="checkbox" onclick="toggleDarkThemeMode(this)" id="check-mobile">
+        <div class="toggle-content">
+          <label class="label" for="check-mobile">
+            <span>🌜</span>
+            <span>🌞</span>
+            <div class="ball"></div>
+          </label>
+        </div>
+      </div>
       <div class="navbar-item is-hoverable">
         <a href="https://community.bonitasoft.com/" class="navbar-link">Community</a>
       </div>
@@ -51,14 +56,23 @@
       </div>
     </div>
 
-    <div class="theme-switch-wrapper">
-      <input type="checkbox" name="" onclick="toggleDarkThemeMode(this)">
+    <div class="navbar-search" id="search-container">
+      <div class="navbar-item search-item hide-for-print">
+        <input type="text" placeholder="Search Docs" class="search-bar query ds-input" id="search-query">
+        <i class="search-icon" aria-hidden="true"></i>
+      </div>
+      <div class="theme-switch-wrapper">
+        <input type="checkbox" class="checkbox" onclick="toggleDarkThemeMode(this)" id="check">
+        <div class="toggle-content">
+          <label class="label" for="check">
+            <span>🌜</span>
+            <span>🌞</span>
+            <div class="ball"></div>
+          </label>
+        </div>
+      </div>
     </div>
 
-    <div class="navbar-item search-item hide-for-print">
-      <input type="text" placeholder="Search Docs" class="search-bar query ds-input" id="search-query">
-      <i class="search-icon" aria-hidden="true"></i>
-    </div>
   </nav>
 </header>
 <div class="body">
@@ -1156,13 +1170,7 @@
 </div>
 <main class="article">
 <div class="toolbar" role="navigation">
-  <button class="nav-toggle"></button>
-  <a href="../7.12/" class="home-link">
-    <svg height="30" viewBox="0 0 48 48" width="30" xmlns="http://www.w3.org/2000/svg">
-      <path d="M20 40V28h8v12h10V24h6L24 6 4 24h6v16z" />
-      <path d="M0 0h48v48H0z" fill="none" />
-    </svg>
-  </a>
+  <button class="nav-toggle"></button>  <a href="../7.12/" class="home-link"></a>
   <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="./">Bonita</a></li>
@@ -1186,8 +1194,7 @@
   </div>
 </div>
   <div class="edit-this-page"><a href="https://github.com/bonitasoft/bonita-doc/edit/7.9_asciidoctor/modules/ROOT/pages/define-business-data-model.adoc">Edit this Page</a></div>
-  </div>
-  <div class="content">
+  </div>  <div class="content">
 <article class="doc">
 <h1 class="page">Define business data model (BDM)</h1>
 <div class="paragraph">
@@ -1408,11 +1415,10 @@ Bonita Studio uses h2 to provide the database for testing. (You can use other ty
     apiKey: '16267f96d135c47df8454efd5b448c9a',
     indexName: 'bonitasoft',
     inputSelector: '#search-query-mobile',
-    debug: false // Set debug to true if you want to inspect the dropdown
+    debug: true // Set debug to true if you want to inspect the dropdown
     /*algoliaOptions: {
       'facetFilters': ["tags:7.9", "tags:bonita"]
     },*/
   });
-</script>
-  </body>
+</script>  </body>
 </html>
