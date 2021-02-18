@@ -1500,17 +1500,11 @@ localhost	FALSE	/	FALSE	0	X-Bonita-API-Token	2f86dcab-9b54-45e6-8eb1-f82c2a2f8e2
     apiKey: '16267f96d135c47df8454efd5b448c9a',
     indexName: 'bonitasoft',
     inputSelector: '#search-query',
-    debug: false // Set debug to true if you want to inspect the dropdown
+    debug: false, // Set debug to true if you want to inspect the dropdown
+    algoliaOptions: {
+      'facetFilters': ["version:7.11", "tags:bonita"]
+    }
   });
 </script>
-<script type="text/javascript"> docsearch({
-    apiKey: '16267f96d135c47df8454efd5b448c9a',
-    indexName: 'bonitasoft',
-    inputSelector: '#search-query-mobile',
-    debug: true // Set debug to true if you want to inspect the dropdown
-    /*algoliaOptions: {
-      'facetFilters': ["tags:7.11", "tags:bonita"]
-    },*/
-  });
-</script>  </body>
+  </body>
 </html>

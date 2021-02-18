@@ -2016,7 +2016,7 @@ body {
   padding: 0.5rem 0.5rem 0.5rem 0.3rem;
   height: 1.8rem;
   width: 3.8rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
   -webkit-transition: background 0.5s ease;
   transition: background 0.5s ease;
   cursor: pointer;
@@ -2616,7 +2616,9 @@ footer .footer-body .footer-footer .footer-bonita-logo {
 .card-section .sectionbody > :not(.card) {
   grid-column: 1/-1; }
 
-.card .content, .card .paragraph, .card p {
+.card .content,
+.card .paragraph,
+.card p {
   display: inline; }
 
 .card a {
@@ -2635,14 +2637,16 @@ footer .footer-body .footer-footer .footer-bonita-logo {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 1.5rem 1.2rem; }
+  padding: 1.5rem 1.2rem;
+  text-align: center; }
 
 .card a .card-body {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1; }
 
-.card-title, .card-body {
+.card-title,
+.card-body {
   display: block; }
 
 .card a {
@@ -2687,7 +2691,11 @@ footer .footer-body .footer-footer .footer-bonita-logo {
   transform: translateY(-3px);
   top: -3px;
   -webkit-box-shadow: 0 10px 20px 0 rgba(108, 135, 135, 0.2);
-  box-shadow: 0 10px 20px 0 rgba(108, 135, 135, 0.2); }
+  box-shadow: 0 10px 20px 0 rgba(108, 135, 135, 0.2);
+  background: -webkit-gradient(linear, left top, right top, from(var(--color-smoke-10)), color-stop(var(--color-smoke-30)), to(var(--color-smoke-50)));
+  background: linear-gradient(90deg, var(--color-smoke-10), var(--color-smoke-30), var(--color-smoke-50));
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
 
 .card-secondary a {
   border: solid 1px #e9e9ed;

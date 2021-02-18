@@ -1422,17 +1422,11 @@ to display forms properly in the mobile version, only create a form with one col
     apiKey: '16267f96d135c47df8454efd5b448c9a',
     indexName: 'bonitasoft',
     inputSelector: '#search-query',
-    debug: false // Set debug to true if you want to inspect the dropdown
+    debug: false, // Set debug to true if you want to inspect the dropdown
+    algoliaOptions: {
+      'facetFilters': ["version:7.10", "tags:bonita"]
+    }
   });
 </script>
-<script type="text/javascript"> docsearch({
-    apiKey: '16267f96d135c47df8454efd5b448c9a',
-    indexName: 'bonitasoft',
-    inputSelector: '#search-query-mobile',
-    debug: true // Set debug to true if you want to inspect the dropdown
-    /*algoliaOptions: {
-      'facetFilters': ["tags:7.10", "tags:bonita"]
-    },*/
-  });
-</script>  </body>
+  </body>
 </html>
