@@ -8,10 +8,11 @@
     <meta name="generator" content="Antora 2.3.4">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 <link rel="stylesheet" href="../../_/stylesheets/site.css">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7LLM509FEH"></script>
-    <script>function gtag(){dataLayer.push(arguments)};window.dataLayer=window.dataLayer||[];gtag('js',new Date());gtag('config','G-7LLM509FEH')</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7LLM509FEH"></script>
+<script>function gtag() { dataLayer.push(arguments) }; window.dataLayer = window.dataLayer || []; gtag('js', new Date()); gtag('config', 'G-7LLM509FEH')</script>
 <link rel="icon" href="../../_/img/favicon.svg" type="image/x-icon">  </head>
   <body class="article">
+<script src="../../_/js/theme.js"></script>
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
@@ -1634,6 +1635,17 @@ A form also contains form <a href="variables" class="page">variables</a>, which 
       'facetFilters': ["version:7.12", "tags:bonita"]
     }
   });
+</script>
+
+<script>
+  // init toggle state
+  if (localStorage.getItem('theme') === 'dark') {
+    document.getElementById('check').checked = true
+    document.getElementById('check-mobile').checked = true
+  } else {
+    document.getElementById('check').checked = false
+    document.getElementById('check-mobile').checked = false
+  }
 </script>
   </body>
 </html>
