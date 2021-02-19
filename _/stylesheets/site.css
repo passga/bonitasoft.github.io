@@ -2033,11 +2033,7 @@ body {
   height: 1.3rem;
   width: 1.3rem;
   -webkit-transform: translateX(0);
-  transform: translateX(0);
-  -webkit-transition: background-color 0.5s ease, -webkit-transform 0.3s ease;
-  transition: background-color 0.5s ease, -webkit-transform 0.3s ease;
-  transition: transform 0.3s ease, background-color 0.5s ease;
-  transition: transform 0.3s ease, background-color 0.5s ease, -webkit-transform 0.3s ease; }
+  transform: translateX(0); }
 
 .label .ball:hover {
   -webkit-box-shadow: 0 0 5px 3px var(--color-blue-bright);
