@@ -60,16 +60,6 @@
   --color-link-light: #1565c0;
   --color-link-hover-light: #104d92;
   --color-nav-item-light: var(--color-blue-bonita-light);
-  --color-admonition-note-light: #217de7;
-  --color-admonition-note-bg-light: #217de74f;
-  --color-admonition-tip-light: #41af46;
-  --color-admonition-tip-bg-light: #41af464f;
-  --color-admonition-important-light: #d32f2f;
-  --color-admonition-important-bg-light: #d32f2f4f;
-  --color-admonition-warning-light: #e18114;
-  --color-admonition-warning-bg-light: #e181144f;
-  --color-admonition-caution-light: #a0439c;
-  --color-admonition-caution-bg-light: #a0439c4f;
   --color-white-dark: #151a25;
   --color-text-light-dark: #556;
   --color-smoke-10-dark: #141a28;
@@ -81,11 +71,11 @@
   --color-gray-30-dark: #808080;
   --color-gray-50-dark: #8e8e8e;
   --color-gray-70-dark: #c1c1c1;
-  --color-jet-20-dark: #aaa;
-  --color-jet-30-dark: #b0b0b0;
-  --color-jet-50-dark: #bbb;
-  --color-jet-70-dark: #ccc;
-  --color-jet-80-dark: #ddd;
+  --color-jet-20-dark: #d4d4d4;
+  --color-jet-30-dark: #d6d6d6;
+  --color-jet-50-dark: #d8d8d8;
+  --color-jet-70-dark: #dadada;
+  --color-jet-80-dark: #dcdcdc;
   --color-black-dark: #fff;
   --color-blue-bonita-dark: #232f3e;
   --color-red-bonita-dark: #e22936;
@@ -94,16 +84,31 @@
   --color-link-dark: #e0cb2e;
   --color-link-hover-dark: #f9e236;
   --color-nav-item-dark: var(--color-black-dark);
-  --color-admonition-note-dark: #11386a;
-  --color-admonition-note-bg-dark: #11386a4f;
-  --color-admonition-tip-dark: #265b37;
-  --color-admonition-tip-bg-dark: #265b374f;
-  --color-admonition-important-dark: #642d2d;
-  --color-admonition-important-bg-dark: #642d2d4f;
-  --color-admonition-warning-dark: #8b6e25;
-  --color-admonition-warning-bg-dark: #8b6e254f;
-  --color-admonition-caution-dark: #652e7c;
-  --color-admonition-caution-bg-dark: #652e7c4f;
+  --color-white: var(--color-white-light);
+  --color-text-light: var(--color-text-light-light);
+  --color-smoke-10: var(--color-smoke-10-light);
+  --color-smoke-30: var(--color-smoke-30-light);
+  --color-smoke-50: var(--color-smoke-50-light);
+  --color-smoke-70: var(--color-smoke-70-light);
+  --color-smoke-90: var(--color-smoke-90-light);
+  --color-gray-10: var(--color-gray-10-light);
+  --color-gray-30: var(--color-gray-30-light);
+  --color-gray-50: var(--color-gray-50-light);
+  --color-gray-70: var(--color-gray-70-light);
+  --color-jet-20: var(--color-jet-20-light);
+  --color-jet-30: var(--color-jet-30-light);
+  --color-jet-50: var(--color-jet-50-light);
+  --color-jet-70: var(--color-jet-70-light);
+  --color-jet-80: var(--color-jet-80-light);
+  --color-black: var(--color-black-light);
+  --color-blue-bonita: var(--color-blue-bonita-light);
+  --color-red-bonita: var(--color-red-bonita-light);
+  --color-unfocused: var(--color-unfocused-light);
+  --color-focused: var(--color-focused-light);
+  --color-link: var(--color-link-light);
+  --color-link-hover: var(--color-link-hover-light);
+  --color-nav-item: var(--color-nav-item-light);
+  --color-blue-bright: #0fe;
   --rem-base: 18;
   --body-font-size: 1.0625em;
   --body-font-size--desktop: 1.125em;
@@ -147,6 +152,16 @@
   --toc-heading-font-color: var(--doc-font-color);
   --toc-border-color: var(--panel-border-color);
   --toc-line-height: 1.2;
+  --caution-color: #a0439c;
+  --caution-on-color: var(--color-white);
+  --important-color: #d32f2f;
+  --important-on-color: var(--color-white);
+  --note-color: #217ee7;
+  --note-on-color: var(--color-white);
+  --tip-color: #41af46;
+  --tip-on-color: var(--color-white);
+  --warning-color: #e18114;
+  --warning-on-color: var(--color-white);
   --doc-font-color: var(--color-jet-50);
   --doc-font-size: inherit;
   --doc-font-size--desktop: calc(17 / var(--rem-base) * 1rem);
@@ -212,7 +227,9 @@
   --filter-icon-light: invert(0%) sepia(98%) saturate(9%) hue-rotate(152deg) brightness(100%) contrast(102%);
   --filter-icon-search-light: invert(15%) sepia(13%) saturate(6139%) hue-rotate(174deg) brightness(100%) contrast(94%);
   --filter-icon-dark: invert(100%) sepia(0%) saturate(7500%) hue-rotate(39deg) brightness(112%) contrast(112%);
-  --filter-icon-search-dark: invert(100%) sepia(0%) saturate(7500%) hue-rotate(39deg) brightness(112%) contrast(112%); }
+  --filter-icon-search-dark: invert(100%) sepia(0%) saturate(7500%) hue-rotate(39deg) brightness(112%) contrast(112%);
+  --filter-icon: var(--filter-icon-light);
+  --filter-icon-search: var(--filter-icon-search-light); }
 
 html {
   -webkit-text-size-adjust: 100%;
@@ -1421,65 +1438,24 @@ a + .breadcrumbs {
   margin-top: 0; }
 
 .doc .admonitionblock.caution .icon {
-  background-color: var(--color-admonition-caution);
-  color: var(--color-focused); }
-
-.doc .admonitionblock.caution .icon i.fa.icon-caution::before {
-  background: no-repeat url("../img/caution.svg"); }
-
-.doc .admonitionblock.caution .content {
-  background: var(--color-admonition-caution-bg); }
+  background-color: var(--caution-color);
+  color: var(--caution-on-color); }
 
 .doc .admonitionblock.important .icon {
-  background-color: var(--color-admonition-important);
-  color: var(--color-focused); }
-
-.doc .admonitionblock.important .icon i.fa.icon-important::before {
-  background: no-repeat url("../img/important.svg"); }
-
-.doc .admonitionblock.important .content {
-  background: var(--color-admonition-important-bg); }
-
-.doc .doc .admonitionblock .icon {
-  border-radius: 1rem; }
-
-.doc i.fa[class^=icon-],
-.doc i.fa[class*=" icon-"]::before {
-  content: "";
-  height: 1.25rem;
-  width: 1.25rem;
-  margin-right: 0.25rem;
-  margin-left: -0.5rem; }
+  background-color: var(--important-color);
+  color: var(--important-on-color); }
 
 .doc .admonitionblock.note .icon {
-  background-color: var(--color-admonition-note);
-  color: var(--color-focused); }
-
-.doc .admonitionblock.note .icon i.fa.icon-note::before {
-  background: no-repeat url("../img/note.svg"); }
-
-.doc .admonitionblock.note .content {
-  background: var(--color-admonition-note-bg); }
+  background-color: var(--note-color);
+  color: var(--note-on-color); }
 
 .doc .admonitionblock.tip .icon {
-  background-color: var(--color-admonition-tip);
-  color: var(--color-focused); }
-
-.doc .admonitionblock.tip .icon i.fa.icon-tip::before {
-  background: no-repeat url("../img/tip.svg"); }
-
-.doc .admonitionblock.tip .content {
-  background: var(--color-admonition-tip-bg); }
+  background-color: var(--tip-color);
+  color: var(--tip-on-color); }
 
 .doc .admonitionblock.warning .icon {
-  background-color: var(--color-admonition-warning);
-  color: var(--color-focused); }
-
-.doc .admonitionblock.warning .icon i.fa.icon-warning::before {
-  background: no-repeat url("../img/warning.svg"); }
-
-.doc .admonitionblock.warning .content {
-  background: var(--color-admonition-warning-bg); }
+  background-color: var(--warning-color);
+  color: var(--warning-on-color); }
 
 .doc .image > img {
   height: auto;
@@ -2294,54 +2270,6 @@ footer {
   padding: 5rem;
   padding-bottom: 2rem; }
 
-footer .footer-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-
-footer .footer-header h3 {
-  font-size: 1.3rem;
-  font-weight: normal;
-  margin-right: 1rem;
-  text-align: center; }
-
-footer .footer-header input {
-  height: 2rem;
-  border: none;
-  padding: 1rem;
-  width: 15rem;
-  margin: 0; }
-
-footer .footer-header input::-webkit-input-placeholder {
-  font-size: 0.7rem; }
-
-footer .footer-header input::-moz-placeholder {
-  font-size: 0.7rem; }
-
-footer .footer-header input:-ms-input-placeholder {
-  font-size: 0.7rem; }
-
-footer .footer-header input::-ms-input-placeholder {
-  font-size: 0.7rem; }
-
-footer .footer-header input::placeholder {
-  font-size: 0.7rem; }
-
-footer .footer-header button {
-  height: 2rem;
-  border: none;
-  margin: 0;
-  font-size: 0.7rem;
-  background-color: var(--color-red-bonita);
-  color: var(--color-focused);
-  font-weight: bold; }
-
 footer .footer-body {
   display: block; }
 
@@ -2424,28 +2352,6 @@ footer .footer-body .footer-footer .footer-bonita-logo {
 @media screen and (max-width: 767px) {
   footer {
     padding: 1rem 2rem; }
-  footer .footer-header {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column; }
-  footer .footer-header h3 {
-    margin-right: 0; }
-  footer .footer-header input {
-    width: 100%; }
-  footer .footer-header input::-webkit-input-placeholder {
-    text-align: center; }
-  footer .footer-header input::-moz-placeholder {
-    text-align: center; }
-  footer .footer-header input:-ms-input-placeholder {
-    text-align: center; }
-  footer .footer-header input::-ms-input-placeholder {
-    text-align: center; }
-  footer .footer-header input::placeholder {
-    text-align: center; }
-  footer .footer-header button {
-    margin-top: 1rem;
-    width: 100%; }
   footer .footer-body {
     margin-top: 1rem; }
   footer .footer-body .footer-content {
